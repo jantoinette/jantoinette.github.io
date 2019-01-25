@@ -2,9 +2,31 @@ h1 {
 	font-family: 'Muli', sans-serif;
 	font-weight: 100;
 	text-align: left;
-	color: red;
+	color: pink;
+}
+
+nav {
+	grid-area: nav;
+	font-family: 'Muli', sans-serif;
+	font-size: 14px;
+	color: skyblue;
+	display: inline-flex;
+	flex-wrap: wrap;
+	text-align: right;
 }
 
 img {
 	display: inline-block;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: "header nav"
+						 "main"
+						 "footer"
+}
+
+.main {
+	display: inline-flex;
+	justify-content: center;
 }
