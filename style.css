@@ -1,12 +1,14 @@
-h1 {
-	font-family: 'Muli', sans-serif;
-	font-weight: 100;
-	font-size: 36px;
-	text-align: left;
-	color: pink;
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+#logo {
+	height: 50px;
 }
 
 nav {
+	display: flex;
 	grid-area: nav;
 	font-family: 'Muli', sans-serif;
 	font-size: 18px;
@@ -21,6 +23,7 @@ ul {
 
 li {
 	display: inline;
+	padding: 14px 16px;
 }
 
 img {
@@ -42,6 +45,3 @@ img {
 	grid-auto-flow: row;
 }
 
-#logo {
-	height: 50px;
-}
