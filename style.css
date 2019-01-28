@@ -2,6 +2,16 @@ html {
 	background-color: #eeeeec;
 	font-family: 'Muli', sans-serif;
 }
+/* colors
+pink: #f08594;
+light blue: #7AD1E4;
+dark blue: #0d255f; */
+
+a:link, a:active, a:visited {
+	font: inherit;
+	color: inherit;
+	text-decoration: none;
+}
 
 .container {
 	margin: 60px 100px;
@@ -11,6 +21,14 @@ html {
 						 "main"
 }
 
+p {
+	color: #0d255f;
+	font-size: 18px;
+	line-height: 24px;
+	word-spacing: 1px;
+}
+
+/* -- Header -- */
 header {
 	display: flex;
 	justify-content: space-between;
@@ -46,18 +64,12 @@ nav ul li {
 	padding: 14px 0px 14px 32px;
 }
 
-nav a:link, nav a:active, nav a:visited {
+nav ul li a:hover {
 	font: inherit;
-	color: inherit;
-	text-decoration: none;
-}
-
-nav a:hover {
-	font: inherit;
-	color: inherit;
+	color: #f08594;
 	cursor: pointer;
 	padding-bottom: 3px;
-	border-bottom: 1px solid;
+	/* border-bottom: 1px solid; */
 }
 
 /* Dropdown Menu */
@@ -68,16 +80,14 @@ nav ul li.parent:hover ul.child {
     display: block; /* shows dropdown when hovering */
     position: absolute;
     top: 46px;
-    left: 40px;
 }
 
 nav ul li.parent ul.child li {
     width: 9em;
     padding: 0;
+    margin-bottom: 4px;
 }
-nav ul li.parent ul.child li a:hover {
-    text-decoration: none;
-}
+
 nav ul li.parent ul.child li a {
     display: block;
 }
@@ -86,16 +96,31 @@ nav ul li.parent ul.child li a {
 
 .main {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	height: 100%;
+	grid-template: repeat(4,40%)/repeat(12,1fr);
 	grid-gap: 2rem 3rem;
-	grid-auto-rows: 1fr;
 	grid-auto-flow: row;
-	justify-content: 
+	grid-auto-columns: 1fr;
 }
 
+/* -- Home Page -- */
 .work {
-	width: 1fr 1fr;
+	display: grid;
 	position: relative;
+}
+
+.a {
+	grid-column: 1 / span 6;
+}
+.b {
+	grid-column: 7 / span 6;
+}
+.c {
+	grid-column: 1 / span 6;
+}
+.d {
+	grid-column: 7 / span 6;
 }
 
 .work img {
@@ -118,24 +143,86 @@ nav ul li.parent ul.child li a {
 	letter-spacing: 1px;
 } */
 
+/* -- inside pages -- */
 .hero_img {
 	position: absolute;
-	top: 234px;
-	left: -56px;
 	width: 100%;
-	height: 100%;
+	height: 68%;
+	left: -56px;
 }
 
-img {
-	display: inline-block;
+.project {
+	z-index: 1;
+}
+
+.title {
+	grid-column: 7 / span 6;
+}
+
+.info {
+	grid-area: 2 / 6 / span 2 / span 6;
+	padding: 18% 0;
+}
+
+.mockup {
+	display: grid;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	grid-column: 1 / span 10;
+	grid-row-end: 4;
+	align-self: end;
+}
+
+.about_me {
+	height: 100%;
+	grid-column: 4 / span 6;
+	position: relative;
+	top: 14rem;
+	background-color: rgba(238,238,236,0.6);
+	padding: 2% 8%;
+}
+
+.about_me p {
+	margin: 4% 0;
+}
+
+.about_me p a:hover {
+	cursor: pointer;
+	color: #7AD1E4;
+}
+
+h2 {
+	font-family: 'Muli ExtraBold', sans-serif;
+	font-size: 60px;
+	color: #0d255f;
+	letter-spacing: 1px;
+	line-height: 54px;
+	text-align: right;
 }
 
 h3 {
-	font-family: 'Muli', sans-serif;
-	font-size: 14px;
-	font-weight: 700;
-	color: skyblue;
+	font-family: inherit;
+	font-weight: 200;
+	font-size: 26px;
+	color: #0d255f;
 	letter-spacing: 1px;
-	display: inline;
-	float: right;
+}
+
+h4 {
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: 700;
+	color: #f08594;
+	letter-spacing: 1px;
+	text-align: right;
+}
+
+h6 {
+	font-family: inherit;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 300;
+	color: #7AD1E4;
+	letter-spacing: 1px;
 }
