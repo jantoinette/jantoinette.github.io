@@ -153,6 +153,16 @@ nav ul li.parent ul.child li a {
 	letter-spacing: 1px;
 } */
 
+#request {
+	padding-top:10%;
+	font-size:12px;
+	font-style:italic;
+}
+
+#request a:hover{
+	color:#f08594;
+}
+
 /* -- inside pages -- */
 .hero_img {
 	position: absolute;
