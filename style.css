@@ -38,14 +38,16 @@ header {
 
 /* -- Navigation -- */
 nav {
-	/*display: flex*/;
-	/*grid-area: nav;*/
-	font-size: 13px;
+	/*display: flex;
+	grid-area: nav;*/
+	font-size: 14px;
 	font-weight: 700;
 	color: #7AD1E4;
 	letter-spacing: 1px;
 	margin-bottom: 40px;
 	position: relative;
+	text-align: right;
+	float: right;
 }
 
 nav ul {
@@ -65,7 +67,7 @@ nav ul li {
 
 nav ul li a {
 	display: block;;
-	border-bottom: 2px solid #d3d3d3;
+	/* border-bottom: 2px solid #d3d3d3; */
 	max-width: 280px;
 }
 
@@ -79,9 +81,7 @@ nav ul li a:hover {
 
 /* Dropdown Menu */
 nav ul.child {
-    display: none;
-    /* hides dropdown */
-
+    display: none; /* hides dropdown */
     position: absolute;
     left: 0px;
     top: 35px;
@@ -92,12 +92,12 @@ nav ul.child {
 nav ul li.parent:hover ul.child {
     display: block; /* shows dropdown when hovering */
     position: absolute;
-/*    top: 46px;*/
+	/* top: 46px;*/
 }
 
 nav ul.child li {
     padding: 0;
-   	margin: 0 0 10px 0;
+   	margin-bottom: 10px;
 }
 
 nav ul.child li a {
@@ -110,7 +110,7 @@ nav ul.child li a {
 /* -- Home Page -- */
 .work {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 12px;
 	width: 100%;
 }
 
@@ -134,15 +134,22 @@ nav ul.child li a {
 	letter-spacing: 1px;
 } */
 
-#request {
-	padding-top:10%;
-	font-size:12px;
-	font-style:italic;
+request {
+	padding-top: 6%;
+	padding-left: 60px;
 }
 
-#request a:hover{
-	color:#f08594;
+request p {
+	font-size: 12px;
+	font-style: italic;
 }
+
+request a:hover{
+	color: #f08594;
+}
+
+/* -- end Home Page -- */
+
 
 /* -- inside pages -- */
 .hero_img {
@@ -242,24 +249,25 @@ h6 {
 
 
 
-
+/* -- Responsive -- */
 @media screen and (min-width:720px) {
 
 	.container {
 		margin: 0;
 		padding: 0;
 		display: grid;
-		/*grid-template: repeat(12, 1fr) / repeat(6, 1fr); */
-		/grid-template-areas: "header nav" "main";
+		/* grid-template: repeat(12, 1fr) / repeat(6, 1fr);
+		grid-template-areas: "header nav" "main"; */
 	}
 
+	/* -- Header + Nav -- */
 	header {
 	    display: flex;
 	    justify-content: space-between;
 	    align-items: center;
 	    padding-bottom: 140px;
 	    color: #F2828D;
-	    padding: 60px 100px;
+	    padding: 60px 60px;
 	}
 
 	nav {
@@ -272,6 +280,7 @@ h6 {
 	nav ul {
 	  	margin: 0;
 	  	padding: 0;
+	  	text-align: left;
 	}
 
 	nav ul li {
@@ -298,13 +307,13 @@ h6 {
 	nav ul li.parent ul.child {
 	    /*display: block;*/
 	    /* hides dropdown */
-
 	    position: absolute;
 	    top: 20px;
 	    left: 0;
 	    width: auto;
 	    padding: 14px 0px 14px 32px;
 	}
+
 	nav ul li.parent:hover ul.child {
 	    display: block; /* shows dropdown when hovering */
 	    position: absolute;
@@ -313,7 +322,7 @@ h6 {
 	nav ul li.parent ul.child li {
 	    width: 9em;
 	    padding: 0;
-	    margin-bottom: 4px;
+	    margin-bottom: 10px;
 	}
 
 	nav ul li.parent ul.child li a {
@@ -328,7 +337,7 @@ h6 {
 		padding: 0 60px;
 	    display: grid;
 	    grid-template-columns: repeat(12,1fr);
-	    grid-gap: 3rem;
+	    grid-gap: 1rem 2rem;
 	    grid-auto-flow: row;
 	    grid-auto-columns: 1fr;
 	}
@@ -346,8 +355,5 @@ h6 {
 	}
 
 
-	.work {
-		margin-bottom: 50px;
-	}
 
 }
