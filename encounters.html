@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>encounters • antoinette chow</title>
+	<link rel="icon" type="image/png" href="images/logomark.png"/>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://fontlibrary.org/face/elaine-sans">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<!-- <script type="text/javascript" src="styles/encounters.js"></script> -->
+	<script src="styles/float-panel.js"></script>
+	<script language="JavaScript">
+		function pickimg(){
+		var imagenumber = 6 ;
+		var randomnumber = Math.random() ;
+		var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
+		images = new Array
+		images[1] = "photos/encounters/IMG_6100.jpg"
+		images[2] = "photos/encounters/IMG_0802.jpg"
+		images[3] = "photos/encounters/IMG_2553.jpg"
+		images[4] = "photos/encounters/IMG_2657.jpg"
+		images[5] = "photos/encounters/IMG_2748.jpg"
+		images[6] = "photos/encounters/IMG_5621.jpg"
+		var image = images[rand1]
+		document.randimg.src = image
+		}
+	</script>
+</head>
+
+<body>
+	<div class="top_nav">
+		<nav class="top_nav_left">
+			<a href="home.html"><p>⤸</p></a>
+			<p class="back">back</p>
+		</nav>
+		<nav class="parent top_nav_right"><a class="projects" href="#">→</a>
+			<ul class="child">
+				<li><a href="moments.html">moments</a></li>
+				<li><a href="places.html">places</a></li>
+				<li><a href="fujixt10.html">fuji xt-10</a></li>
+				<li><a href="fattynettie.html">food</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="info">
+	<div class="title"><h1>random finds</h1></br></div>
+	</div>
+
+	<!-- <section> 
+        <p>This image is random</p>
+        <a href="#" class="click">
+            <script>
+                getRandomImage()
+            </script>
+        </a>
+    </section> -->
+
+    <div class="gallery">
+    <div class="encounters">
+		<a href="" onClick="pickimg();return false;"><IMG SRC="photos/encounters/IMG_6100.jpg" name="randimg" border=0></a>
+		<p>click image to also randomly find something</p>
+	</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer_text">
+			<p> music&ensp;food&ensp;culture&ensp;em-dashes — <a href="mailto:chowantoinette@gmail.com?subject=why hello there">let's talk</a></p>
+			<p>© Antoinette Chow 2019</p>
+		</div>
+	</div>
+
+</body>
+</html>
