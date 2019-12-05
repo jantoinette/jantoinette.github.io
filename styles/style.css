@@ -892,17 +892,17 @@ label[for=music] {cursor: pointer;}
 /* -- Footer -- */
 
 .main_footer {
-	background: rgba(0,0,0,.1);
+	background: #d6d6d3;
 	position: absolute;
 	width: 100%;
 }
 
 .footer {
-	background: rgba(0,0,0,.1);
+	background: #d6d6d3;
 	position: fixed;
 	display: block;
 	width: 100%;
-	z-index: 0;
+	z-index: 99;
 	bottom: 0;
 }
 
