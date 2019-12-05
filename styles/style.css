@@ -40,7 +40,7 @@ i {font-style:italic;}
     animation: slide 1s;
 }
 .slideanim::after {
-     useful when its child elements are float:left; 
+    float:left; 
     content: "";
     display: table;
     /*clear: both;*/
@@ -867,12 +867,12 @@ label[for=music] {cursor: pointer;}
 	padding-left: 2.6em;
 }
 
-.description .p1::before {content:"💭";padding-right: 1em;}
-.description .p2::before {content:"👀";padding-right: 1em;}
-.description .p3::before {content:"✍️";padding-right: 1em;}
-.description .p4::before {content:"👩🏻‍💻";padding-right: 1em;}
-.description .p5::before {content:"📷";padding-right: 1em;}
-.description .p6::before {content:"📋";padding-right: 1em;}
+.description .p1::before {content:"\1F4AD";padding-right: 1em;}
+.description .p2::before {content:"\1F440";padding-right: 1em;}
+.description .p3::before {content:"\270D";padding-right: 1em;}
+.description .p4::before {content:"\1F469\1F3FB\200D\1F4BB";padding-right: 1em;}
+.description .p5::before {content:"\1F4F7";padding-right: 1em;}
+.description .p6::before {content:"\1F4CB";padding-right: 1em;}
 
 .contact {
 	display: inline-block;
