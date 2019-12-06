@@ -139,7 +139,7 @@ hr {
 }
 
 .category {
-	margin-top: 12%;
+	margin-top: 20%;
 	display: block;
 	position: relative;
 	/*background: rgba(0,0,0,.1);*/
@@ -152,20 +152,21 @@ hr {
 }*/
 
 .category h2 {
-	padding-top: 8%;
+	padding: 2% 0;
 	display: inline-block;
-	position: absolute;
+	position: sticky;
+	top: 8vh;
 	background-color: #eeeeec;
 	width: 30vw;
 	z-index: 100;
-	font-size: 2.25vw;
+	font-size: 2.4vw;
 	font-weight: bold;
 }
 
 .list {
-	margin-top: 8%;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	margin-top: -6%;
+	/*overflow-y: scroll;
+	overflow-x: hidden;*/
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
 	height: 90vh;
@@ -197,13 +198,14 @@ hr {
 
 .peek {
 	display: inline-block;
+	background: black;
 }
 
 .peek img {
 	width: 55.3vw;
 	max-height: 75vh;
 	object-fit: scale-down;
-	/*border: solid;*/
+	border: solid;
 }
 
 /*.peek:hover {
@@ -224,10 +226,13 @@ hr {
 @media (max-width:800px) {
 	.category h2 {
 		font-size: 3.5vw;
+		margin-bottom: 8%;
+    	padding: 3% 0;
 	}
 	.list {
 		height: auto;
 		padding-bottom: 8%;
+		margin-top: -15%;
 	}
 	.project {
 		font-size: 2.75vw;
