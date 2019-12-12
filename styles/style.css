@@ -30,6 +30,7 @@ a:hover .wes {color:#3ec1af;} /*4dc0d1*/
 }*/
 
 i {font-style:italic;}
+mark {background:lightblue;}
 
 .slideanim {
     visibility:hidden;
@@ -58,9 +59,61 @@ i {font-style:italic;}
 
 /* -- Header -- */
 
+.sticky {
+	position: sticky;
+	top: 3%;
+	z-index: 100;
+	font-size: 2.8vw;
+	margin-top: 15%;
+	margin-left: 38.65vw;
+}
+
+/*.pop {
+	position: sticky;
+	z-index: 2;
+	height: 120px; width: 120px;
+	border-radius: 50%;
+	top: 68%;
+	margin-left: calc(100% - 80px);
+	background: pink;
+}
+
+.pop a:hover {margin-left: calc(100% - 120px);}*/
+
+a #pop {
+	position: sticky;
+	z-index: 99;
+	top: 480px;
+	margin-left: 95vw;
+	transition: 0.3s;
+	padding: 25px;
+	height: 35px;
+	width: 45px;
+	border-radius: 50%;
+	background: pink;
+	font-size:0.85em;
+	transform: rotate(-20deg);
+}
+
+a:hover #pop {
+	margin-left: 86vw;
+	height: 85px; width: 85px;
+}
+a:hover #pop h5 {display:none;}
+a #pop h6 {display:none; padding-top:8px;}
+a:hover #pop h6 {display:block;}
+
+/*.sayhi {
+	position: sticky;
+	top: 70%;
+	z-index: 99;
+	margin-top: 40vh;
+	margin-left: 92%;
+}*/
+
 .hero_img {
 	position: relative;
-	margin-top: -13.8%; /* sayhi: -38.6% */
+	margin-top: calc(100% - 121.5%); /* sayhi: -38.6% */
 	left: .1rem;
 	padding: 0 6%;
 	z-index: 4;
@@ -89,39 +142,24 @@ i {font-style:italic;}
 	line-height: 1.45;
 }
 
-.sticky {
-	position: sticky;
-	top: 3%;
-	z-index: 100;
-	font-size: 2.8vw;
-	margin-top: 15%;
-	margin-left: 38.65vw;
-}
-
-/*.sticky2 {
-	position: sticky;
-	top: 3%;
-	z-index: 2;
-	width: 24vw;
-	height: 5vh;
-	top: 4%;
-	margin-left: 40vw;
-	background-color: #eeeeec;
-}*/
-
-.sayhi {
-	position: sticky;
-	top: 70%;
-	z-index: 99;
-	margin-top: 40vh;
-	margin-left: 92%;
-}
-
 /* -- end Header -- */
 
 
 
 /* -- Main -- */
+
+/*.highlight {
+    width: 48px;
+    height: 28px;
+    background: lightblue;
+    position: fixed;
+    margin-top: 7.9vh;
+    top: 3%;
+    left: 0;
+	border-top: 12px solid transparent;
+	border-right: 24px solid lightblue;
+	border-bottom: 12px solid transparent;
+}*/
 
 .main {
 	padding: 6%;
@@ -157,7 +195,7 @@ hr {
 	position: sticky;
 	top: 8vh;
 	background-color: #eeeeec;
-	width: 30vw;
+	width: 32vw;
 	z-index: 100;
 	font-size: 2.4vw;
 	font-weight: bold;
@@ -196,10 +234,8 @@ hr {
 	transform: rotate(4deg);
 }
 
-.peek {
-	display: inline-block;
-	background: black;
-}
+.peek {display: inline-block;}
+.peek:hover {background: black;}
 
 .peek img {
 	width: 55.3vw;
@@ -208,10 +244,6 @@ hr {
 	border: solid;
 }
 
-/*.peek:hover {
-	border: solid;
-}
-*/
 .peek a:hover img {
 	-ms-transform: rotate(-1deg);
 	-webkit-transform: rotate(-1deg);
@@ -818,7 +850,7 @@ label[for=music] {cursor: pointer;}
 	.tooltip {
 		position: relative;
 		display: inline-block;
-		padding-right: 1.5%;
+		padding-right: 5%;
 	}
 
 	.tooltip h1 {font-size: 1.3em;}
@@ -890,6 +922,7 @@ label[for=music] {cursor: pointer;}
 
 .contact p {display: inline-block;}
 .contact-links {font-size:.8em;}
+.contact a:hover p {font-style:italic;}
 
 /* -- end About -- */
 
