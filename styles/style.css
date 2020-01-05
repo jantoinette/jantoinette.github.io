@@ -113,7 +113,7 @@ a:hover #pop h6 {display:block;}
 
 .hero_img {
 	position: relative;
-	margin-top: calc(100% - 121.5%); /* sayhi: -38.6% */
+	margin-top: calc(100% - 114.5%); /* no sayhi: 121.5% */
 	left: .1rem;
 	padding: 0 6%;
 	z-index: 4;
