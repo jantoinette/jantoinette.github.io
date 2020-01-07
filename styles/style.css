@@ -217,6 +217,7 @@ hr {
 	position: relative;
 	padding-bottom: 3%;
 	width: 0;
+	z-index: 101;
 }
 
 .project {
