@@ -10,6 +10,7 @@ html, body {
 	background-color: #eeeeec;
 	margin: 0;
 	padding: 0;
+	overscroll-behavior: none;
 	font-family: 'ElaineSansRegular', sans-serif;
 	/*font-family: 'Apercu Regular', sans-serif;*/
 }
@@ -21,6 +22,8 @@ a:link, a:visited {
 
 a:hover .ae {color:#8dc63f;}
 a:hover .unh {color:#f83a80;}
+a:hover .dys {color:#d9d9d9;}
+a:hover .hm {color:#ffd11a;}
 a:hover .haz {color:#516ac8;} /*66ace4 77c6d8*/
 a:hover .ful {color:red;}
 a:hover .wes {color:#3ec1af;} /*4dc0d1*/
