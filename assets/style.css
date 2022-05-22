@@ -1,0 +1,184 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url(Hershey-Noailles-Futura-Simplex-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Times";
+  src: url(Hershey-Noailles-Times-Duplex-Italic-Light.woff) format("woff");
+}
+
+:root {
+	--sans: "Futura", Futura, sans-serif;
+	--serif: "Times", Times, serif;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: var(--sans);
+	font-size: 21px;
+	overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+a {
+	color: gray;
+	text-decoration: none;
+}
+
+a:hover {color: gainsboro;}
+
+::selection {background: pink;}
+::-moz-selection {background: pink;}
+
+
+/* --- LANDING --- */
+
+#home {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/* -- intro -- */
+
+.intro {
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	position: fixed;
+	top: 0;
+}
+
+.center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+.center button {
+	margin-top: 10px;
+	padding: 0 10px;
+	align-self: center;
+}
+
+/* -- skills -- */
+
+#skills {
+	display: inline-flex;
+	margin-top: 30%;
+	margin-left: 20%;
+	white-space: nowrap;
+	height: 70%;
+	width: 80%;
+
+}
+#skills p {
+	font-family: var(--serif);
+	font-size: 32px;
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+	display: flex;
+	width: 100%;
+	position: absolute;
+	bottom: -106px;
+	height: 120px;
+	font-size: 0.8rem;
+	background: whitesmoke;
+	padding-bottom: 30px;
+	z-index: 1;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	transition: 0.5s ease;
+}
+
+footer:hover {
+	bottom: 0;
+}
+
+footer div {
+	position: relative;
+	display: inline-block;
+	padding: 14px 30px 0 30px;
+}
+
+footer br {display: none;}
+
+.old:hover a::after {content: " old website";}
+
+#time {
+	width: 24vw;
+	text-align: end;
+}
+
+.contact {width: 60%;}
+
+.year {
+	align-self: flex-end;
+}
+
+@media screen and (max-width: 752px) {
+	footer {
+		height: auto;
+		padding-bottom: 12px;
+		bottom: -170px;
+	}
+
+	footer br {display: block;}
+
+	.contact {width: 100%;}
+	#time {
+		order: 1;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	footer {
+		font-size: 5vw;
+		top: 91.75vh;
+		bottom: auto;
+	}
+	footer br {display: none;}
+	footer div {padding-bottom: 12px}
+}
+
+
+
+/* --- CURSORS --- */
+
+.pointer         { cursor: pointer; }
+.progress        { cursor: progress; }
+.crosshair       { cursor: crosshair; }
+.context         { cursor: context-menu; }
+.typing          { cursor: text; }
+.alias           { cursor: alias; }
+.plus            { cursor: copy; }
+.move            { cursor: move; }
+.not-allowed     { cursor: not-allowed; }
+.up			         { cursor: n-resize; }
+.left		         { cursor: w-resize; }
+.right	         { cursor: e-resize; }
+.down		         { cursor: s-resize; }
+.grab		         { cursor: grab; }
+.grabbing		     { cursor: grabbing; }
+.zoom				     { cursor: zoom-in; }
+
