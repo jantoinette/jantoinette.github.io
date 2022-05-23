@@ -159,11 +159,13 @@ footer br {display: none;}
 @media screen and (max-width: 420px) {
 	footer {
 		font-size: 5vw;
-		top: 91.75vh;
+		top: 84vh;
 		bottom: auto;
 	}
 	footer br {display: none;}
 	footer div {padding-bottom: 12px}
+
+	.face {display:block;}
 }
 
 @supports(padding:max(0px)) {
