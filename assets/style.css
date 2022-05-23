@@ -83,8 +83,8 @@ a:hover {color: gainsboro;}
 	margin-top: 30%;
 	margin-left: 20%;
 	white-space: nowrap;
-	height: 70%;
-	width: 80%;
+	/*height: 70%;
+	width: 80%;*/
 
 }
 #skills p {
@@ -136,6 +136,11 @@ footer br {display: none;}
 }
 
 @media screen and (max-width: 752px) {
+	#skills {
+		display: block;
+		margin-top: 40%;
+	}
+
 	footer {
 		height: auto;
 		padding-bottom: 12px;
@@ -161,24 +166,18 @@ footer br {display: none;}
 	footer div {padding-bottom: 12px}
 }
 
+@supports(padding:max(0px)) {
+    body, header, footer {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+    }
+}
+
 
 
 /* --- CURSORS --- */
 
-.pointer         { cursor: pointer; }
-.progress        { cursor: progress; }
 .crosshair       { cursor: crosshair; }
 .context         { cursor: context-menu; }
-.typing          { cursor: text; }
-.alias           { cursor: alias; }
-.plus            { cursor: copy; }
-.move            { cursor: move; }
-.not-allowed     { cursor: not-allowed; }
-.up			         { cursor: n-resize; }
-.left		         { cursor: w-resize; }
-.right	         { cursor: e-resize; }
-.down		         { cursor: s-resize; }
-.grab		         { cursor: grab; }
-.grabbing		     { cursor: grabbing; }
-.zoom				     { cursor: zoom-in; }
+
 

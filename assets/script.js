@@ -109,13 +109,6 @@
 
             distance = Math.sqrt((distancex * distancex) + (distancey * distancey));
             
-            /*
-            magnet = 2600 - distance*20;
-            if(distance>130) {
-               magnet=0; 
-            }
-            */
-            
             powerx = x0 - (distancex / distance) * magnet / distance;
             powery = y0 - (distancey / distance) * magnet / distance;
             
