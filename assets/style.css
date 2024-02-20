@@ -69,8 +69,8 @@ a {text-decoration: none;}
 	text-align: center;
 }
 
-.center span {display: none;}
-.center:hover span {display: block;}
+/*.center span {display: none;}
+.center:hover span {display: block;}*/
 
 /* -- skills -- */
 
@@ -216,7 +216,7 @@ footer br {display: none;}
 #view {
 	display: none;
 	position: fixed;
-	font-weight: bold;
+	font-family: var(--serif);
 	z-index: -1;
 }
 

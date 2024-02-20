@@ -30,7 +30,7 @@ table, tbody, td, textarea, tfoot, th, thead, time, tr, ul, var, video {
   padding: 0;
   text-align: left;
   text-decoration: none;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
 ol, ul {
