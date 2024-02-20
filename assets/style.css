@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: "Futura";
-  src: url(Hershey-Noailles-Futura-Simplex-Regular.woff) format("woff");
+  src: url('http://hershey-noailles.luuse.io/output/Hershey-Noailles-Futura-Simplex-Regular/Hershey-Noailles-Futura-Simplex-Regular.woff');
 }
 
 @font-face {
   font-family: "Times";
-  src: url(Hershey-Noailles-Times-Duplex-Italic-Light.woff) format("woff");
+  src: url('http://hershey-noailles.luuse.io/output/Hershey-Noailles-Times-Duplex-Italic-Light/Hershey-Noailles-Times-Duplex-Italic-Light.woff');
 }
 
 :root {
@@ -23,7 +23,8 @@ html, body {
 	width: 100%;
 	font-family: var(--sans);
 	font-size: 21px;
-	overscroll-behavior: none;
+	scroll-behavior: smooth;
+	overscroll-behavior-y: none;
 }
 
 ::-webkit-scrollbar {
@@ -32,18 +33,16 @@ html, body {
     background: transparent;
 }
 
-a {
-	color: gray;
-	text-decoration: none;
-}
+a {text-decoration: none;}
 
-a:hover {color: gainsboro;}
+.link a {color: gray;}
+.link a:hover {color: gainsboro;}
 
 ::selection {background: pink;}
 ::-moz-selection {background: pink;}
 
 
-/* --- LANDING --- */
+/* --- HOME --- */
 
 #home {
 	height: 100%;
@@ -70,11 +69,8 @@ a:hover {color: gainsboro;}
 	text-align: center;
 }
 
-.center button {
-	margin-top: 10px;
-	padding: 0 10px;
-	align-self: center;
-}
+.center span {display: none;}
+.center:hover span {display: block;}
 
 /* -- skills -- */
 
@@ -83,10 +79,8 @@ a:hover {color: gainsboro;}
 	margin-top: 30%;
 	margin-left: 20%;
 	white-space: nowrap;
-	/*height: 70%;
-	width: 80%;*/
-
 }
+
 #skills p {
 	font-family: var(--serif);
 	font-size: 32px;
@@ -97,13 +91,12 @@ a:hover {color: gainsboro;}
 
 footer {
 	display: flex;
-	width: 100%;
 	position: absolute;
-	bottom: -106px;
-	height: 120px;
+	bottom: -5.5rem;
+	width: 100%;
 	font-size: 0.8rem;
 	background: whitesmoke;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	z-index: 1;
 	flex-flow: row wrap;
 	justify-content: space-between;
@@ -116,22 +109,14 @@ footer:hover {
 
 footer div {
 	position: relative;
-	display: inline-block;
-	padding: 14px 30px 0 30px;
+	padding: 15px 1rem 0 1rem;
 }
 
 footer br {display: none;}
 
 .old:hover a::after {content: " old website";}
 
-#time {
-	width: 24vw;
-	text-align: end;
-}
-
-.contact {width: 60%;}
-
-.year {
+.Cyear {
 	align-self: flex-end;
 }
 
@@ -142,30 +127,29 @@ footer br {display: none;}
 	}
 
 	footer {
-		height: auto;
 		padding-bottom: 12px;
-		bottom: -170px;
 	}
 
 	footer br {display: block;}
 
-	.contact {width: 100%;}
 	#time {
 		order: 1;
 		width: auto;
 	}
+
+	.social {width: 100%;}
 }
 
 @media screen and (max-width: 420px) {
 	footer {
 		font-size: 5vw;
-		top: 84vh;
-		bottom: auto;
+		bottom: -11rem;
 	}
 	footer br {display: none;}
-	footer div {padding-bottom: 12px}
-
-	.face {display:block;}
+	footer div {
+		padding-bottom: 12px;
+		flex-basis: auto;
+	}
 }
 
 @supports(padding:max(0px)) {
@@ -181,5 +165,155 @@ footer br {display: none;}
 
 .crosshair       { cursor: crosshair; }
 .context         { cursor: context-menu; }
+
+
+
+
+/* WORK --------- */
+
+.work {
+	padding: 30px;
+	width: calc(100vw - 60px);
+	height: calc(100vh - 60px);
+	overflow: scroll;
+}
+
+.info {
+	height: calc(100% - 60px);
+	width: calc(40% - 30px);
+	display: flex;
+	position: fixed;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.info p {
+	display: block;
+}
+
+@media screen and (max-width: 1072px) {
+	.info {width: calc(100vw - 60px);}
+}
+
+.name a {
+	color: unset;
+}
+.name span {display: none;}
+.name:hover span {display: block;}
+
+.contact span {
+	display: none;
+	padding-bottom: 12px;
+}
+.contact:hover span {display: block;}
+
+.content {
+	overflow: scroll;
+	width: 55%;
+	float: right;
+}
+
+#view {
+	display: none;
+	position: fixed;
+	font-weight: bold;
+	z-index: -1;
+}
+
+.content div {
+	display: flex;
+	flex-flow: column nowrap;
+	padding-bottom: 2%;
+}
+
+.content div:last-child {
+	padding-bottom: 30px;
+}
+
+#projects a {
+	cursor: none;
+}
+
+#projects img {
+	width: calc(100% - 30px);
+	display: none;
+	mix-blend-mode: multiply;
+}
+
+#projects h1 {
+	font-size: 1rem;
+}
+
+#projects div:hover img {
+	display: block;
+	padding-top: 4px;
+}
+
+#projects span {
+	font-family: var(--serif);
+}
+
+#projects p span {
+	font-size: 0.75rem;
+}
+
+@media screen and (max-width: 670px) {
+
+	.content {
+		width: 100%;
+		float: none;
+		position: relative;
+		top: 60px;
+		line-height: 150%;
+	}
+}
+
+
+/* INNER PAGES --------- */
+
+.info h2 {
+	position: absolute;
+	top: 50px;
+	font-family: var(--serif);
+}
+
+.details {
+	width: 100%;
+	display: block;
+	font-size: 0.75rem;
+}
+
+.details > div {
+	display: flex;
+	padding: 2px 0;
+}
+
+.details h4{
+	width: 100px;
+}
+
+.desc {
+	font-size: 1rem;
+	line-height: 115%;
+}
+
+.project > div {
+	line-height: 115%;
+	padding-bottom: 20%;
+	font-size: 0.75rem;
+}
+
+.project img {
+	padding-bottom: 2%;
+}
+
+@media screen and (max-width: 670px) {
+	.project {
+		position: relative;
+		top: 100px;
+		height: calc(100% - 220px);
+		overflow: scroll;
+	}
+}
 
 

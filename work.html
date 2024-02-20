@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Antoinette's work</title>
+</head>
+
+<body class="work">
+  <section class="info">
+    <p class="name"><a href="index.html">Antoinette Chow</a><span><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></span></p>
+    <div class="contact">
+      <span>
+        <p>email <a href="mailto:chowantoinette@gmail.com?subject=hello!!">chowantoinette@gmail.com</a></p>
+        <p>insta <a href="https://instagram.com/antoinette.chow" target="_blank">@antoinette.chow</a></p>
+      </span>
+      <p>contact</p>
+    </div>
+  </section>
+  <section id="projects" class="content">
+    <span id="view">view →</span>
+    <div>
+      <!-- <a href="rapport.html"> -->
+      <p>Rapport <span>WIP!<span></p>
+      <!-- <img src="images/.png"> -->
+      <!-- </a> -->
+    </div>
+    <div><a href="themorningafter.html">
+      <p>The Morning After <span>2024<span></p>
+      <img src="images/tma_hero.png">
+    </a></div>
+    <div><a href="mb_bank.html">
+      <p>MB Bank <span>2023<span></p>
+      <img src="images/mb_landing.png">
+    </a></div>
+    <div><a href="orientation.html">
+      <p>orient-ation <span>2022<span></p>
+      <img src="images/orientation.gif">
+    </a></div>
+    <!-- <div><a href="untitled.html">
+      <p>untitled <span>2022<span></p>
+      <img src="images/untitled.png">
+    </a></div> -->
+    <div><a href="vcs_fieldnotes.html">
+      <p>Visual Cultural Seminar – Field Notes <span>2022<span></p>
+      <img src="images/VCS.gif">
+    </a></div>
+    <div><a href="studybuds.html">
+      <p>Study Buds <span>2021<span></p>
+      <img src="images/studybuds.png">
+    </a></div>
+    <div><a href="projectunhappiness.html">
+      <p>ProjectUnhappiness <span>2020<span></p>
+      <img src="images/unhap.png">
+    </a></div>
+    <div><a href="etudiant.html">
+      <p>etudiant <span>2020<span></p>
+      <img src="images/etudiant.jpg">
+    </a></div>
+    <div><a href="luvsic.html">
+      <p>Luv(Sic) Part 4 <span>2020<span></p>
+      <img src="images/luvsic.jpg">
+    </a></div>
+    <div><a href="tactus.html">
+      <p>Tactus <span>2019<span></p>
+      <img src="images/tactus_logo.gif">
+    </a></div>
+    <div><a href="aenigma.html">
+      <p>Aenigma <span>2018<span></p>
+      <img src="images/aenigma.png">
+    </a></div>
+  </section>
+
+<script>
+  // Custom cursor text
+  var text = document.getElementById("view");
+  text.style.display = "none";
+
+  function changeText(event) {
+    document.getElementById("projects").style.cursor = 'none';
+    text.style.display = "block";
+    text.style.top = event.clientY + "px";
+    text.style.left = event.clientX + "px";
+  }
+  document.getElementById("projects").addEventListener('mousemove', changeText);
+
+  function normal(event) {
+    text.style.display = "none";
+  }
+  document.getElementById("projects").addEventListener('mouseleave', normal);
+</script>
+
+</body>
+</html>

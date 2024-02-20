@@ -1,14 +1,4 @@
 
-// Scrolling title
-
-  (function titleScroller(text) {
-    document.title = text;
-    setTimeout(function () {
-      titleScroller(text.substr(1) + text.substr(0, 1));
-    }, 400);
-  }("Antoinette's Website ... Coming soon ... "))
-
-
 // Clock
   
   function Time() {
@@ -138,5 +128,4 @@
   }
 
   window.onload = disorder();
-
 
