@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: "Futura";
-  src: url('http://hershey-noailles.luuse.io/output/Hershey-Noailles-Futura-Simplex-Regular/Hershey-Noailles-Futura-Simplex-Regular.woff');
+  src: url('Hershey-Noailles-Futura-Simplex-Regular.woff');
 }
 
 @font-face {
   font-family: "Times";
-  src: url('http://hershey-noailles.luuse.io/output/Hershey-Noailles-Times-Duplex-Italic-Light/Hershey-Noailles-Times-Duplex-Italic-Light.woff');
+  src: url('Hershey-Noailles-Times-Duplex-Italic-Light.woff');
 }
 
 :root {
