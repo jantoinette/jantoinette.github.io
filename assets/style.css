@@ -240,10 +240,6 @@ footer br {display: none;}
 	mix-blend-mode: multiply;
 }
 
-#projects h1 {
-	font-size: 1rem;
-}
-
 #projects div:hover img {
 	display: block;
 	padding-top: 4px;
@@ -275,6 +271,8 @@ footer br {display: none;}
 	position: absolute;
 	top: 50px;
 	font-family: var(--serif);
+	font-size: 1.5em;
+	font-weight: 700;
 }
 
 .details {
