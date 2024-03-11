@@ -234,15 +234,20 @@ footer br {display: none;}
 	cursor: none;
 }
 
-#projects img {
-	width: calc(100% - 30px);
+.preview {
 	display: none;
-	mix-blend-mode: multiply;
+	color: black;
+	line-height: 1.1;
 }
 
-#projects div:hover img {
-	display: block;
+#projects img {
+	width: calc(100% - 30px);
+	mix-blend-mode: multiply;
 	padding-top: 4px;
+}
+
+#projects div:hover .preview {
+	display: block;
 }
 
 #projects span {
