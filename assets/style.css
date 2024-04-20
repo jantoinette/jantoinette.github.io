@@ -207,6 +207,14 @@ footer br {display: none;}
 }
 .contact:hover span {display: block;}
 
+#projects > div{
+	margin-bottom: 2%;
+}
+
+#projects a {
+	cursor: none;
+}
+
 .content {
 	overflow: scroll;
 	width: 55%;
@@ -223,15 +231,10 @@ footer br {display: none;}
 .content div {
 	display: flex;
 	flex-flow: column nowrap;
-	padding-bottom: 2%;
 }
 
 .content div:last-child {
 	padding-bottom: 30px;
-}
-
-#projects a {
-	cursor: none;
 }
 
 .preview {
@@ -268,7 +271,7 @@ footer br {display: none;}
 	}
 
 	.content div {
-		padding-bottom: 8%;
+		margin-bottom: 8%;
 	}
 
 	.preview{
@@ -314,7 +317,7 @@ footer br {display: none;}
 }
 
 .project img {
-	padding-bottom: 2%;
+	margin-bottom: 2%;
 }
 
 @media screen and (max-width: 670px) {
@@ -326,4 +329,17 @@ footer br {display: none;}
 	}
 }
 
+
+#rapportgifs {
+	flex-flow: row nowrap;
+	width: 100%;
+	background: #f9f5ee;
+	padding: 40px 0;
+	justify-content: space-evenly;
+	margin-bottom: 2%;
+}
+
+#rapportgifs img {
+	width: 30%;
+}
 
