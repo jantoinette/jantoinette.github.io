@@ -140,7 +140,7 @@ footer br {display: none;}
 	.social {width: 100%;}
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
 	footer {
 		font-size: 5vw;
 		bottom: -11rem;
@@ -158,7 +158,6 @@ footer br {display: none;}
         padding-right: min(0vmin, env(safe-area-inset-right));
     }
 }
-
 
 
 /* --- CURSORS --- */
@@ -194,12 +193,16 @@ footer br {display: none;}
 
 @media screen and (max-width: 820px) {
 	.info {width: calc(100vw - 60px);}
+	.info p {width: 100%;}
 }
 
 .name a {
 	color: unset;
 }
-.name span {display: none;}
+.name span {
+	display: none;
+	background-color: white;
+}
 .name:hover span {display: block;}
 
 .contact span {
@@ -208,7 +211,7 @@ footer br {display: none;}
 }
 .contact:hover span {display: block;}
 
-#projects > div{
+#projects > div:not(:last-child){
 	margin-bottom: 2%;
 }
 
@@ -271,7 +274,7 @@ footer br {display: none;}
 	}
 
 	#projects {
-		padding: 60px 0;
+		margin: 150px 0;
 	}
 
 	#projects > div {
@@ -282,6 +285,12 @@ footer br {display: none;}
 		display: block;
 	}
 }
+
+#projects a > span:nth-child(2) {
+	color: black;
+}
+
+
 
 
 /* INNER PAGES --------- */
@@ -352,3 +361,126 @@ footer br {display: none;}
 	width: 30%;
 }
 
+
+
+
+/* other pages --------- */
+
+.page-title {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: var(--serif);
+	font-size: 5vw;
+}
+
+@media screen and (max-width: 540px) {
+	.page-title {
+		top: 110px;
+		font-size: 12vw;
+	}
+}
+
+
+
+.slideanim {
+    visibility:hidden;
+    visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {                  
+    visibility: visible;                  
+    animation: slide 1s;
+}
+.slideanim::after {
+    float:left; 
+    content: "";
+    display: table;
+    /*clear: both;*/
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(14%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+
+
+.title {
+	position: relative;
+	top: 30px;
+	font-family: var(--serif);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.gallery {
+	padding: 60px 0 30px 0;
+	position: relative;
+	width: 100%;
+}
+
+.photo {
+	position: relative;
+	padding-top: 3%;
+}
+
+.photo:first-child {
+	padding-top: 0;
+}
+
+.photo img {
+	max-height: 120vh;
+	max-width: 46vw;
+	padding-bottom: 4%;
+}
+
+@media (max-width:800px) {
+	.photo {
+		width: 100%;
+		display: block;
+	}
+	.photo img {
+		min-width: 100%;
+		display: block;
+		padding-left:0 !important; padding-right:0 !important;
+	}
+}
+
+.FL {float:left;}
+.FR {float:right;}
+#full img {width:100%;height:auto;}
+
+.horizontal-scroll {
+	display: flex;
+	flex: row nowrap;
+	gap: 20px;
+	position: relative;
+	top: 60px;
+	left: -30px;
+	padding: 0 30px;
+	height: 85%;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+#mani_story {
+	width: 100%;
+	height: 75vh;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 20px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding-bottom: 2%;
+}
+
+#mani_story video, #mani_story img {
+	display: block;
+	height: 100%;
+}

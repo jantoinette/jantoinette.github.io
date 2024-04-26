@@ -22,7 +22,17 @@
     <section class="intro">
       <div class="center link">
         <p>Welcome to my liminal space.</p>
-        <span style="font-family: var(--serif)"><a href="work.html"> See work → </a></span>
+        <div style="padding-top:1%;">
+          <label for="page" style="font-family:var(--serif)">Visit:</label>
+          <select name="page" id="page">
+            <option value="work">Design work</option>
+            <option value="photo">Photography</option>
+            <option value="side">Side quests</option>
+            <option value="music">Playlists</option>
+            <!-- <option value="site">About this site</option> -->
+          </select>
+          <button type="submit" onclick="gotopage()">→</button>
+        </div>
       </div>
     </section>
 
@@ -54,13 +64,34 @@
 
 <script src="assets/script.js"></script>
 <script>
+
   // Scrolling title
+
   (function titleScroller(text) {
     document.title = text;
     setTimeout(function () {
       titleScroller(text.substr(1) + text.substr(0, 1));
     }, 400);
-  }("● Welcome to Antoinette's Website "))
+  }("● Welcome to Antoinette's Website "));
+
+
+  // Go to page
+
+  function gotopage() {
+    var form = document.getElementById("page");
+    var page = form.options[form.selectedIndex].value;
+    var html = page + ".html";
+
+    if (page == "music") {
+      window.location = "https://open.spotify.com/user/netneeet";
+    } else {
+      var url = window.location.toString();
+      window.location = url.replace(/index.html/, html);
+    }
+
+    // window.location = "https://antoinettechow.com/" + html;
+  }
+
 </script>
 
 </body>

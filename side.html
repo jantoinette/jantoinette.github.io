@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K943JVQ707');
+  </script>
+  <title>Antoinette's other stuff</title>
+</head>
+
+<body class="work">
+  <h1 class="page-title">Side quests</h1>
+  <section class="info">
+    <p class="name"><a href="index.html">Antoinette Chow</a>
+      <span style="font-size:0.75rem;padding:4px 0;line-height:1.1;"> is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.</span>
+      <span><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></span>
+    </p>
+    <div class="contact">
+      <span>
+        <p>email <a href="mailto:chowantoinette@gmail.com?subject=hello!!">chowantoinette@gmail.com</a></p>
+        <p>insta <a href="https://instagram.com/antoinette.chow" target="_blank">@antoinette.chow</a></p>
+      </span>
+      <p>contact</p>
+    </div>
+  </section>
+
+  <section id="projects" class="content">
+    <span id="view">view →</span>
+    <div><a href="side/manifesto.html">
+      <p>Manifesto <span>2021<span></p>
+        <span>Student project</span>
+        <img src="side/images/manifesto_process.png">
+    </a></div>
+    <div><a href="side/SAD.html">
+      <p>Subtle Asian Dating <span>2019<span></p>
+        <span>Facebook post</span>
+        <img src="side/images/SAD.png">
+    </a></div>
+    <div><a href="side/fattynettie.html">
+      <p>Fatty Nettie <span>2019<span></p>
+        <span>Instagram stories</span>
+        <img src="side/images/food/0.png">
+    </a></div>
+  </section>
+
+<script>
+  // Custom cursor text
+  var text = document.getElementById("view");
+  text.style.display = "none";
+
+  function changeText(event) {
+    document.getElementById("projects").style.cursor = 'none';
+    text.style.display = "block";
+    text.style.top = event.clientY + "px";
+    text.style.left = event.clientX + "px";
+  }
+  document.getElementById("projects").addEventListener('mousemove', changeText);
+
+  function normal(event) {
+    text.style.display = "none";
+  }
+  document.getElementById("projects").addEventListener('mouseleave', normal);
+</script>
+
+</body>
+</html>
