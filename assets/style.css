@@ -211,7 +211,7 @@ footer br {display: none;}
 }
 .contact:hover span {display: block;}
 
-#projects > div:not(:last-child){
+#projects > div {
 	margin-bottom: 2%;
 }
 
