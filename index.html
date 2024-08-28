@@ -80,12 +80,11 @@
   function gotopage() {
     var form = document.getElementById("page");
     var page = form.options[form.selectedIndex].value;
-    var html = page + ".html";
 
     if (page == "music") {
       window.location = "https://open.spotify.com/user/netneeet";
     } else {
-      window.location = "https://antoinettechow.com/" + html;
+      window.location = "https://antoinettechow.com/" + page;
     }
   }
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/manifont-grotesk" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <section id="home" class="plus" style="display:block">
+    <canvas id="canvas"></canvas>
+    <section class="notebook" onclick="show(ex)">
+      <p>The plain notebook has no rules.</p>
+    </section>
+
+    <section id="explore" class="wrapper" onclick="show(dis)">
+      <p>Here now</p>
+      <p>(and there sometimes),</p>
+      <p>my compulsion to always be exploring.</p>
+    </section>
+
+    <section id="disorderly" class="wrapper" onmousemove="disorder()" onclick="show(unf)">
+      <p id="gather">Gathering pieces,</p>
+      <p id="order">Ordering the disorderly.</p>
+      <p id="shaping">shaping the shapeless.</p>
+    </section>
+
+    <section id="unfolds" class="wrapper down" onclick="closeAll()">
+      <p class="alias" onclick="wip()">Intangibly, it unfolds itself.</p>
+    </section>
+
+  </section>
+
+  <section id="process" class="alias">
+  <div class="process crosshair" lang="en">
+    <div><p>It sounds like I have a set approach, but a lot of times I feel like it’s disorganized and I know I have a problem with not being efficient. <span>I gather things and slowly put pieces together</span>, trying to get hold of that fleeting idea I envision (or not) until it slowly emerges and reveals itself.</p></div>
+
+    <div><p>The immediate answer I wanted to "Who do you work for?" was “me”, and I think it is true, too. It is the perfectionist in me, the ego who wants to be proud of my own creation, maybe knowing that not many else would be or could understand.</p></div>
+
+    <div><p>There's an inner part of me who wants to tap into creative expressions, the abstracted communication, the storytelling through other means that needs attention and consideration in order to be understood, and then appreciated.</p></div>
+
+    <div><p>Yes. Always. (To reasearch). Because I live in uncertainty and need some grounding. I need reasoning to back me up, to make sense of things.</p></div>
+
+    <div><p>Reading and seeing; learning and thinking; expanding and concentrating. In–between lateral thinking and research, I am freed and grounded as I <span>order the disorderly</span>. I gather things and slowly put pieces together, trying to make out that <span>shapeless idea in my head, until it slowly emerges and unfolds itself</span>.</p></div>
+
+    <div><p>Maybe it’s being careful, maybe it’s procrastination — undecidedly, my approach is unhurried. Tangents after tangents, then everything being circled in again. There is a part within me that is avid for creative expressions and abstracted communication, storytelling through other means that requires attention and consideration in order to be understood and appreciated. <span>I am here now (and there sometimes), as part of my desire to always be inspired by exploration</span>.</p></div>
+
+    <div><p><span>The plain notebook has no rules</span>. Pages filled with scribbles and sketches, these shapes try to simulate inherently shapeless thoughts. They may be disorderly and expansive, seemingly unrelated; but they are elemental to the formation. Deliberately and selectively, these shapes are composed to manifest the intangible into the final creation.</p></div>
+  </div>
+  </section>
+
+  <footer>
+    <div class="footer"><a href="https://antoinettechow.com/" class="context">Antoinette Chow</a></div>
+    <div id="time"> </div>
+  </footer>
+
+<script src="assets/script.js"></script>
+
+</body>
+</html>

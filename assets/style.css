@@ -211,7 +211,7 @@ footer br {display: none;}
 }
 .contact:hover span {display: block;}
 
-#projects > div:not(:last-child){
+#projects > div {
 	margin-bottom: 2%;
 }
 
@@ -469,7 +469,7 @@ footer br {display: none;}
 	overflow-y: hidden;
 }
 
-#mani_story {
+#vert_img {
 	width: 100%;
 	height: 75vh;
 	display: flex;
@@ -480,7 +480,7 @@ footer br {display: none;}
 	padding-bottom: 2%;
 }
 
-#mani_story video, #mani_story img {
+#vert_img video, #vert_img img {
 	display: block;
 	height: 100%;
 }
