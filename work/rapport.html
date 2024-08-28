@@ -19,23 +19,54 @@
   <title>Rapport, branding</title>
 </head>
 
-<body class="work">
-  <section class="info">
-    <p><a href="../work.html"><<span> back</span></a></p>
+<body>
+  <div class="container">
+  <section class="nav">
+    <div><a href="../work/">Antoinette Chow</a></div>
+
+    <div id="menu-btn" style="text-align:right">menu</div>
+
+    <div id="menu-container">
+    <div>
+      <p class="info"> is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.</p>
+      <p><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></p>
+    </div>
+
+    <div><ul>
+      <li>Ask June <span>WIP!</span></li>
+      <li class="current"><a href="rapport.html">Rapport <span>2024</span></a></li>
+      <li><a href="themorningafter.html">The Morning After <span>2024</span></a></li>
+      <li><a href="mb_bank.html">MB Bank <span>2023</span></a></li>
+      <li><a href="orientation.html">orient-ation <span>2022</span></a></li>
+      <li><a href="vcs_fieldnotes.html">Visual Cultural Seminar – Field Notes <span>2022</span></a></li>
+      <li><a href="studybuds.html">Study Buds <span>2021</span></a></li>
+      <li><a href="vantage.html">Vantage <span>2021</span></a></li>
+      <li><a href="projectunhappiness.html">ProjectUnhappiness <span>2020</span></a></li>
+      <li><a href="etudiant.html">etudiant <span>2020</span></a></li>
+      <li><a href="luvsic.html">Luv(Sic) Part 4 <span>2020</span></a></li>
+      <li><a href="tactus.html">Tactus <span>2019</span></a></li>
+      <li><a href="aenigma.html">Aenigma <span>2018</span></a></li>
+    </ul></div>
+    </div>
+  </section>
+  <div id="menu-line"></div>
+
+  <section id="content">
+  <div class="proj-info">
     <h2>Rapport AI Medical</h2>
     <div class="details">
-      <div><h4><a href="https://rapportaimedical.com/" target="_blank">Visit website</a></h4></div>
+      <div><h4><a href="https://rapportaimedical.com/" target="_blank">Visit website ↗</a></h4></div>
       <div><h4>Year</h4><p>2024</p></div>
       <div><h4>Project</h4><p>Start up branding + Website</p></div>
       <div><h4>Role</h4><p>Designer, Front-end Dev</a></p></div>
       <div><h4>Tool(s)</h4><p>Adobe Ai, Ps, Ae, Figma, HTML/CSS/JS</p></div>
     </div>
-  </section>
+    <p class="desc">Recognizing the issues of a cumbersome and stagnant healthcare system, the founders of Rapport AI Medical created this B2B healthcare technology solutions platform with a mission to improve the efficiency of the industry for both doctors and patients. Our brand system reflects our identity as an intellectual caregiver; being soft and confident, simple and smart.</p>
+  </div>
 
-  <section class="project content">
+  <div class="project">
     <div>
       <img src="images/rapport_tagline.png" alt="Logo with tagline">
-      <p class="desc">Recognizing the issues of a cumbersome and stagnant healthcare system, the founders of Rapport AI Medical created this B2B healthcare technology solutions platform with a mission to improve the efficiency of the industry for both doctors and patients. Our brand system reflects our identity as an intellectual caregiver; being soft and confident, simple and smart.</p>
     </div>
     <div>
       <img src="images/rapport_stationery.png" alt="Stationery set with letterhead, envelope, and business card">
@@ -49,21 +80,38 @@
     <div>
       <img src="images/rapport_favicon.png" alt="Close up of favicon on Google Chrome window browser">
       <img src="images/rapport_landing.png" alt="Laptop on desk next to coffee, showing landing page of Rapport AI Medical's website">
-      <p>Launch page website</p>
+      <p>Company website</p>
     </div>
-    <div>
-      <img src="images/rapport_workflow.png" alt="Set of icons with text">
-      <div id="rapportgifs">
-        <img src="images/rapport_search.gif" alt="Animated icon of document search">
-        <img src="images/rapport_match.gif" alt="Animated icon of matching doctors with patients">
-        <img src="images/rapport_admin.gif" alt="Animated icon of consolidating administrative work on Rapport AI Medical's platform">
-      </div>
-      <p>Expressive Iconography</p>
-    </div>
-    <div>
-      <img src="images/rapport.gif" style="margin:0" alt="Animated visuals of logo, with smiley face forming the logomark R, then revealing full business name">
-    </div>
+  </div>
   </section>
+
+  </div> 
+
+  <footer>
+    <div style="font-size:1rem;width:50%">Thank you for being here.</div>
+    <div><a href="mailto:chowantoinette@gmail.com"><span class="email"></span></a></div>
+    <div class="footer-info">Antoinette Chow is a designer between Hong Kong and New York. <br>She is currently seeking full-time opportunities in New York.</div>
+    <div class="Cyear"><span style="font-family: var(--serif)">©</span> 2024</div>
+  </footer>
+
+  <script>
+
+  // Toggle menu display
+    const btn = document.getElementById("menu-btn");
+    const menuContainer = document.getElementById("menu-container");
+    const line = document.getElementById("menu-line");
+
+    btn.addEventListener("click", function() {
+      menuContainer.classList.toggle("show");
+      if (menuContainer.classList.contains("show")) {
+        line.style.display = "block";
+      } else {
+        line.style.display = "none";
+      }
+    });
+  
+  </script>
+
 
 </body>
 </html>
