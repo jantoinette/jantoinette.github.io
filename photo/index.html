@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/reset.css">
+  <link rel="stylesheet" type="text/css" href="../assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K943JVQ707');
+  </script>
+  <title>Antoinette's photography</title>
+</head>
+
+<body class="work">
+  <h1 class="page-title">Photography</h1>
+  <section class="name">
+    <p><a href="../index.html">Antoinette Chow</a>
+      <span class="info"> is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.</span>
+      <span><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></span>
+    </p>
+  </section>
+  <section class="contact">
+    <span>
+      <p>email <a href="mailto:chowantoinette@gmail.com?subject=hello!!">chowantoinette@gmail.com</a></p>
+      <p>insta <a href="https://instagram.com/antoinette.chow" target="_blank">@antoinette.chow</a></p>
+    </span>
+    <p>contact</p>
+  </section>
+
+  <section id="projects">
+    <span id="view">view →</span>
+
+    <ul class="other-img">
+
+      <li>
+        <a href="moments.html">Moments <span>ongoing<span>
+        <p>Shot on Leica CL, Yashica 124, Contax TVS, or disposable cameras</p>
+        <img src="images/moments.jpg" alt=""></a>
+      </li>
+
+      <li>
+        <a href="hd003.html">003 Helping Hand <span>2021</span>
+        <p>Hopes & Dreams Club</p>
+        <img src="images/09060025.jpg"></a>
+      </li>
+
+      <li>
+        <a href="frame.html">Frame <span>2020</span>
+        <p>Photo zine</p>
+        <img src="images/frame_0.jpg"></a>
+      </li>
+
+      <li>
+        <a href="home.html">Home <span>2020</span>
+        <p>Poster design</p>
+        <img src="images/home.jpg"></a>
+      </li>
+
+      <li>
+        <a href="places.html">Places <span>2018</span>
+        <p>Shot on Leica CL, and disposable cameras</p>
+        <img src="images/places.jpg"></a>
+      </li>
+
+    </ul>
+  </section>
+
+<script>
+  // Custom cursor text
+  var text = document.getElementById("view");
+  text.style.display = "none";
+
+  function changeText(event) {
+    document.getElementById("projects").style.cursor = 'none';
+    text.style.display = "block";
+    text.style.top = event.clientY + "px";
+    text.style.left = event.clientX + "px";
+  }
+  document.getElementById("projects").addEventListener('mousemove', changeText);
+
+  function normal(event) {
+    text.style.display = "none";
+  }
+  document.getElementById("projects").addEventListener('mouseleave', normal);
+</script>
+
+</body>
+</html>
