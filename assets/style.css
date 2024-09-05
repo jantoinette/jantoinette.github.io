@@ -39,10 +39,14 @@ a {
 }
 
 a:hover {
-	background-color: rgba(255,192,203,0.75);
+	background-color: pink;
 }
 
 .link a {color: gray;}
+
+.hidden {
+	display: none;
+}
 
 ::selection {background: pink;}
 ::-moz-selection {background: pink;}
@@ -238,6 +242,30 @@ footer div {
 	cursor: none;
 }
 
+#categories {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 28px;
+	width: calc(50% - 30px);
+}
+
+.category {
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+	padding: 0 20px;
+	text-transform: uppercase;
+	cursor: context-menu;
+}
+
+.category.active {
+	border: 1px outset pink;
+	padding: 4px 20px;
+	background: white;
+}
+
 li:last-child {
 	margin-bottom: 30px;
 }
@@ -246,13 +274,18 @@ li {
 	margin-bottom: 3%;
 }
 
+#proj-list {
+	margin-top: 40px;
+}
+
 #proj-list li:hover, #menu-container .current {
-	background-color: rgba(255,192,203,0.75);
+	background-color: pink;
 }
 
 #view {
 	display: none;
-	position: fixed;
+	position: absolute;
+    pointer-events: none;
 	font-family: var(--serif);
 	z-index: -1;
 }
@@ -265,6 +298,13 @@ li span {
 li p {
 	font-size: 0.75rem;
 	margin-top: 4px;
+}
+
+.blink {transition: opacity 0.3s;}
+li:hover .blink {animation: blink 1s infinite;}
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
 }
 
 #proj-list img {
