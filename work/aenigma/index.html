@@ -19,92 +19,57 @@
   <title>Ænigma, corporate rebrand</title>
 </head>
 
-<div class="container">
-  <section class="nav">
-    <div><a href="../">Antoinette Chow</a></div>
+<body>
+  <div class="container">
+    <section id="nav"></section>
+    <div id="menu-line"></div>
 
-    <div id="menu-btn" style="text-align:right">menu</div>
+    <section id="content">
+      <div id="content-head">
+        <div id="proj-info"></div>
+      </div>
 
-    <div id="menu-container">
-    <div>
-      <p class="info"> is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.</p>
-      <p><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></p>
-    </div>
-
-    <div><ul>
-      <li>Ask June <span>WIP!</span></li>
-      <li><a href="../rapport">Rapport <span>2024</span></a></li>
-      <li><a href="../themorningafter">The Morning After <span>2024</span></a></li>
-      <li><a href="../mb_bank">MB Bank <span>2023</span></a></li>
-      <li><a href="../orientation">orient-ation <span>2022</span></a></li>
-      <li><a href="../vcs_fieldnotes">Visual Cultural Seminar – Field Notes <span>2022</span></a></li>
-      <li><a href="../studybuds">Study Buds <span>2021</span></a></li>
-      <li><a href="../vantage">Vantage <span>2021</span></a></li>
-      <li><a href="../projectunhappiness">ProjectUnhappiness <span>2020</span></a></li>
-      <li><a href="../etudiant">etudiant <span>2020</span></a></li>
-      <li><a href="../luvsic">Luv(Sic) Part 4 <span>2020</span></a></li>
-      <li><a href="../tactus">Tactus <span>2019</span></a></li>
-      <li class="current"><a href="../aenigma">Aenigma <span>2018</span></a></li>
-    </ul></div>
-    </div>
-  </section>
-  <div id="menu-line"></div>
-
-  <section id="content">
-  <div class="proj-info">
-    <h2>Ænigma</h2>
-    <div class="content-info details">
-      <div><h4>Year</h4><p>2018</p></div>
-      <div><h4>Project</h4><p>Corporate rebrand</p></div>
-      <div><h4>Role</h4><p>Student @ Shillington School of Graphic Design</p></div>
-      <div><h4>Tool(s)</h4><p>Adobe Ps, Ai</p></div>
-    </div>
-    <p class="content-info desc">The logo design visually represents “look again”, the new concept of the rebranded Spy Museum Berlin, now named as Aenigma. Much like being a spy and having to scrutinize for clues, the various ways of reading letters A and E incites curiosity, and playfully invites people to visit and revisit.</p>
-  </div>
-
-  <div class="project">
-    <div>
-      <img src="ae_sign.png">
-    </div>
-    <div>
-      <img src="ae_ticket.png">
-      <img src="ae_wayfind.png">
-      <img src="ae_poster.png">
-      <p>Entry ticket, Wayfinding Signage, and Poster</p>
-    </div>
-    <div>
-      <img src="ae_card.png">
-      <img src="ae_bag.png">
-      <p>Playing Cards, and Gift Shop Bag</p>
-    </div>
-  </div>
-  </section>
-
+      <div class="project">
+        <div>
+          <img src="ae_sign.png">
+        </div>
+        <div>
+          <img src="ae_ticket.png">
+          <img src="ae_wayfind.png">
+          <img src="ae_poster.png">
+          <p>Entry ticket, Wayfinding Signage, and Poster</p>
+        </div>
+        <div>
+          <img src="ae_card.png">
+          <img src="ae_bag.png">
+          <p>Playing Cards, and Gift Shop Bag</p>
+        </div>
+      </div>
+    </section>
   </div> 
 
-  <footer>
-    <div style="font-size:1rem;width:50%">Thank you for being here.</div>
-    <div><a href="mailto:chowantoinette@gmail.com"><span class="email"></span></a></div>
-    <div class="footer-info">Antoinette Chow is a designer between Hong Kong and New York. <br>She is currently seeking full-time opportunities in New York.</div>
-    <div class="Cyear"><span style="font-family: var(--serif)">©</span> 2024</div>
-  </footer>
+  <footer id="footer"></footer>
 
+  <script id="project-info" type="application/json">
+    {
+      "textContent": [
+        "2018",
+        "Corporate rebrand",
+        "Student @ Shillington School of Graphic Design",
+        "Adobe Ps, Ai"
+      ]
+    }
+  </script>
+
+  <script src="../../assets/templates.js" defer></script>
   <script>
+    const projectName = 'Ænigma';
 
-  // Toggle menu display
-    const btn = document.getElementById("menu-btn");
-    const menuContainer = document.getElementById("menu-container");
-    const line = document.getElementById("menu-line");
-
-    btn.addEventListener("click", function() {
-      menuContainer.classList.toggle("show");
-      if (menuContainer.classList.contains("show")) {
-        line.style.display = "block";
-      } else {
-        line.style.display = "none";
-      }
+    document.addEventListener('DOMContentLoaded', function() {
+      const contentHead = document.getElementById("content-head");
+      const newProject = projTemplate(projectName, '', '', 'The logo design visually represents “look again”, the new concept of the rebranded Spy Museum Berlin, now named as Aenigma. Much like being a spy and having to scrutinize for clues, the various ways of reading letters A and E incites curiosity, and playfully invites people to visit and revisit.');
+      contentHead.appendChild(newProject);
     });
-  
   </script>
 
 </body>

@@ -19,44 +19,68 @@
   <title>Ask June, branding</title>
 </head>
 
-<body class="work">
-  <section class="info">
-    <p><a href="../"><<span> back</span></a></p>
-    <h2>Ask June</h2>
-    <div class="details">
-      <div><h4>Year</h4><p>2024</p></div>
-      <div><h4>Project</h4><p>Digital app brand design</p></div>
-      <div><h4>Role</h4><p>Design Lead</a></p></div>
-      <div><h4>Tool(s)</h4><p>Adobe Ai, Id, Ps, Figma</p></div>
-    </div>
-  </section>
+<body>
+  <div class="container">
+    <section id="nav"></section>
+    <div id="menu-line"></div>
 
-  <section class="project content">
-    <div>
-      <img src="askjune_iphone.png">
-      <p class="desc">Ask June is an AI chatbot for the general public who have medical enquiries and needs, powered by Rapport AI Medical. It streamlines for users the process of triaging, booking, follow-up and communication with medical professionals all within the mobile system and in real time. Having identified the need for a B2C brand separate from its B2B masterbrand, we created a friendly, spirited, human brand system that follows the positioning of "Your Personal Trusted Guide".</p>
-    </div>
-    <div>
-      <img src="askjune.gif" style="width:103%;">
-      <img src="askjune_appicon.png">
-      <p></p>
-    </div>
-    <div>
-      <img src="askjune_TOV.png">
-      <img src="askjune_logoguideline.png">
-      <img src="askjune_colorcontrast.png">
-      <img src="askjune_typography.png">
-      <p></p>
-    </div>
-    <div>
-      <img src="askjune_icons.png">
-      <p>Custom functional icons</p>
-    </div>
-    <div>
-      <img src="askjune_tote.png">
-      <img src="askjune_folder.png">
-    </div>
-  </section>
+    <section id="content">
+      <div id="content-head">
+        <div id="proj-info"></div>
+      </div>
+
+      <div class="project">
+        <div>
+          <img src="askjune_iphone.png">
+          <p class="desc"></p>
+        </div>
+        <div>
+          <img src="askjune.gif" style="width:103%;">
+          <img src="askjune_appicon.png">
+          <p></p>
+        </div>
+        <div>
+          <img src="askjune_TOV.png">
+          <img src="askjune_logoguideline.png">
+          <img src="askjune_colorcontrast.png">
+          <img src="askjune_typography.png">
+          <p></p>
+        </div>
+        <div>
+          <img src="askjune_icons.png">
+          <p>Custom functional icons</p>
+        </div>
+        <div>
+          <img src="askjune_tote.png">
+          <img src="askjune_folder.png">
+        </div>
+      </div>
+    </section>
+  </div> 
+
+  <footer id="footer"></footer>
+
+  <script id="project-info" type="application/json">
+    {
+      "textContent": [
+        "2024",
+        "Digital app brand design",
+        "Design Lead",
+        "Adobe Ai, Id, Ps, Figma"
+      ]
+    }
+  </script>
+
+  <script src="../../assets/templates.js" defer></script>
+  <script>
+    const projectName = 'Ask June';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const contentHead = document.getElementById("content-head");
+      const newProject = projTemplate(projectName, '', '', 'Ask June is an AI chatbot for the general public who have medical enquiries and needs, powered by Rapport AI Medical. It streamlines for users the process of triaging, booking, follow-up and communication with medical professionals all within the mobile system and in real time. Having identified the need for a B2C brand separate from its B2B masterbrand, we created a friendly, spirited, human brand system that follows the positioning of "Your Personal Trusted Guide".');
+      contentHead.appendChild(newProject);
+    });
+  </script>
 
 </body>
 </html>

@@ -21,99 +21,62 @@
 
 <body>
   <div class="container">
-  <section class="nav">
-    <div><a href="../">Antoinette Chow</a></div>
+    <section id="nav"></section>
+    <div id="menu-line"></div>
 
-    <div id="menu-btn" style="text-align:right">menu</div>
+    <section id="content">
+      <div id="content-head">
+        <div id="proj-info"></div>
+      </div>
 
-    <div id="menu-container">
-    <div>
-      <p class="info"> is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.</p>
-      <p><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></p>
-    </div>
-
-    <div><ul>
-      <li>Ask June <span>WIP!</span></li>
-      <li><a href="../rapport">Rapport <span>2024</span></a></li>
-      <li><a href="../themorningafter">The Morning After <span>2024</span></a></li>
-      <li><a href="../mb_bank">MB Bank <span>2023</span></a></li>
-      <li><a href="../orientation">orient-ation <span>2022</span></a></li>
-      <li><a href="../vcs_fieldnotes">Visual Cultural Seminar – Field Notes <span>2022</span></a></li>
-      <li><a href="../studybuds">Study Buds <span>2021</span></a></li>
-      <li><a href="../vantage">Vantage <span>2021</span></a></li>
-      <li class="current"><a href="../projectunhappiness">ProjectUnhappiness <span>2020</span></a></li>
-      <li><a href="../etudiant">etudiant <span>2020</span></a></li>
-      <li><a href="../luvsic">Luv(Sic) Part 4 <span>2020</span></a></li>
-      <li><a href="../tactus">Tactus <span>2019</span></a></li>
-      <li><a href="../aenigma">Aenigma <span>2018</span></a></li>
-    </ul></div>
-    </div>
-  </section>
-  <div id="menu-line"></div>
-
-  <section id="content">
-  <div class="proj-info">
-    <h2>Project Unhappiness</h2>
-    <div class="content-info details">
-      <div><h4>Year</h4><p>2018-2020</p></div>
-      <div><h4>Project</h4><p>Social Campaign Branding</p></div>
-      <div><h4>Role</h4><p>Student @ Shillington School of Graphic Design</p></div>
-      <div><h4>Tool(s)</h4><p>Adobe Ps, Ai, Spark AR</p></div>
-    </div>
-    <p class="content-info desc">Social media is often oversaturated with happy posts. This hypothetical campaign is a response to the unhealthy obsession with positivity in today's society. Playing with the idea that light shines the brightest in dark, the visual language advocates the importance of darkness to bring out colors.</p>
-  </div>
-
-  <div class="project">
-    <div>
-      <img src="unhap_poster.jpg">
-    </div>
-    <div>
-      <img src="unhap_calendar.jpg">
-      <img src="unhap_glowsticks.jpg">
-      <img src="unhap_notebooks.jpg">
-      <p>Products for campaign event</p>
-    </div>
-    <div>
-      <img src="unhap_ig.png">
-      <p>Instagram filter</p>
-    </div>
-    <div>
-      <img src="unhap_web.png">
-      <p>Website landing page</p>
-    </div>
-    <div>
-      <img src="unhap_ty.gif">
-    </div>
-  </div>
-  </section>
-
+      <div class="project">
+        <div>
+          <img src="unhap_poster.jpg">
+        </div>
+        <div>
+          <img src="unhap_calendar.jpg">
+          <img src="unhap_glowsticks.jpg">
+          <img src="unhap_notebooks.jpg">
+          <p>Products for campaign event</p>
+        </div>
+        <div>
+          <img src="unhap_ig.png">
+          <p>Instagram filter</p>
+        </div>
+        <div>
+          <img src="unhap_web.png">
+          <p>Website – landing page</p>
+        </div>
+        <div>
+          <img src="unhap_ty.gif">
+        </div>
+      </div>
+    </section>
   </div> 
 
-  <footer>
-    <div style="font-size:1rem;width:50%">Thank you for being here.</div>
-    <div><a href="mailto:chowantoinette@gmail.com"><span class="email"></span></a></div>
-    <div class="footer-info">Antoinette Chow is a designer between Hong Kong and New York. <br>She is currently seeking full-time opportunities in New York.</div>
-    <div class="Cyear"><span style="font-family: var(--serif)">©</span> 2024</div>
-  </footer>
+  <footer id="footer"></footer>
 
-  <script>
-
-  // Toggle menu display
-    const btn = document.getElementById("menu-btn");
-    const menuContainer = document.getElementById("menu-container");
-    const line = document.getElementById("menu-line");
-
-    btn.addEventListener("click", function() {
-      menuContainer.classList.toggle("show");
-      if (menuContainer.classList.contains("show")) {
-        line.style.display = "block";
-      } else {
-        line.style.display = "none";
-      }
-    });
-  
+  <script id="project-info" type="application/json">
+    {
+      "textContent": [
+        "2020",
+        "Social Campaign Branding",
+        "Student @ Shillington School of Graphic Design",
+        "Adobe Ps, Ai, Spark AR"
+      ]
+    }
   </script>
 
+  <script src="../../assets/templates.js" defer></script>
+  <script>
+    const projectName = 'Project Unhappiness';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const contentHead = document.getElementById("content-head");
+      const newProject = projTemplate(projectName, '', '', 'Social media is often oversaturated with happy posts. This hypothetical campaign is a response to the unhealthy obsession with positivity in today\'s society. Playing with the idea that light shines the brightest in dark, the visual language advocates the importance of darkness to bring out colors.');
+      contentHead.appendChild(newProject);
+    });
+  </script>
 
 </body>
 </html>
