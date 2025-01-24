@@ -46,7 +46,9 @@
       const menuList = document.createElement('ul');
 
         const menuItems = [
-          { link: "", name: "Ask June", date: "WIP!"},
+          { link: "", name: "Zentitude", date: "WIP!"},
+          { link: "", name: "Sky Nine Social Club", date: "WIP!"},
+          { link: "askjune", name: "Ask June", date: "2024"},
           { link: "rapport", name: "Rapport AI Medical", date: "2024"},
           { link: "themorningafter", name: "The Morning After", date: "2024"},
           { link: "mb_bank", name: "MB Bank", date: "2023"},
@@ -78,6 +80,10 @@
           const pageName = document.createTextNode(name);
           const pubDate = document.createElement ('span');
           pubDate.textContent = " " + date;
+
+          if (date === "WIP!") {
+            pubDate.className = "blink";
+          }
 
           pageLink.appendChild(pageName);
           pageLink.appendChild(pubDate);
@@ -205,7 +211,7 @@
 
       const year = document.createElement('div');
       year.className = 'Cyear';
-      year.innerHTML = "<span>©</span> 2024";
+      year.innerHTML = "<span>©</span> 2025";
 
       const footerContainer = document.getElementById("footer");
 

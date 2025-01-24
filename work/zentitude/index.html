@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
+  <link rel="stylesheet" href="../../assets/reset.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K943JVQ707');
+  </script>
+  <title>Zentitude, retail branding</title>
+</head>
+
+<body>
+  <div class="container">
+    <section id="nav"></section>
+    <div id="menu-line"></div>
+
+    <section id="content">
+      <div id="content-head">
+        <div id="proj-info"></div>
+      </div>
+
+      <div class="project">
+        <div>
+          <img src=".png" alt="">
+          <p>desc</p>
+        </div>
+      </div>
+    </section>
+  </div> 
+
+  <footer id="footer"></footer>
+
+  <script id="project-info" type="application/json">
+    {
+      "textContent": [
+        "2025",
+        "Retail Branding",
+        "Designer",
+        "Adobe Ps, Ai"
+      ]
+    }
+  </script>
+
+  <script src="../../assets/templates.js" defer></script>
+  <script>
+    const projectName = 'Zentitude';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const contentHead = document.getElementById("content-head");
+      const newProject = projTemplate(projectName, '', '', 'zentitude branding project description');
+      contentHead.appendChild(newProject);
+    });
+  </script>
+
+</body>
+</html>
