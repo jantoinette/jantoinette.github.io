@@ -3,8 +3,7 @@
 
 <head>
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.png">
-  <link rel="stylesheet" href="../assets/reset.css">
-  <link rel="stylesheet" type="text/css" href="../assets/style.css">
+  <link rel="stylesheet" type="text/css" href="../src/styles/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
@@ -21,12 +20,7 @@
 
 <body class="work">
   <h1 class="page-title">Photography</h1>
-  <section class="name">
-    <p><a href="../">Antoinette Chow</a>
-      <span class="info"> is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.</span>
-      <span><a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a></span>
-    </p>
-  </section>
+  <section id="name"></section>
   <section class="contact">
     <span>
       <p>email <a href="mailto:chowantoinette@gmail.com?subject=hello!!">chowantoinette@gmail.com</a></p>
@@ -35,10 +29,10 @@
     <p>contact</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="other-pages">
     <span id="view">view →</span>
 
-    <ul class="other-img">
+    <ul id="other-projects" class="other-img">
 
       <li>
         <a href="moments">Moments <span>ongoing<span>
@@ -73,23 +67,12 @@
     </ul>
   </section>
 
+<script src="../src/scripts/script.js"></script>
 <script>
-  // Custom cursor text
-  var text = document.getElementById("view");
-  text.style.display = "none";
 
-  function changeText(event) {
-    document.getElementById("projects").style.cursor = 'none';
-    text.style.display = "block";
-    text.style.top = event.clientY + "px";
-    text.style.left = event.clientX + "px";
-  }
-  document.getElementById("projects").addEventListener('mousemove', changeText);
+  customCursor();
+  aboutMe();
 
-  function normal(event) {
-    text.style.display = "none";
-  }
-  document.getElementById("projects").addEventListener('mouseleave', normal);
 </script>
 
 </body>

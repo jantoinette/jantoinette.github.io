@@ -1,0 +1,196 @@
+/* --- WORK --- */
+
+.work {
+  padding: 0 30px;
+  width: calc(100vw - 60px);
+  height: calc(100vh - 30px);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+/* NAME + CONTACT */
+
+#who {
+  position: relative;
+  display: inline-block;
+  color: unset;
+
+  &::after {
+    content: " ?";
+    display: none;
+  }
+
+  &:hover::after {
+    display: inline;
+  }
+}
+
+#name {
+  width: 50%;
+  margin-top: 30px;
+
+  span {
+    display: none;
+  }
+
+  p:hover span {
+    display: block;
+  }
+}
+
+.info {
+  font-size: 0.75rem;
+  padding: 4px 0;
+  line-height: 1.1;
+}
+
+.contact {
+  span {
+    display: none;
+    padding-bottom: 12px;
+  }
+
+  &:hover span {
+    display: block;
+  }
+}
+
+/* --- PROJECTS --- */
+
+#projects {
+  padding: 30px 0;
+  min-height: calc(100vh - 30px);
+  width: 50%;
+  overflow: auto;
+
+  a {
+    cursor: none;
+  }
+}
+
+#categories {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 28px;
+  width: calc(50% - 30px);
+}
+
+.category {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 0 17px;
+  text-transform: uppercase;
+  cursor: context-menu;
+
+  &.active {
+    border: 1px outset pink;
+    padding: 4px 20px;
+    background: white;
+  }
+}
+
+#proj-list {
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  li:hover, 
+  #menu-container .current {
+    background-color: pink;
+  }
+
+  a:last-child {
+    margin-bottom: 30px;
+  }
+
+  img {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 70%;
+    max-height: 80%;
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+}
+
+#menu-container .disabled {
+  pointer-events: none;
+}
+
+#view {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  font-family: var(--serif);
+  z-index: -1;
+  color: white;
+  mix-blend-mode: exclusion;
+}
+
+.blink {
+  transition: opacity 0.3s;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}
+
+li:hover .blink {
+    animation: blink 1s infinite;
+  }
+
+/* --- responsiveness --- */
+
+@media screen and (max-width: 670px), (max-width: 1024px) and (min-height: 1024px) {
+  .work {
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 30px;
+    height: auto;
+    overflow-y: scroll;
+  }
+
+  #name {
+    width: auto;
+    margin-top: 42px;
+  }
+
+  .contact {
+    order: 3;
+  }
+
+  #projects {
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    order: 2;
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #proj-list img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    padding: 6px 0 30px 0;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    transform: none;
+  }
+
+  #categories {
+    width: calc(100% - 60px);
+  }
+}

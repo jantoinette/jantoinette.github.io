@@ -3,7 +3,7 @@
 
 <head>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
@@ -29,8 +29,8 @@
             <option value="photo">◘ – Photography</option>
             <option value="side">✦ – Side quests</option>
             <option value="music">♫ – Spotify Playlists</option>
-            <option value="about">ⓘ – About this site</option>
-            <!-- <option value="site">About this site</option> -->
+            <option value="site">ⓘ – About this site</option>
+            <option value="about">○ – Who am I ???</option>
           </select>
           <button type="submit" onclick="gotopage()">→</button>
         </div>
@@ -50,7 +50,7 @@
 
 
   <footer class="context link">
-    <div>Antoinette Chow is a designer between New York and Hong Kong.</div>
+    <div><a href="aboutme" id="who">Antoinette Chow</a> is a designer between New York and Hong Kong.</div>
     <div id="time"> </div>
     <div style="width:100%;">
       <p>She is working on this website. (◔ , ◔)ノ</p>
@@ -60,21 +60,13 @@
       <p>email <a href="mailto:chowantoinette@gmail.com?subject=hello!!">chowantoinette@gmail.com</a></p>
       <p>insta <a href="https://instagram.com/antoinette.chow" target="_blank">@antoinette.chow</a></p>
     </div>
-    <div class="Cyear">Last updated: January 24, 2025</div>
+    <div class="Cyear">Last updated: February 13, 2025</div>
   </footer>
 
-<script src="assets/script.js"></script>
+<script src="src/scripts/script.js"></script>
 <script>
 
-  // Scrolling title
-
-  (function titleScroller(text) {
-    document.title = text;
-    setTimeout(function () {
-      titleScroller(text.substr(1) + text.substr(0, 1));
-    }, 400);
-  }("● Welcome to Antoinette's Website "));
-
+  liminalSpace();
 
   // Go to page
 

@@ -14,6 +14,26 @@
   
 
   // Nav
+
+    const menuItems = [
+          { link: "", name: "Zentitude", year: "WIP!", src: "zent_bilinguallogo.png"},
+          { link: "", name: "Sky Nine Social Club", year: "WIP!", src: "skynine_logo.png"},
+          { link: "askjune", name: "Ask June", year: "2024", src: "askjune_iphone.png"},
+          { link: "rapport", name: "Rapport AI Medical", year: "2024", src: "rapport_tagline.png"},
+          { link: "themorningafter", name: "The Morning After", year: "2024", src: "tma_logo.gif"},
+          { link: "mb_bank", name: "MB Bank", year: "2023", src: "mb_landing.png"},
+          { link: "orientation", name: "orient-ation", year: "2022", src: "orientation.gif"},
+          { link: "vcs_fieldnotes", name: "Visual Culture Seminar – Notes from the Field", year: "2022", src: "VCS.gif"},
+          { link: "studybuds", name: "Study Buds", year: "2021", src: "studybuds.png"},
+          { link: "vantage", name: "Vantage", year: "2021", src: "vantage.png"},
+          { link: "projectunhappiness", name: "Project Unhappiness", year: "2020", src: "unhap.png"},
+          { link: "etudiant", name: "etudiant", year: "2020", src: "etudiant.jpg"},
+          { link: "luvsic", name: "Luv(Sic) Part 4", year: "2020", src: "luvsic.jpg"},
+          { link: "tactus", name: "Tactus", year: "2019", src: "tactus_logo.gif"},
+          { link: "aenigma", name: "Ænigma", year: "2018", src: "aenigma.png"}
+        ];
+
+    // Menu Navigation
     function pageNav() {
       const nav = document.getElementById("nav");
 
@@ -45,45 +65,21 @@
       const menuListDiv = document.createElement('div');
       const menuList = document.createElement('ul');
 
-        const menuItems = [
-          { link: "", name: "Zentitude", date: "WIP!"},
-          { link: "", name: "Sky Nine Social Club", date: "WIP!"},
-          { link: "askjune", name: "Ask June", date: "2024"},
-          { link: "rapport", name: "Rapport AI Medical", date: "2024"},
-          { link: "themorningafter", name: "The Morning After", date: "2024"},
-          { link: "mb_bank", name: "MB Bank", date: "2023"},
-          { link: "orientation", name: "orient-ation", date: "2022"},
-          { link: "vcs_fieldnotes", name: "Visual Culture Seminar – Notes from the Field", date: "2022"},
-          { link: "studybuds", name: "Study Buds", date: "2021"},
-          { link: "vantage", name: "Vantage", date: "2021"},
-          { link: "projectunhappiness", name: "Project Unhappiness", date: "2020"},
-          { link: "etudiant", name: "etudiant", date: "2020"},
-          { link: "luvsic", name: "Luv(Sic) Part 4", date: "2020"},
-          { link: "tactus", name: "Tactus", date: "2019"},
-          { link: "aenigma", name: "Ænigma", date: "2018"}
-        ];
-
-        function menuItem(link, name, date) {
+        function menuItem(link, name, year) {
           const li = document.createElement('li');
 
-          if (name === projectName) {
-            li.className = "current";
-          }
+          name === projectName && (li.className = "current");
 
           const pageLink = document.createElement('a');
           pageLink.href = "../" + link;
 
-          if (link.length === 0) {
-            pageLink.className = "disabled";
-          }
+          link.length === 0 && (pageLink.className = "disabled");
 
           const pageName = document.createTextNode(name);
           const pubDate = document.createElement ('span');
-          pubDate.textContent = " " + date;
+          pubDate.textContent = " " + year;
 
-          if (date === "WIP!") {
-            pubDate.className = "blink";
-          }
+          year === "WIP!" && (pubDate.className = "blink");
 
           pageLink.appendChild(pageName);
           pageLink.appendChild(pubDate);
@@ -93,7 +89,7 @@
         }
 
       menuItems.forEach(item => {
-        const menuItemList = menuItem(item.link, item.name, item.date);
+        const menuItemList = menuItem(item.link, item.name, item.year);
         menuFragment.appendChild(menuItemList);
       });
 
@@ -109,6 +105,63 @@
     }
 
     pageNav();
+
+
+    // Project Navigation
+    function projNav() {
+      const projNavContainer = document.getElementById("projNav");
+
+      function createProjNavButton(direction, text, project, projClass) {
+        if (project.link == null) {
+          const emptyDiv = document.createElement('div');
+          projNavContainer.appendChild(emptyDiv);
+          return;
+        }
+
+        const projLink = document.createElement('a');
+        projLink.href = "../" + project.link;
+
+        const projText = document.createElement('span');
+        projText.textContent = text;
+
+        const arrow = document.createTextNode(direction);
+        direction === "← " ? projLink.append(arrow, projText) : projLink.append(projText, arrow);
+
+        const projImage = document.createElement('img');
+        projImage.src = "../" + project.link + "/" + project.src;
+
+        projLink.addEventListener("mouseenter", function() {
+            projText.textContent = project.name;
+            projImage.style.display = "block";
+
+            projImage.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center',
+              inline: 'nearest'
+            });
+        });
+        projLink.addEventListener("mouseleave", function() {
+            projText.textContent = text;
+            projImage.style.display = "none";
+        });
+
+        projLink.appendChild(projImage);
+        projLink.className = projClass;
+        projNavContainer.appendChild(projLink);
+      }
+
+      const index = menuItems.findIndex(item => item.name === projectName);
+      const prev = index > 0 ? menuItems[index - 1] : null;
+      const next = index < menuItems.length - 1 ? menuItems[index + 1] : null;
+
+      prev && prev.link
+        ? createProjNavButton("← ", "Previous Project", prev, "prevProj")
+        : projNavContainer.appendChild(document.createElement('div'));
+      next && next.link && createProjNavButton(" →", "Next Project", next, "nextProj");
+
+    }
+
+    projNav();
 
 
   // Toggle menu display
@@ -202,7 +255,8 @@
       const emailAdd = document.createElement('a');
       emailAdd.href = "mailto:chowantoinette@gmail.com";
       const emailSpan = document.createElement('span');
-      emailAdd.innerHTML = "<span class='email'></span>";
+      emailSpan.className = "email";
+      emailAdd.appendChild(emailSpan);
       email.appendChild(emailAdd);
 
       const footerInfo = document.createElement('div');
