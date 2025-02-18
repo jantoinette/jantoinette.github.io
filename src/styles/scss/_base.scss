@@ -27,6 +27,10 @@ html, body {
 	overscroll-behavior-y: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: unset;
+}
+
 @media screen and (min-width: 670px) {
 	div {scroll-margin-top: 75px;}
 }
