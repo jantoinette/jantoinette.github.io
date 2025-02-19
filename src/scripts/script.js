@@ -181,7 +181,6 @@
 // Custom cursor text
 
   function customCursor() {
-
     const cursorText = document.getElementById("view");
     const hoverArea = document.querySelectorAll("#proj-list li") || document.querySelectorAll("#other-projects li");
     cursorText.style.display = "none";

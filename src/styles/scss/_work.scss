@@ -98,13 +98,23 @@
   margin-top: 40px;
   margin-bottom: 30px;
 
-  li:hover, 
-  #menu-container .current {
+  li:hover {
     background-color: pink;
   }
 
   a:last-child {
     margin-bottom: 30px;
+  }
+
+  .title {
+    display: inline;
+    padding-right: 6.5px;
+  }
+
+  p {
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.625);
+    letter-spacing: 0.25px;
   }
 
   img {
@@ -121,10 +131,6 @@
   }
 }
 
-#menu-container .disabled {
-  pointer-events: none;
-}
-
 #view {
   display: none;
   position: absolute;
@@ -133,6 +139,16 @@
   z-index: -1;
   color: white;
   mix-blend-mode: exclusion;
+}
+
+.subtext {
+  font-size: 0.875rem;
+  padding: 3px 0;
+  display: none;
+
+  &::before {
+    content:"∟ ";
+  }
 }
 
 .blink {
@@ -173,21 +189,23 @@ li:hover .blink {
     min-height: auto;
     padding: 0;
     order: 2;
-
-    li:last-child {
-      margin-bottom: 0;
-    }
   }
 
-  #proj-list img {
-    display: block;
-    position: relative;
-    max-width: 100%;
-    padding: 6px 0 30px 0;
-    top: 0;
-    left: 0;
-    margin-right: 0;
-    transform: none;
+  #proj-list {
+    .subtext {
+      display: block;
+    }
+
+    img {
+      display: block;
+      position: relative;
+      max-width: 100%;
+      padding: 6px 0 30px 0;
+      top: 0;
+      left: 0;
+      margin-right: 0;
+      transform: none;
+    }
   }
 
   #categories {

@@ -16,7 +16,7 @@
 
     gtag('config', 'G-K943JVQ707');
   </script>
-  <title>Study Buds, Website rebrand</title>
+  <title>Study Buds, Website redesign</title>
 </head>
 
 <body>
@@ -31,41 +31,137 @@
 
       <div class="project">
         <div>
-          <img src="studybuds_landing.png" alt="Landing page of Study Buds website in Google Chrome window">
+          <img src="studybuds_screen.png" alt="Landing page of Study Buds website in Google Chrome window">
         </div>
-        <div>
-          <img src="tutor_landing.png" alt="Screen of original homepage design, with pink post-it notes">
-          <img src="tutor_form.png" alt="Screen of original application form design, with pink post-it notes">
-          <p>Original landing screen and input form, with notes from heuristic evaluation identifying problem areas</p>
+
+        <div class="case-study left">
+          <h5>Challenge</h5>
+          <p>The primary challenge was to reduce the abandonment rate during the sign-up process. Users were struggling with an overly complicated sign-up flow, unclear messaging, and a lack of visual appeal, which led to frustration and drop-offs. This led to missed opportunities for new users and poor conversion rates.</p>
         </div>
+        
+        <div class="half">
+          <div>
+            <img src="tutor_form.png" alt="Screen of original application form design, with pink post-it notes">
+            <p>Original landing screen and input form with notes from heuristic evaluation</p>
+          </div>
+
+          <div>
+            <img src="tutor_landing.png" alt="Screen of original homepage design, with pink post-it notes">
+            <div class="case-study">
+              <h5>Problem discovery</h5>
+              <p style="margin-bottom:4px">Through heuristic evaluation, we pinpointed the problem areas of the original user journey, and discovered the following key issues:</p>
+              <div class="case-points pain">
+                <h3>Lack of User Control and Freedom</h3>
+                <p>The design lacked important features like a “Back” button, preventing users from easily correcting mistakes or adjusting their choices, leading to frustration and abandonment.</p>
+                
+                <h3>Poor Visibility of System Status</h3>
+                <p>There was no indication of progress during the sign-up process. Users were left in the dark about how many steps were remaining, creating a sense of uncertainty and disengagement.</p>
+                
+                <h3>Error Prevention</h3>
+                <p>Users were not receiving confirmation messages after submitting input, which led to uncertainty about whether their actions had been successful. Additionally, input fields were not optimized, causing frustration during form completion.</p>
+                
+                <h3>System Not Matching with Real World</h3>
+                <p>The system asked for payment details before users were able to fully explore or book a tutor, which created a mismatch between user expectations and the flow of the process. Users felt pressured and confused, as this was an unusual and unanticipated step at that point.</p>
+                
+                <h3>Lack of Help and Documentation</h3>
+                <p>The information on the sign-up page was dense and overwhelming. There were no clear tooltips or guides, making it difficult for users to understand how to proceed. The design felt crowded, which added to user frustration.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="case-study left">
+          <h5>Hypothesis and Ideation</h5>
+          <p>With these insights, we hypothesized that streamlining the sign-up flow and personalizing search results for students seeking tutors online would make the process more efficient and enjoyable.</p>
+          <p style="margin-bottom:4px">We then ideated potential solutions that addressed the discovered problems based on our hypothesis, including:</p>
+          <div class="case-points todo">
+            <h3>Eliminating Unnecessary Fields</h3>
+            <p>We removed fields from the original form that were not essential for the immediate sign-up process and could be collected later in order to simplify the flow. This helped reduce cognitive overload and kept the process focused and clear.</p>
+
+            <h3>Sectioning the Form into Digestible Steps</h3>
+            <p>By using a step-by-step flow, users could focus on completing one field at a time without being distracted by others. This helped avoid overwhelming users, and create a more interactive experience with clearer progress tracking.</p>
+
+            <h3>Conditional Logic for Flexibility</h3>
+            <p>To give users more control over their sign-up experience, we implemented conditional logic that allowed users to skip account creation during the initial sign-up process.  By offering users the freedom to complete the account creation at their own pace, we aimed to reduce abandonment rates and increase user satisfaction.</p>
+            
+            <h3>Redesigning the visual identity</h3>
+            <p>The platform needed a new brand that would resonate with high school students, creating a more welcoming and engaging experience through modern typography, and a comfortable color palette.</p>
+          </div>
+        </div>
+
         <div>
           <img src="studybuds_sketch.png" alt="Hand sketches of user flows and wireframes">
-          <p>Ideating solutions – hypothesized that simplifying the question form and customizing search results for students looking for tutors online will be a more efficient and enjoyable experience.</p>
+          <p>Sketches and Wireframes</p>
         </div>
-        <div>
+
+        <div class="case-study left">
+          <h5>Prototyping</h5>
+          <p>After initial sketches of how the UX flow of the sign up process can be restructured, we developed two mid-fi wireframes and prototypes using Figma. One prototype featured a quick form directly on the landing page that allows user to input the only necessary information to search for a tutor; while the other brings users through a questionnaire step-by-step for a more personalized experience.</p>
+          <h5>Usability Testing</h5>
+          <p>The two mid-fi prototypes were then tested through user interviews, allowing us to gather valuable feedback on their preferences, pain points, and overall experience with the design. This testing phase provided critical insights into areas for improvement and helped validate the design choices before moving to the final stages.</p>
+        </div>
+
+        <div class="half">
           <div>
-            <img src="studybud_signup.png" alt="Screen with sign-up form">
+            <img src="studybuds_usertest.gif" alt="Looping GIF showing different screens of a mid-fi website prototype with annotated notes from usability testing">
+          </div>
+          <div class="case-study">
+            <br><br>
+            <h5>Synthesis</h5>
+            <p style="margin-bottom:4px">The feedback collected from the usability tests were then synthesized into key findings and insights, such as:</p>
+            <div class="case-points todo">
+              <h3>Customized Search Results Are More Enjoyable</h3>
+              <p>Users find personalized results based on their input to be satisfying. Customization made the platform feel more user-centric and tailored to their individual needs, increasing engagement and trust.</p>
+
+              <h3>Positive Reactions to Flexible Options</h3>
+              <p>Users appreciated the ability to skip questions or delay certain steps, such as providing payment details. This flexibility allowed them to move at their own pace, reducing friction and making the sign-up process feel less daunting.</p>
+
+              <h3>Quick Form vs Questionnaire Format</h3>
+              <p>While users found the questionnaire-style format to be more personal and engaging, they also appreciated the simplicity and efficiency of the quick form. To address these conflicting preferences, I proposed a solution to combine the best of both approaches. This would allow users to choose the experience that best suited their needs, and introduced a flexibility that would cater to a broader range of users and enhance overall satisfaction with the sign-up process.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="half">
+          <div class="case-study">
+            <div class="spacer"></div>
+            <h5>Ready to Bloom</h5>
+            <p>Study Buds is a place where students receive the intellectual nourishment they need to blossom into their full potential. Inspired by the concept of springtime flower buds, the rebranding embraces a visual language centered on growth, renewal, and flourishing.</p>
+          </div>
+          <div>
+            <img src="studybuds_style.png" alt="Brand system UI style tile showing typography, color palettes, and buttons">
+            <p>Brand System UI Style Tile</p>
+          </div>
+        </div>
+        
+        <div class="case-study"><h5>Final screens</h5>
+        <div class="horizontal-scroll">
+          <div>
+            <img src="studybuds_landing.png" alt="Webpage of StudyBuds home">
+            <p>The new landing page features options to either search for tutors using a quick form, or be matched with suggested tutors after filling out a questionnaire.</p>
+          </div>
+          <div>
+            <img src="studybuds_signup.png" alt="Webpage with sign-up form">
             <p>Sign up prompt after completing quick form or questionnaire, with option to skip</p>
           </div>
           <div>
-            <img src="studybud_search.png" alt="Screen with search results of tutors">
-            <p>Search results from user input into quick form or questionnaire</p>
+            <img src="studybuds_search.png" alt="Webpage with search results of tutors">
+            <p>Search results from after completing quick form or questionnaire</p>
           </div>
           <div>
-            <img src="studybud_payment.png" alt="Screen of payment plan options">
-            <p>Payment options</p>
+            <img src="studybuds_payment.png" alt="Webpage of payment plan options">
+            <p>Payment options for booking tutorial sessions</p>
           </div>
           <div>
-            <img src="studybud_confirm.png" alt="Screen of scheduling confirmation">
+            <img src="studybuds_confirm.png" alt="Webpage of scheduling confirmation">
             <p>Scheduling confirmation page</p>
           </div>
         </div>
-        <div>
-          <img src="studybud_style.png" alt="Screen of brand system UI style tile showing typography, color palettes, and buttons">
-          <p>Brand System UI Style Tile</p>
-        </div>
+
       </div>
     </section>
+
   </div>
 
   <section id="projNav"></section>
@@ -76,7 +172,7 @@
     {
       "textContent": [
         "2021",
-        "Website rebrand",
+        "Website redesign",
         "Student @ MPS CD, Parsons",
         "Figma"
       ]
@@ -89,7 +185,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       const contentHead = document.getElementById("content-head");
-      const newProject = projTemplate(projectName, '', '', 'Study Buds is an online tutorial service for young college students, which was facing a high abandonment rate during the sign-up process. We identify the causes through heuristic analysis, and improve overall user engagement by redesigning the UX flow and incorporating a reimagined visual identity.');
+      const newProject = projTemplate(projectName, '', '', 'Study Buds, formerly known as Tutor Orial, is an online tutorial platform aimed at helping high school studentsacademically. Despite offering valuable services, the platform experienced a high abandonment rate during the sign-up process. My role was to conduct a thorough analysis of the existing design, identify pain points, and redesign the UX flow to improve user engagement. We also reimagined the visual identity to better connect with the platform\'s young audience.');
       contentHead.appendChild(newProject);
     });
   </script>

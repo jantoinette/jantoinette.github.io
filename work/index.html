@@ -55,106 +55,23 @@
         <p>Brand Identity, Web Design, Web Development</p>
         <img class="preview" src="skynine/skynine_logo.png" alt=""></a>
       </li>
-
-      <a href="askjune"><li class="brand uxui">
-        Ask June <span>2024</span>
-        <p>Brand Identity, UX/UI</p>
-        <img src="askjune/askjune_iphone.png" alt="Photo of a woman holding a phone, with the shot taken from behind her shoulder. The phone is positioned in front of her, and her back and part of her arm are visible in the frame.">
-      </li></a>
-
-      <a href="rapport"><li class="brand web">
-        Rapport <span>2024</span>
-        <p>Animation, Brand Identity, Brand Strategy, Web Design, Web Development</p>
-        <img class="preview" src="rapport/rapport_tagline.png" alt="Logo with tagline">
-      </li></a>
-
-      <a href="themorningafter"><li class="brand web">
-        The Morning After <span>2024</span>
-        <p>Animation, Brand Identity, Packaging, Social Media Direction, Shopify Web Development, Web Design</p>
-        <img src="themorningafter/tma_logo.gif" alt="Animated visual of Creation of Adam parody image with left hand holding a bagel and right hand having spread on index finger, revealing logo in the center">
-      </li></a>
-
-      <a href="mb_bank"><li class="brand uxui">
-        MB Bank <span>2023</span>
-        <p>Brand Identity, Brand Strategy, Prototyping, UX/UI</p>
-        <img class="preview" src="mb_bank/mb_landing.png" alt="Three iPhones showing screens of apps in different banking tiers">
-      </li></a>
-
-      <a href="orientation"><li class="web concepts">
-        orient-ation <span>2022</span>
-        <p>Web design, Web Development</p>
-        <img class="preview" src="orientation/orientation.gif" alt="Cursor interaction with website">
-      </li></a>
-
-      <a href="vcs_fieldnotes"><li class="concepts">
-        Visual Culture Seminar – Notes from the Field <span>2022</span>
-        <p>Presentation Concept</p>
-        <img class="preview" src="vcs_fieldnotes/VCS.gif" alt="Cursor interaction with Google Calender">
-      </li></a>
-
-      <!-- <a href="colors_archive"><li class="web concepts">
-        Archive: Colors <span>2022</span>
-        <p>Web design, Web Development</p>
-        <img class="preview" src="colors_archive/orientation.gif" alt="Cursor interaction with website">
-      </li></a> -->
-
-      <a href="studybuds"><li class="brand uxui">
-        Study Buds <span>2021</span>
-        <p>UX/UI, Branding</p>
-        <img class="preview" src="studybuds/studybuds.png" alt="Compilation of different pages of website shown at an angle">
-      </li></a>
-
-      <a href="vantage"><li class="brand">
-        Vantage <span>2021</span>
-        <p>Brand Identity, Digital design</p>
-        <img class="preview" src="vantage/vantage.png" alt="Logo on textured paper in dark teal">
-      </li></a>
-
-      <a href="projectunhappiness"><li class="brand concepts">
-        Project Unhappiness <span>2020</span>
-        <p>Campaign Concept, Brand Identity</p>
-        <img class="preview" src="projectunhappiness/unhap.png" alt="Close up of posters stuck on power boxes in street">
-      </li></a>
-
-      <a href="etudiant"><li class="concepts">
-        etudiant <span>2020</span>
-        <p>Typeface design</p>
-        <img class="preview" src="etudiant/etudiant.jpg" alt="B/W image of sky with building and hanging signs in frame. Text in center, reads: Etudiant">
-      </li></a>
-
-      <a href="luvsic"><li class="concepts">
-        Luv(Sic) Part 4 <span>2020</span>
-        <p>Graphic Design, Print</p>
-        <img class="preview" src="luvsic/luvsic.jpg" alt="Set of 3 cards with soft gradient graphics laid out flat">
-      </li></a>
-
-      <a href="tactus"><li class="brand">
-        Tactus <span>2019</span>
-        <p>Branding, Pro-bono</p>
-        <img class="preview" src="tactus/tactus_logo.gif" alt="Animated logo">
-      </li></a>
-
-      <a href="aenigma"><li class="brand concepts">
-        Aenigma <span>2018</span>
-        <p>Branding</p>
-        <img class="preview" src="aenigma/aenigma.png" alt="Close up of large scale poster hanging indoors on wall">
-      </li></a>
-
     </ul>
-      
     
   </section>
 
 <script src="../src/scripts/script.js"></script>
+<script src="../src/scripts/templates.js"></script>
 <script>
 
-  customCursor();
   aboutMe();
+  listProjects();
+  customCursor();
+
 
   // Show hovered project
 
     const mediaQ = window.matchMedia('(min-width:768px)');
-    const hoverArea = document.querySelectorAll("#proj-list li")
+    const hoverArea = document.querySelectorAll("#proj-list a, #proj-list li")
 
     function toggleVisibility(el, isVisible) {
         if (!mediaQ.matches) return;
@@ -163,11 +80,14 @@
             sibling => sibling !== el
         );
         const img = el.querySelector("img");
+        const sub = el.querySelector(".subtext")
 
         img.style.display = isVisible ? "block" : "none";
         siblings.forEach(sibling => {
-            sibling.style.color = isVisible ? "rgba(0,0,0,0.25)" : "initial";
+            sibling.style.opacity = isVisible ? 0.25 : "initial";
         });
+
+        sub.style.display = isVisible ? "block" : "none";
     }
 
     function show(el) {
@@ -177,9 +97,9 @@
         toggleVisibility(el, false);
     }
 
-    hoverArea.forEach((li) => {
-      li.addEventListener('mouseenter', (event) => show(event.target));
-      li.addEventListener('mouseleave', (event) => hide(event.target));
+    hoverArea.forEach((a) => {
+      a.addEventListener('mouseenter', (event) => show(event.target));
+      a.addEventListener('mouseleave', (event) => hide(event.target));
     });
 
 

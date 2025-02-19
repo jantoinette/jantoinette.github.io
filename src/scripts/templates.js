@@ -4,7 +4,228 @@
 
   // Global \\
 
-      // Menu
+  // Projects
+    const projects = [
+      {
+        link: '',
+        category: 'brand',
+        name: 'Zentitude',
+        year: 'WIP!',
+        sub: '',
+        tags: 'Brand Identity',
+        src: 'zentitude/zent_bilinguallogo.png',
+        imgAlt: 'Outline of English and Chinese wordmarks'
+      },
+      {
+        link: '',
+        category: 'brand web',
+        name: 'Sky Nine Social Club',
+        year: 'WIP!',
+        sub: '',
+        tags: 'Brand Identity, Web Design, Web Development',
+        src: 'skynine/skynine_logo.png',
+        imgAlt: 'Text logo of Skynine Social Club'
+      },
+      {
+        link: 'askjune',
+        category: 'brand uxui',
+        name: 'Ask June',
+        year: '2024',
+        sub: 'A Trusted Personal Guide in Healthcare, Powered by Rapport',
+        tags: 'Brand Identity, Brand Strategy, Prototyping, UX/UI',
+        src: 'askjune/askjune.gif',
+        imgAlt: 'Photo of a woman holding a phone, with the shot taken from behind her shoulder. The phone is positioned in front of her, and her back and part of her arm are visible in the frame'
+      },
+      {
+        link: 'rapport',
+        category: 'brand web',
+        name: 'Rapport',
+        year: '2024',
+        sub: 'Redefining Healthcare with Accessible and Efficient Solutions',
+        tags: 'Animation, Brand Identity, Brand Strategy, Web Design, Web Development',
+        src: 'rapport/rapport_tagline.png',
+        imgAlt: 'Logo with tagline'
+      },
+      {
+        link: 'vistra',
+        category: 'brand web',
+        name: 'Vistra',
+        year: '2024',
+        sub: 'Creating a Unified Brand through Purpose-Driven Transformation',
+        tags: 'Brand Identity, Web design',
+        src: 'vistra/vistra_products.png',
+        imgAlt: ''
+      },
+      {
+        link: 'themorningafter',
+        category: 'brand web',
+        name: 'The Morning After',
+        year: '2024',
+        sub: 'Where Naughty Meets Nice in Every Crunch',
+        tags: 'Animation, Brand Identity, Packaging, Social Media Direction, Shopify, Web Design',
+        src: 'themorningafter/tma_logo.gif',
+        imgAlt: 'Animated visual of Creation of Adam parody image with left hand holding a bagel and right hand having spread on index finger, revealing logo in the center'
+      },
+      {
+        link: 'mb_bank',
+        category: 'brand uxui',
+        name: 'MB Bank',
+        year: '2023',
+        sub: 'A Strategic Brand Refresh Through Digital Banking Transformation',
+        tags: 'Brand Identity, Brand Strategy, Prototyping, UX/UI',
+        src: 'mb_bank/mb_landing.png',
+        imgAlt: 'Three iPhones showing screens of apps in different banking tiers'
+      },
+      {
+        link: 'orientation',
+        category: 'web concepts',
+        name: 'orient-ation',
+        year: '2022',
+        sub: 'A Web-based Expression on Shifting States, Belonging, and Cultural Displacement',
+        tags: 'Web design, Web Development',
+        src: 'orientation/orientation.gif',
+        imgAlt: 'Cursor interaction with website'
+      },
+      {
+        link: 'vcs_fieldnotes',
+        category: 'concepts',
+        name: 'Visual Culture Seminar – Notes from the Field',
+        year: '2022',
+        sub: 'Reinterpreting Google Calendar to Reflect Diverse Learnings',
+        tags: 'Presentation Concept',
+        src: 'vcs_fieldnotes/VCS.gif',
+        imgAlt: 'Cursor interaction with Google Calendar'
+      },
+      // {
+      //   link: 'colors_archive',
+      //   category: 'web concepts',
+      //   name: 'Archive: Colors',
+      //   year: '2022',
+      //   sub: '',
+      //   tags: 'Web design, Web Development',
+      //   src: 'colors_archive.gif',
+      //   imgAlt: 'Cursor interaction with website'
+      // },
+      {
+        link: 'studybuds',
+        category: 'brand uxui',
+        name: 'Study Buds',
+        year: '2021',
+        sub: 'A UX/UI Redesign to Tackle Abandonment',
+        tags: 'UX/UI, Branding',
+        src: 'studybuds/studybuds.png',
+        imgAlt: 'Compilation of different pages of website shown at an angle'
+      },
+      {
+        link: 'vantage',
+        category: 'brand',
+        name: 'Vantage',
+        year: '2021',
+        sub: 'Repositioning a Multi-Asset Broker to Drive Growth',
+        tags: 'Brand Identity, Digital design',
+        src: 'vantage/vantage.png',
+        imgAlt: 'Logo on textured paper in dark teal'
+      },
+      {
+        link: 'projectunhappiness',
+        category: 'brand concepts',
+        name: 'Project Unhappiness',
+        year: '2020',
+        sub: 'Visual Narrative that Embraces Human Emotional Spectrum',
+        tags: 'Campaign Concept, Brand Identity',
+        src: 'projectunhappiness/unhap.png',
+        imgAlt: 'Close up of posters stuck on power boxes in street'
+      },
+      {
+        link: 'etudiant',
+        category: 'concepts',
+        name: 'etudiant',
+        year: '2020',
+        sub: 'A Typeface for the Ever-Learning Mind',
+        tags: 'Typeface design',
+        src: 'etudiant/etudiant.jpg',
+        imgAlt: 'B/W image of sky with building and hanging signs in frame. Text in center, reads: Etudiant'
+      },
+      {
+        link: 'luvsic',
+        category: 'concepts',
+        name: 'Luv(Sic) Part 4',
+        year: '2020',
+        sub: 'Visual Tribute to Music, Life, and the Genius of Nujabes',
+        tags: 'Graphic Design, Print',
+        src: 'luvsic/luvsic.jpg',
+        imgAlt: 'Set of 3 cards with soft gradient graphics laid out flat'
+      },
+      {
+        link: 'tactus',
+        category: 'brand',
+        name: 'Tactus',
+        year: '2019',
+        sub: 'A Visual Identity that Brings Rhythm to Everyone',
+        tags: 'Branding, Pro-bono',
+        src: 'tactus/tactus_logo.gif',
+        imgAlt: 'Animated logo'
+      },
+      {
+        link: 'aenigma',
+        category: 'brand concepts',
+        name: 'Ænigma',
+        year: '2018',
+        sub: 'Designing Curiosity through a New Identity',
+        tags: 'Branding',
+        src: 'aenigma/aenigma.png',
+        imgAlt: 'Close up of large scale poster hanging indoors on wall'
+      }
+    ];
+
+
+  // Project List
+    function listProjects() {
+      const ul = document.getElementById('proj-list');
+
+      projects.forEach(project => {
+        const link = document.createElement('a');
+        if (project.link == '') {
+          return;
+        } else {
+          link.href = project.link;
+        }
+
+        const listItem = document.createElement('li');
+        listItem.className = project.category;
+
+        const title = document.createElement('h4');
+        title.className = 'title';
+        title.innerText = project.name;
+
+        const year = document.createElement('span');
+        year.innerText = project.year;
+        project.year === "WIP!" && (year.className = "blink");
+
+        const sub = document.createElement('h4');
+        if (project.sub) {
+          sub.className = 'subtext';
+          sub.innerText = project.sub;
+        }
+
+        const tags = document.createElement('p');
+        tags.innerText = project.tags;
+
+        const img = document.createElement('img');
+        img.className = 'preview';
+        img.src = project.src;
+        img.alt = project.imgAlt;
+
+        listItem.append(title, year, sub, tags, img);
+
+        link.appendChild(listItem);
+
+        ul.appendChild(link);
+      });
+    }
+
+
+  // Menu
     const menu = document.createElement('div');
     menu.setAttribute("id", "menu-btn");
     menu.textContent = "menu"
@@ -15,27 +236,10 @@
 
   // Nav
 
-    const menuItems = [
-          { link: "", name: "Zentitude", year: "WIP!", src: "zent_bilinguallogo.png"},
-          { link: "", name: "Sky Nine Social Club", year: "WIP!", src: "skynine_logo.png"},
-          { link: "askjune", name: "Ask June", year: "2024", src: "askjune_iphone.png"},
-          { link: "rapport", name: "Rapport AI Medical", year: "2024", src: "rapport_tagline.png"},
-          { link: "themorningafter", name: "The Morning After", year: "2024", src: "tma_logo.gif"},
-          { link: "mb_bank", name: "MB Bank", year: "2023", src: "mb_landing.png"},
-          { link: "orientation", name: "orient-ation", year: "2022", src: "orientation.gif"},
-          { link: "vcs_fieldnotes", name: "Visual Culture Seminar – Notes from the Field", year: "2022", src: "VCS.gif"},
-          { link: "studybuds", name: "Study Buds", year: "2021", src: "studybuds.png"},
-          { link: "vantage", name: "Vantage", year: "2021", src: "vantage.png"},
-          { link: "projectunhappiness", name: "Project Unhappiness", year: "2020", src: "unhap.png"},
-          { link: "etudiant", name: "etudiant", year: "2020", src: "etudiant.jpg"},
-          { link: "luvsic", name: "Luv(Sic) Part 4", year: "2020", src: "luvsic.jpg"},
-          { link: "tactus", name: "Tactus", year: "2019", src: "tactus_logo.gif"},
-          { link: "aenigma", name: "Ænigma", year: "2018", src: "aenigma.png"}
-        ];
-
     // Menu Navigation
+    const nav = document.getElementById("nav");
+
     function pageNav() {
-      const nav = document.getElementById("nav");
 
       const myName = document.createElement('div');
       const backHome = document.createElement('a');
@@ -88,7 +292,7 @@
           return li;
         }
 
-      menuItems.forEach(item => {
+      projects.forEach(item => {
         const menuItemList = menuItem(item.link, item.name, item.year);
         menuFragment.appendChild(menuItemList);
       });
@@ -104,20 +308,15 @@
       nav.appendChild(menuContainer);
     }
 
-    pageNav();
+    nav && pageNav();
 
 
     // Project Navigation
+    const projNavContainer = document.getElementById("projNav");
+
     function projNav() {
-      const projNavContainer = document.getElementById("projNav");
 
-      function createProjNavButton(direction, text, project, projClass) {
-        if (project.link == null) {
-          const emptyDiv = document.createElement('div');
-          projNavContainer.appendChild(emptyDiv);
-          return;
-        }
-
+      function createProjNavButton(direction, text, project, dirClass) {
         const projLink = document.createElement('a');
         projLink.href = "../" + project.link;
 
@@ -127,11 +326,16 @@
         const arrow = document.createTextNode(direction);
         direction === "← " ? projLink.append(arrow, projText) : projLink.append(projText, arrow);
 
+        const projDesc = document.createElement('h4');
+        projDesc.className = "subtext";
+        projDesc.textContent = project.sub;
+
         const projImage = document.createElement('img');
-        projImage.src = "../" + project.link + "/" + project.src;
+        projImage.src = "../" + project.src;
 
         projLink.addEventListener("mouseenter", function() {
             projText.textContent = project.name;
+            projDesc.style.display = "block";
             projImage.style.display = "block";
 
             projImage.scrollIntoView({
@@ -142,17 +346,18 @@
         });
         projLink.addEventListener("mouseleave", function() {
             projText.textContent = text;
+            projDesc.style.display = "none";
             projImage.style.display = "none";
         });
 
-        projLink.appendChild(projImage);
-        projLink.className = projClass;
+        projLink.append(projDesc, projImage);
+        projLink.className = dirClass;
         projNavContainer.appendChild(projLink);
       }
 
-      const index = menuItems.findIndex(item => item.name === projectName);
-      const prev = index > 0 ? menuItems[index - 1] : null;
-      const next = index < menuItems.length - 1 ? menuItems[index + 1] : null;
+      const index = projects.findIndex(item => item.name === projectName);
+      const prev = index > 0 ? projects[index - 1] : null;
+      const next = index < projects.length - 1 ? projects[index + 1] : null;
 
       prev && prev.link
         ? createProjNavButton("← ", "Previous Project", prev, "prevProj")
@@ -161,21 +366,23 @@
 
     }
 
-    projNav();
+    projNavContainer && projNav();
 
 
   // Toggle menu display
     const btn = document.getElementById("menu-btn");
     const line = document.getElementById("menu-line");
 
-    btn.addEventListener("click", function() {
-      menuContainer.classList.toggle("show");
-      if (menuContainer.classList.contains("show")) {
-        line.style.display = "block";
-      } else {
-        line.style.display = "none";
-      }
-    });
+    if (btn) {
+      btn.addEventListener("click", function() {
+        menuContainer.classList.toggle("show");
+        if (menuContainer.classList.contains("show")) {
+          line.style.display = "block";
+        } else {
+          line.style.display = "none";
+        }
+      });
+    }
 
 
   // Project Info
@@ -267,12 +474,9 @@
       year.className = 'Cyear';
       year.innerHTML = "<span>©</span> 2025";
 
-      const footerContainer = document.getElementById("footer");
-
-      footerContainer.appendChild(footerText);
-      footerContainer.appendChild(email);
-      footerContainer.appendChild(footerInfo);
-      footerContainer.appendChild(year);
+      footerContainer.append(footerText, email, footerInfo, year);
     }
 
-    footerTemplate();
+    const footerContainer = document.getElementById("footer");
+    footerContainer && footerTemplate();
+
