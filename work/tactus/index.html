@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../src/scripts/float-panel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
@@ -33,23 +33,57 @@
         <div>
           <img src="tactus_logo.png" alt="Tactus stacked logo with tagline">
         </div>
-        <div>
-          <img src="tactus_posters.png" alt="People walking in front of a poster set of 2 in public">
+        <div class="case-study right">
+          <h5>Brand Story</h5>
+          <p>Inspired by a hard–of–hearing dancer who choreographs by feeling and memorizing the rhythm of a song on a loudspeaker, mechanical engineer Jeremy conceived this project. He founded Tactus, seeing how the product can help the wider Deaf community and make music more accessible.</p>
         </div>
         <div>
           <img src="tactus_symbols.png" alt="The 3 symbols each carrying meanings that make up the Tactus logo">
+        </div>
+        <div class="half">
+          <div class="case-study">
+            <div class="spacer"></div>
+            <h5>Logo Design</h5>
+            <p>With a background in mechanical engineering, the brand carries a level of measured accuracy and reliance on science. The logo came from the idea of incorporating lines of sound wave graphs into the letter “t”. The shape also resembles a dancing figure, which is a respectful nod to the brand story.</p>
+          </div>
+          <div><img src="tactus_sketches.png"></div>
+        </div>
+        <div>
           <img src="tactus_color.png" alt="Logo color variations">
-          <p>Logo symbolism and color variations</p>
+          <p>Logo color variations</p>
+        </div>
+        <div class="case-study half">
+          <div><img src="tactus_palette.png" alt="Page on brand colors in brand guideline"></div>
+          <div><img src="tactus_type1.png" alt="Page on brand typography in brand guideline"></div>
+          <div>
+            <h5>Color Palette</h5>
+            <p>The primary brand color of Tactus is a cool light blue, which evokes trust and professionalism. This is complemented by the warm contrast of a coral accent color, adding energy and vibrancy to the overall design, creating a balanced yet dynamic visual identity.</p>
+          </div>
+          <div>
+            <h5>Typography</h5>
+            <p>Stratos is chosen as the primary typeface, paired with Trade Gothic LT Extended as secondary. The contrasting condensed and extended widths shows that the brand welcomes differences and embraces a wide spectrum of possibilities.</p>
+          </div>
         </div>
         <div>
-          <img src="tactus_palette.png" alt="Page on brand colors in brand guideline">
-          <img src="tactus_type1.png" alt="Page on brand typography in brand guideline">
-          <p>Pages from Brand Guideline detailing brand color palette and typography</p>
+          <img src="tactus_posters.png" alt="People walking in front of a poster set of 2 in public">
+        </div>
+        <div class="half">
+          <div>
+            <img src="tactus_cards.png" alt="Business card designs, front and back">
+            <p>Business cards</p>
+          </div>
+          <div>
+            <img style="aspect-ratio:4/3; object-fit:cover;" src="tactus_tag.jpg">
+            <p>Clothing tag</p>
+          </div>
         </div>
         <div>
-          <img src="tactus_cards.png" alt="Business card designs, front and back">
+          <img src="tactus_logo.gif" alt="Animated logo">
         </div>
-        <div><img src="tactus_logo.gif" alt="Animated logo"></div>
+        <div class="case-study right">
+          <h5>What's Next</h5>
+          <p>Tactus has received Non Equity Assistance from Commonwealth of Massachusetts and MassChallenge, and is on their way to launch on the market soon.</p>
+        </div>
       </div>
     </section>
   </div> 
@@ -75,8 +109,10 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       const contentHead = document.getElementById("content-head");
-      const newProject = projTemplate(projectName, '', '', 'Tactus is a startup that specializes in a light-weight vest designed for people with hearing disabilities, inspired by a dancer who choreographs by feeling the rhythm on a loudspeaker. The vest translates audio signals into vibrations, so that everyone can enjoy music tactually and unrestricted by audial capabilities.');
+      const newProject = projTemplate(projectName, 'https://tactusmusic.com/', 'Visit website ↗', 'Tactus is a startup that specializes in a light-weight vest designed for people with hearing disabilities, inspired by a dancer who choreographs by feeling the rhythm on a loudspeaker. The vest translates audio signals into vibrations, so that everyone can enjoy music tactually and unrestricted by audial capabilities.');
       contentHead.appendChild(newProject);
+
+      slideIn();
     });
   </script>
 

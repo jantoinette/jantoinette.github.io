@@ -121,11 +121,8 @@
     display: none;
     position: fixed;
     top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    max-width: 70%;
-    max-height: 80%;
+    transform: translate(calc(-100% - 24px), -50%);
+    width: calc(50% - 54px);
     mix-blend-mode: multiply;
     z-index: -1;
   }

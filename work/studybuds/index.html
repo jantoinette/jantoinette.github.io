@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../src/scripts/float-panel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
@@ -187,6 +187,8 @@
       const contentHead = document.getElementById("content-head");
       const newProject = projTemplate(projectName, '', '', 'Study Buds, formerly known as Tutor Orial, is an online tutorial platform aimed at helping high school studentsacademically. Despite offering valuable services, the platform experienced a high abandonment rate during the sign-up process. My role was to conduct a thorough analysis of the existing design, identify pain points, and redesign the UX flow to improve user engagement. We also reimagined the visual identity to better connect with the platform\'s young audience.');
       contentHead.appendChild(newProject);
+
+      slideIn();
     });
   </script>
 

@@ -201,27 +201,16 @@ footer div {
   gap: 24px;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: calc(100% + 30px);
-  padding-right: 30px;
+  width: calc(100% + 60px);
+  padding: 0 30px;
   box-sizing: border-box;
+  position: relative;
+  left: -30px;
 }
 .horizontal-scroll > div {
   flex: 0 0 65%;
 }
 
-/*.horizontal-scroll {
-  display: flex;
-  flex: row nowrap;
-  gap: 20px;
-  position: relative;
-  top: 60px;
-  left: -30px;
-  padding: 0 30px;
-  height: 85%;
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}*/
 #vert_img {
   width: 100%;
   height: 75vh;
@@ -255,11 +244,6 @@ footer div {
 .slideanim.slide {
   visibility: visible;
   animation: slide 1s;
-}
-.slideanim::after {
-  float: left;
-  content: "";
-  display: table;
 }
 
 @keyframes slide {
@@ -422,11 +406,8 @@ footer div {
   display: none;
   position: fixed;
   top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  max-width: 70%;
-  max-height: 80%;
+  transform: translate(calc(-100% - 24px), -50%);
+  width: calc(50% - 54px);
   mix-blend-mode: multiply;
   z-index: -1;
 }
@@ -614,7 +595,7 @@ li:hover .blink {
   flex-flow: row wrap;
   gap: 24px;
 }
-.project .half > div {
+.project .half > * {
   flex-basis: calc(50% - 12px);
   box-sizing: border-box;
 }
@@ -682,6 +663,9 @@ li:hover .blink {
   .project > div {
     padding-bottom: 20%;
   }
+  .project .half > * {
+    flex-basis: 100%;
+  }
   .case-study.left > *, .case-study.right > * {
     margin-left: 0;
     margin-right: 0;
@@ -731,10 +715,6 @@ li:hover .blink {
   content: "chowantoinette@gmail.com";
 }
 
-#luvsic p:not(:last-child) {
-  padding-bottom: 2%;
-}
-
 #rapportgifs {
   flex-flow: row nowrap;
   width: 100%;
@@ -746,6 +726,11 @@ li:hover .blink {
 #rapportgifs img {
   width: 30%;
 }
+
+#colors_archive img {
+  border: solid 1px;
+}
+
 
 /* --- OTHER PAGES --- */
 .page-title {
@@ -783,6 +768,12 @@ li:hover .blink {
   width: calc(100vw - 60px);
   height: calc(100vh - 60px);
   overflow: scroll;
+}
+
+.other .horizontal-scroll {
+  position: relative;
+  top: 60px;
+  height: 85%;
 }
 
 .other-info {

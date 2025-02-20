@@ -80,14 +80,16 @@
             sibling => sibling !== el
         );
         const img = el.querySelector("img");
-        const sub = el.querySelector(".subtext")
+        const sub = el.querySelector(".subtext");
 
         img.style.display = isVisible ? "block" : "none";
         siblings.forEach(sibling => {
             sibling.style.opacity = isVisible ? 0.25 : "initial";
         });
 
-        sub.style.display = isVisible ? "block" : "none";
+        if (sub) {
+          sub.style.display = isVisible ? "block" : "none";
+        }
     }
 
     function show(el) {

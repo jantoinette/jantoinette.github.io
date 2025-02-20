@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../src/scripts/float-panel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
@@ -93,6 +93,8 @@
       const contentHead = document.getElementById("content-head");
       const newProject = projTemplate(projectName, '', '', 'Through stakeholder interviews, competitor audits, and customer research, we repositioned a multi-asset broker brand and developed a modern visual identity system incorporating the concept of “Shared Success” and the Fibonacci Golden Ratio. We provided an extensive brand guideline, and a complete redesign of the website and mobile app, reflecting a trusted trading ecosystem.');
       contentHead.appendChild(newProject);
+
+      slideIn();
     });
   </script>
 

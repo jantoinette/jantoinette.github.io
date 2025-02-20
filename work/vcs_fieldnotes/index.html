@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../src/scripts/float-panel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
@@ -73,6 +73,8 @@
       const contentHead = document.getElementById("content-head");
       const newProject = projTemplate(projectName, 'https://calendar.google.com/calendar/u/0?cid=Y180NzFmZG52dTV2OTljMm1pN3YzcnNkOWhpOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t', 'Visit website ↗   (last entry: December 2021)', 'This project is a finite exploration within an infinite framework, breaking conventions using a familiar calendar format to reflect the diverse learnings from the course.');
       contentHead.appendChild(newProject);
+
+      slideIn();
     });
   </script>
 

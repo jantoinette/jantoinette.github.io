@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../src/scripts/float-panel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
@@ -34,31 +34,55 @@
           <img src="luvsic.jpg">
           <img src="luvsic_calendar.png">
         </div>
-        <div id="luvsic">
-          <img src="luvsic1.jpg">
-          <p>“Snow flakes in January”</p>
-          <img src="luvsic2.jpg">
-          <p>“Heart warm like February”</p>
-          <img src="luvsic3.jpg">
-          <p>“I wouldn't ordinarily, March to the drum...”</p>
-          <img src="luvsic4.jpg">
-          <p>“... play a fool like April”</p>
-          <img src="luvsic5.jpg">
-          <p>“May the best dance...”</p>
-          <img src="luvsic6.jpg">
-          <p>“... in a Juno bridal”</p>
-          <img src="luvsic7.jpg">
-          <p>“Power of the will, Julius...”</p>
-          <img src="luvsic8.jpg">
-          <p>“... and Augustus”</p>
-          <img src="luvsic9.jpg">
-          <p>“In a new semester, back in September / Boy, I wonder if you still remember”</p>
-          <img src="luvsic10.jpg">
-          <p>“Dress up at the end of October”</p>
-          <img src="luvsic11.jpg">
-          <p>“Give thanks to the fam in November”</p>
-          <img src="luvsic12.jpg">
-          <p>“A cold but cozy December / And we're back to the origin, so let me begin”</p>
+        <div class="horizontal-scroll">
+          <div>
+            <img src="luvsic1.jpg">
+            <p>“Snow flakes in January”</p>
+          </div>
+          <div>
+            <img src="luvsic2.jpg">
+            <p>“Heart warm like February”</p>
+          </div>
+          <div>
+            <img src="luvsic3.jpg">
+            <p>“I wouldn't ordinarily, March to the drum...”</p>
+          </div>
+          <div>
+            <img src="luvsic4.jpg">
+            <p>“... play a fool like April”</p>
+          </div>
+          <div>
+            <img src="luvsic5.jpg">
+            <p>“May the best dance...”</p>
+          </div>
+          <div>
+            <img src="luvsic6.jpg">
+            <p>“... in a Juno bridal”</p>
+          </div>
+          <div>
+            <img src="luvsic7.jpg">
+            <p>“Power of the will, Julius...”</p>
+          </div>
+          <div>
+            <img src="luvsic8.jpg">
+            <p>“... and Augustus”</p>
+          </div>
+          <div>
+            <img src="luvsic9.jpg">
+            <p>“In a new semester, back in September / Boy, I wonder if you still remember”</p>
+          </div>
+          <div>
+            <img src="luvsic10.jpg">
+            <p>“Dress up at the end of October”</p>
+          </div>
+          <div>
+            <img src="luvsic11.jpg">
+            <p>“Give thanks to the fam in November”</p>
+          </div>
+          <div>
+            <img src="luvsic12.jpg">
+            <p>“A cold but cozy December / And we're back to the origin, so let me begin”</p>
+          </div>
         </div>
       </div>
     </section>
@@ -87,6 +111,8 @@
       const contentHead = document.getElementById("content-head");
       const newProject = projTemplate(projectName, 'https://open.spotify.com/track/6norVbAE14clVMEyDuRw1m?si=5e2eb22432a340f9', 'Listen on Spotify ↗', 'The Luv(Sic) Hexalogy is a collaborative project between two friends Nujabes and Shing02. With all that had happened in 2020, I want to create this calendar to share with everyone the lyrics of this song, and the celebration for love and life behind its creation — between two friends and their mutual passion for music.');
       contentHead.appendChild(newProject);
+
+      slideIn();
     });
   </script>
 

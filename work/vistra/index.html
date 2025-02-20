@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../src/scripts/float-panel.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
@@ -84,7 +84,10 @@
       const contentHead = document.getElementById("content-head");
       const newProject = projTemplate(projectName, '', '', 'The business merger of Vistra and Tricor aims to create a global leader in corporate and fund solutions. Vistra needed a reimagined brand to reflect its expanded scale and mission. We developed a new purpose-driven brand strategy, visual identity, and culture to position Vistra as a “Progressive Ally” and a Category of One.');
       contentHead.appendChild(newProject);
+
+      slideIn();
     });
+
   </script>
 
 </body>

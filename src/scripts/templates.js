@@ -96,16 +96,16 @@
         src: 'vcs_fieldnotes/VCS.gif',
         imgAlt: 'Cursor interaction with Google Calendar'
       },
-      // {
-      //   link: 'colors_archive',
-      //   category: 'web concepts',
-      //   name: 'Archive: Colors',
-      //   year: '2022',
-      //   sub: '',
-      //   tags: 'Web design, Web Development',
-      //   src: 'colors_archive.gif',
-      //   imgAlt: 'Cursor interaction with website'
-      // },
+      {
+        link: 'colors_archive',
+        category: 'web concepts',
+        name: 'Archive: Colors',
+        year: '2022',
+        sub: 'Exploration of digital archiving and evolving system of organization',
+        tags: 'Web design, Web Development',
+        src: 'colors_archive/colors_archive.gif',
+        imgAlt: 'Cursor interaction with website'
+      },
       {
         link: 'studybuds',
         category: 'brand uxui',
@@ -448,6 +448,17 @@
       projInfoContainer.appendChild(projDesc);
 
       return projInfoContainer;
+    }
+
+
+  // Project div slide-in animation
+    function slideIn() {
+      const container = document.querySelector('.project');
+      const elements = container.querySelectorAll(':scope > div');
+
+      elements.forEach(element => {
+        element.classList.add('slideanim');
+      });
     }
 
 

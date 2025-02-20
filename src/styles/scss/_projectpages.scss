@@ -119,7 +119,7 @@
     flex-flow: row wrap;
     gap: 24px;
 
-    > div {
+    > * {
       flex-basis: calc(50% - 12px);
       box-sizing: border-box;
     }
@@ -200,6 +200,10 @@
     > div {
       padding-bottom: 20%;
     }
+
+    .half > * {
+      flex-basis: 100%;
+    }
   }
 
   .case-study {
@@ -269,10 +273,6 @@
   }
 }
 
-#luvsic p:not(:last-child) {
-  padding-bottom: 2%;
-}
-
 #rapportgifs {
   flex-flow: row nowrap;
   width: 100%;
@@ -285,3 +285,8 @@
     width: 30%;
   }
 }
+
+#colors_archive {
+  border: solid 1px;
+}
+

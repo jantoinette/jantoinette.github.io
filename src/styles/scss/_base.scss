@@ -285,11 +285,12 @@ footer {
     animation: slide 1s;
   }
 
-  &::after {
-    float: left;
-    content: "";
-    display: table;
-  }
+  // &::after {
+  //   float: left;
+  //   content: "";
+  //   display: table;
+  //   clear: both;
+  // }
 }
 
 @keyframes slide {

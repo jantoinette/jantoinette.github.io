@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
+  <script src="../../src/scripts/float-panel.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K943JVQ707');
+  </script>
+  <title>Archive: Colors, website design</title>
+</head>
+
+<body>
+  <div class="container">
+    <section id="nav"></section>
+    <div id="menu-line"></div>
+
+    <section id="content">
+      <div id="content-head">
+        <div id="proj-info"></div>
+      </div>
+
+      <div class="project">
+        <div>
+          <img src="colors_all.png">
+          <p>Lecturer: <a href="https://tuanpham.info/" target="_blank">Tuan Quoc Pham ↗</a></p>
+        </div>
+        <div>
+          <img src="colors_archive.gif">
+        </div>
+        <div id="colors_archive" class="horizontal-scroll">
+          <div>
+            <img style="border-color:red" src="colors_red.png" alt="Webpage of StudyBuds home">
+            <p>Red: see = images</p>
+          </div>
+          <div>
+            <img style="border-color:gold" src="colors_yellow.png" alt="Webpage of StudyBuds home">
+            <p>Red + Green: see + listen = videos</p>
+          </div>
+          <div>
+            <img style="border-color:lime" src="colors_green.png" alt="Webpage of StudyBuds home">
+            <p>Green: listen = audios</p>
+          </div>
+          <div>
+            <img style="border-color:blue" src="colors_blue.png" alt="Webpage of StudyBuds home">
+            <p>Blue: read = text</p>
+          </div>
+          <div>
+            <img style="border-color:purple" src="colors_purple.png" alt="Webpage of StudyBuds home">
+            <p>Red + Blue: see + read = links</p>
+          </div>
+          <div>
+            <img src="colors_rainbow.png" alt="Webpage of StudyBuds home">
+            <p>Rainbow: all</p>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+  <section id="projNav"></section>
+
+  <footer id="footer"></footer>
+
+  <script id="project-info" type="application/json">
+    {
+      "textContent": [
+        "2022",
+        "Website front-end",
+        "Student @ MPS CD, Parsons",
+        "HTML, CSS, Javascript"
+      ]
+    }
+  </script>
+
+  <script src="../../src/scripts/templates.js" defer></script>
+  <script>
+    const projectName = 'Archive: Colors';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const contentHead = document.getElementById("content-head");
+      const newProject = projTemplate(projectName, 'https://antoinettechow.com/interaction/archive/', 'Visit website ↗', 'This website an evolving organization system of a curated collection themed around "colors". It is an exploration of the internet archival process, of how we navigate, organize, and prioritize online content. Each primary RGB color represents an activity for different types of content media, with their mixed secondary colors corresponding to the combined activities.');
+      contentHead.appendChild(newProject);
+
+      slideIn();
+    });
+  </script>
+
+</body>
+</html>

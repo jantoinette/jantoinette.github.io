@@ -38,6 +38,12 @@
   width: calc(100vw - 60px);
   height: calc(100vh - 60px);
   overflow: scroll;
+
+  .horizontal-scroll {
+    position: relative;
+    top: 60px;
+    height: 85%;
+  }
 }
 
 .other-info {
