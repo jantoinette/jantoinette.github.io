@@ -1,11 +1,12 @@
-<!-- RewriteEngine on
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
+RewriteEngine On
+Redirect 301 /work /
 
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L] -->
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?antoinettechow.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
 
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
+# ErrorDocument 404 /errors/not-found.html
+# ErrorDocument 500 /errors/server-err.html
+
+Options -Indexes
+Options -ExecCGI
