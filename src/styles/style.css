@@ -15,6 +15,7 @@
 :root {
   --sans: "Futura", Futura, sans-serif;
   --serif: "Times", Times, serif;
+  --lightpink: #fcf1f3;
 }
 
 html, body {
@@ -211,6 +212,19 @@ footer div {
   flex: 0 0 65%;
 }
 
+/*.horizontal-scroll {
+  display: flex;
+  flex: row nowrap;
+  gap: 20px;
+  position: relative;
+  top: 60px;
+  left: -30px;
+  padding: 0 30px;
+  height: 85%;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}*/
 #vert_img {
   width: 100%;
   height: 75vh;
@@ -316,22 +330,22 @@ footer div {
   display: inline-block;
   color: unset;
 }
-#who::after {
-  content: " ?";
+#who span {
   display: none;
 }
-#who:hover::after {
+#who:hover span {
   display: inline;
 }
 
 #name {
   width: 50%;
   margin-top: 30px;
+  line-height: 100%;
 }
-#name span {
+#name p {
   display: none;
 }
-#name p:hover span {
+#name:hover p {
   display: block;
 }
 
@@ -356,9 +370,6 @@ footer div {
   width: 50%;
   overflow: auto;
 }
-#projects a {
-  cursor: none;
-}
 
 #categories {
   display: flex;
@@ -369,18 +380,25 @@ footer div {
   top: 28px;
   width: calc(50% - 30px);
 }
+#categories span {
+  display: none;
+}
+#categories .active span {
+  display: inline-block;
+}
 
 .category {
   font-size: 0.75rem;
   letter-spacing: 1px;
-  padding: 0 17px;
   text-transform: uppercase;
   cursor: context-menu;
+  padding-top: 5px;
 }
 .category.active {
   border: 1px outset pink;
-  padding: 4px 20px;
-  background: white;
+  padding: 8px 12px 4px 12px;
+  background: var(--lightpink);
+  line-height: 1;
 }
 
 #proj-list {
@@ -389,6 +407,15 @@ footer div {
 }
 #proj-list li:hover {
   background-color: pink;
+}
+#proj-list li.wip:hover {
+  background: gainsboro;
+}
+#proj-list .wip > * {
+  color: rgba(0, 0, 0, 0.25);
+}
+#proj-list a {
+  cursor: none;
 }
 #proj-list a:last-child {
   margin-bottom: 30px;
@@ -408,8 +435,13 @@ footer div {
   top: 50%;
   transform: translate(calc(-100% - 24px), -50%);
   width: calc(50% - 54px);
-  mix-blend-mode: multiply;
   z-index: -1;
+}
+#proj-list .showcase {
+  background-color: var(--lightpink);
+}
+#proj-list .showcase img {
+  display: block !important;
 }
 
 #view {
@@ -423,12 +455,15 @@ footer div {
 }
 
 .subtext {
+  position: relative;
   font-size: 0.875rem;
-  padding: 3px 0;
+  padding: 3px 0 3px 14px;
   display: none;
 }
 .subtext::before {
   content: "∟ ";
+  position: absolute;
+  left: 0;
 }
 
 .blink {
@@ -445,6 +480,19 @@ footer div {
 
 li:hover .blink {
   animation: blink 1s infinite;
+}
+
+.more {
+  font-size: 0.75rem;
+  line-height: 100%;
+  position: fixed;
+  bottom: 30px;
+}
+.more span {
+  display: none;
+}
+.more:hover span {
+  display: inline-block;
 }
 
 /* --- responsiveness --- */
@@ -471,11 +519,12 @@ li:hover .blink {
   }
   #proj-list .subtext {
     display: block;
+    padding-left: 18px;
   }
   #proj-list img {
     display: block;
     position: relative;
-    max-width: 100%;
+    width: 100%;
     padding: 6px 0 30px 0;
     top: 0;
     left: 0;
@@ -484,6 +533,20 @@ li:hover .blink {
   }
   #categories {
     width: calc(100% - 60px);
+    letter-spacing: 0.5px;
+  }
+  .category {
+    font-size: 0.625rem;
+  }
+  .category.active {
+    padding: 6px 2px 4px 2px;
+  }
+  .more {
+    position: sticky;
+    padding-top: 60px;
+  }
+  .more span {
+    display: block;
   }
 }
 /* --- PROJECT PAGES --- */
@@ -514,7 +577,10 @@ li:hover .blink {
   flex-basis: 100%;
 }
 #menu-container .current {
-  background-color: pink;
+  background: var(--lightpink);
+}
+#menu-container .current::before {
+  content: "✸ "; /* → */
 }
 #menu-container .disabled {
   pointer-events: none;
@@ -731,7 +797,6 @@ li:hover .blink {
   border: solid 1px;
 }
 
-
 /* --- OTHER PAGES --- */
 .page-title {
   position: fixed;
@@ -769,7 +834,6 @@ li:hover .blink {
   height: calc(100vh - 60px);
   overflow: scroll;
 }
-
 .other .horizontal-scroll {
   position: relative;
   top: 60px;

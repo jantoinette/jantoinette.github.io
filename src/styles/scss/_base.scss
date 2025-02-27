@@ -16,6 +16,7 @@
 :root {
 	--sans: "Futura", Futura, sans-serif;
 	--serif: "Times", Times, serif;
+  --lightpink: #fcf1f3;
 }
 
 html, body {
@@ -228,9 +229,11 @@ footer {
   gap: 24px;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: calc(100% + 30px);
-  padding-right: 30px;
+  width: calc(100% + 60px);
+  padding: 0 30px;
   box-sizing: border-box;
+  position: relative;
+  left: -30px;
 
   > div {
     flex: 0 0 65%;

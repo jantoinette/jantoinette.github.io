@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
   <link rel="stylesheet" type="text/css" href="src/styles/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -15,71 +16,149 @@
 
     gtag('config', 'G-K943JVQ707');
   </script>
+  <title>Antoinette's work</title>
 </head>
 
-<body>
-  <section id="home" class="crosshair">
-    <section class="intro">
-      <div class="center link">
-        <p>Welcome to my liminal space.</p>
-        <div style="padding-top:1%;">
-          <label for="page" style="font-family:var(--serif)">Visit:</label>
-          <select name="page" id="page">
-            <option value="work">✎ – Design work</option>
-            <option value="photo">◘ – Photography</option>
-            <option value="side">✦ – Side quests</option>
-            <option value="music">♫ – Spotify Playlists</option>
-            <option value="site">ⓘ – About this site</option>
-            <option value="about">○ – Who am I ???</option>
-          </select>
-          <button type="submit" onclick="gotopage()">→</button>
-        </div>
-      </div>
-    </section>
+<body class="work">
+  <noscript><p style="background:lightskyblue;">hello welcome but sorry please enable javascript for a better experience, thank you!</p></noscript>
 
-    <section id="skills">
-      <p>graphic design</p>
-      <p>branding</p>
-      <p>coding</p>
-      <p>photography</p>
-      <p>visual identity</p>
-      <p>web design</p>
-    </section>
+  <section id="name"></section>
 
-  </section>
-
-
-  <footer class="context link">
-    <div><a href="about" id="who">Antoinette Chow</a> is a designer between New York and Hong Kong.</div>
-    <div id="time"> </div>
-    <div style="width:100%;">
-      <p>She is working on this website. (◔ , ◔)ノ</p>
-      <p>She is currently seeking full time opportunities in New York.</p>
-    </div>
-    <div class="social">
+  <section class="contact link">
+    <span>
       <p>email <a href="mailto:chowantoinette@gmail.com?subject=hello!!">chowantoinette@gmail.com</a></p>
       <p>insta <a href="https://instagram.com/antoinette.chow" target="_blank">@antoinette.chow</a></p>
+    </span>
+    <p>contact</p>
+  </section>
+
+  <section id="projects">
+    <span id="view">view →</span>
+
+    <div id="categories">
+      <div class="category brand active" onclick="filtering(this, 'brand')">Brand <span>-̗̀(•̀◡• )</span></div>
+      <div class="category uxui" onclick="filtering(this, 'uxui')">UX/UI <span>(⚭-⚭ )੭</span></div>
+      <div class="category web" onclick="filtering(this, 'web')">Web <span>◔.̮◔✧</span></div>
+      <div class="category concepts" onclick="filtering(this, 'concepts')">Concepts <span>•͡˘㇁•͡˘</span></div>
+      <div class="category all" onclick="filtering(this, 'all')">All <span>꙳·⸜(•ᴗ• )୨</span></div>
     </div>
-    <div class="Cyear">Last updated: February 20, 2025</div>
-  </footer>
+
+    <ul id="proj-list">
+      <!-- <a href="work/skynine"> -->
+      <li class="brand web wip">
+        <h4 class="title">Sky Nine Social Club</h4>
+        <span class="blink">Coming Soon!</span>
+        <p>Social Club</p>
+        <img src="work/skynine/skynine_logo.png" alt=""></a>
+      </li>
+    </ul>
+    
+    <div class="more"><a href="mailto:chowantoinette@gmail.com?subject=Extended Portfolio Request">Want to see more of my work?</a><span> just send an email (ᵔ ᵕ ᵔ)＞</span></div>
+  </section>
 
 <script src="src/scripts/script.js"></script>
+<script src="src/scripts/templates.js"></script>
 <script>
 
-  liminalSpace();
+  aboutMe();
+  listProjects();
+  customCursor();
 
-  // Go to page
 
-  function gotopage() {
-    var form = document.getElementById("page");
-    var page = form.options[form.selectedIndex].value;
+  const mediaQ = window.matchMedia('(min-width:768px)');
 
-    if (page == "music") {
-      window.location = "https://open.spotify.com/user/netneeet";
-    } else {
-      window.location = page;
+  // Filter Design Categories
+
+    const showcaseProj = [
+      {category: 'brand', name: 'themorningafter'},
+      {category: 'uxui', name: 'studybuds'},
+      {category: 'web', name: 'rapport'},
+      {category: 'concepts', name: 'vcs_fieldnotes'},
+      {category: 'all', name: 'askjune'}
+    ];
+
+    function filtering(el, catClass) {
+      const categories = document.querySelectorAll("#categories .category");
+      const projects = document.querySelectorAll("#proj-list li");
+
+      categories.forEach((cat) => {
+          cat.classList.toggle("active", cat.isSameNode(el));
+      });
+
+      projects.forEach((project) => {
+        if (mediaQ.matches) project.classList.remove("showcase");
+
+        if (catClass === 'all' || project.classList.contains(catClass)) {
+            project.classList.remove("hidden");
+
+            const showcase = showcaseProj.find(item => item.name === project.id && item.category === catClass);
+            if (showcase && mediaQ.matches) project.classList.add('showcase');
+
+        } else {
+            project.classList.add("hidden");
+        }
+      });
     }
-  }
+
+
+  // Show hovered project
+
+    function toggleVisibility(el, isVisible) {
+      if (!mediaQ.matches) return;
+
+      const showingCase = document.querySelector('#proj-list li.showcase');
+      if (showingCase) showingCase.classList.remove('showcase');
+
+      const img = el.querySelector("img");
+      const sub = el.querySelector(".subtext");
+
+      if (isVisible) {
+          img.style.display = "block";
+          if (sub) sub.style.display = "block";
+      } else {
+          img.style.display = "none";
+          if (sub) sub.style.display = "none";
+      }
+
+      if (el.classList.contains('wip')) {
+        const elChildren = el.querySelectorAll(':scope > *');
+
+        elChildren.forEach(child => {
+          child.style.color = isVisible ? 'rgba(0,0,0,1)' : 'rgba(0,0,0,0.25)';
+        });
+      }
+
+      const siblings = Array.from(el.parentNode.children).filter(
+          sibling => sibling !== el && !sibling.classList.contains('wip')
+      );
+      siblings.forEach(sibling => {
+          sibling.style.opacity = isVisible ? 0.25 : "initial";
+      });
+    }
+
+    function show(el) {
+        toggleVisibility(el, true);
+    }
+    function hide(el) {
+        toggleVisibility(el, false);
+    }
+
+
+  // DOMContentLoaded
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const brand = document.querySelector('#categories .brand');
+      filtering(brand, 'brand');
+
+      if (mediaQ.matches) {
+        const hoverArea = document.querySelectorAll("#proj-list a, #proj-list li")
+        hoverArea.forEach((a) => {
+          a.addEventListener('mouseenter', (event) => show(event.target));
+          a.addEventListener('mouseleave', (event) => hide(event.target));
+        });
+      }
+    })
+
 
 </script>
 

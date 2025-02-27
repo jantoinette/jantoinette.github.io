@@ -27,7 +27,11 @@
   flex-basis: 100%;
 
   .current {
-    background-color: pink;
+    background: var(--lightpink);
+
+    &::before {
+      content: "✸ "; /* → */
+    }
   }
   
   .disabled {
@@ -286,7 +290,7 @@
   }
 }
 
-#colors_archive {
+#colors_archive img {
   border: solid 1px;
 }
 

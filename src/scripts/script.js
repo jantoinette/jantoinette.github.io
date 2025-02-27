@@ -150,31 +150,34 @@
 // Name and About
 
   function aboutMe() {
-    
-    const p = document.createElement('p');
 
     const whoLink = document.createElement('a');
-    whoLink.href = '../about';
+    whoLink.href = 'about';
     whoLink.id = 'who';
     whoLink.textContent = 'Antoinette Chow';
+    const whoFace = document.createElement('span');
+    whoFace.textContent = ' ⪕( •᷄◡•́)◜';
+    const whoQ = document.createElement('span');
+    whoQ.textContent = ' who?';
+    whoQ.style.fontFamily = 'var(--serif)';
+    whoLink.append(whoFace, whoQ);
 
-    const infoSpan = document.createElement('span');
-    infoSpan.classList.add('info');
-    infoSpan.innerHTML = ' is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.';
+    const info = document.createElement('p');
+    info.classList.add('info');
+    info.innerHTML = ' is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href="https://prophet.com/" target="_blank">Prophet</a>, and is currently seeking full time opportunities.';
 
-    const resumeLink = document.createElement('span');
+    const resumeLink = document.createElement('p');
     resumeLink.innerHTML = '<a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a>';
 
-    const backLink = document.createElement('span');
-    backLink.innerHTML = '<a href="../"> ⤶ back to her liminal space</a>';
+    const backLink = document.createElement('p');
+    backLink.innerHTML = '<a href="liminalspace.html"> ⤶ visit her liminal space</a>';
 
-    p.appendChild(whoLink);
-    p.appendChild(infoSpan);
-    p.appendChild(resumeLink);
-    p.appendChild(document.createElement('br'));
-    p.appendChild(backLink);
-
-    document.getElementById('name').appendChild(p);
+    const aboutDiv = document.getElementById('name');
+    aboutDiv.appendChild(whoLink);
+    aboutDiv.appendChild(info);
+    aboutDiv.appendChild(resumeLink);
+    aboutDiv.appendChild(document.createElement('br'));
+    aboutDiv.appendChild(backLink);
   }
 
 
@@ -182,7 +185,7 @@
 
   function customCursor() {
     const cursorText = document.getElementById("view");
-    const hoverArea = document.querySelectorAll("#proj-list li") || document.querySelectorAll("#other-projects li");
+    const hoverArea = document.querySelectorAll("#proj-list a") || document.querySelectorAll("#other-projects li");
     cursorText.style.display = "none";
 
     function changeText(event) {
@@ -198,8 +201,8 @@
       cursorText.style.zIndex = -1;
     }
 
-    hoverArea.forEach((li) => {
-      li.addEventListener('mousemove', changeText);
-      li.addEventListener('mouseleave', normal)
+    hoverArea.forEach((a) => {
+      a.addEventListener('mousemove', changeText);
+      a.addEventListener('mouseleave', normal)
     });
   }

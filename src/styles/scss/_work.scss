@@ -17,12 +17,11 @@
   display: inline-block;
   color: unset;
 
-  &::after {
-    content: " ?";
+  span {
     display: none;
   }
 
-  &:hover::after {
+  &:hover span {
     display: inline;
   }
 }
@@ -30,12 +29,13 @@
 #name {
   width: 50%;
   margin-top: 30px;
+  line-height: 100%;
 
-  span {
+  p {
     display: none;
   }
-
-  p:hover span {
+  
+  &:hover p {
     display: block;
   }
 }
@@ -64,10 +64,6 @@
   min-height: calc(100vh - 30px);
   width: 50%;
   overflow: auto;
-
-  a {
-    cursor: none;
-  }
 }
 
 #categories {
@@ -78,19 +74,28 @@
   position: fixed;
   top: 28px;
   width: calc(50% - 30px);
+
+  span {
+    display: none;
+  }
+
+  .active span {
+    display: inline-block;
+  }
 }
 
 .category {
   font-size: 0.75rem;
   letter-spacing: 1px;
-  padding: 0 17px;
   text-transform: uppercase;
   cursor: context-menu;
+  padding-top: 5px;
 
   &.active {
     border: 1px outset pink;
-    padding: 4px 20px;
-    background: white;
+    padding: 8px 12px 4px 12px;
+    background: var(--lightpink);
+    line-height: 1;
   }
 }
 
@@ -98,12 +103,26 @@
   margin-top: 40px;
   margin-bottom: 30px;
 
-  li:hover {
-    background-color: pink;
+  li {
+    &:hover {
+      background-color: pink;
+    }
+
+    &.wip:hover {
+      background: gainsboro;
+    }
   }
 
-  a:last-child {
-    margin-bottom: 30px;
+  .wip > * {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  a {
+    cursor: none;
+  
+    &:last-child {
+      margin-bottom: 30px;
+    }
   }
 
   .title {
@@ -123,8 +142,15 @@
     top: 50%;
     transform: translate(calc(-100% - 24px), -50%);
     width: calc(50% - 54px);
-    mix-blend-mode: multiply;
     z-index: -1;
+  }
+
+  .showcase {
+    background-color: var(--lightpink);
+
+    img {
+      display: block !important;
+    }
   }
 }
 
@@ -139,12 +165,15 @@
 }
 
 .subtext {
+  position: relative;
   font-size: 0.875rem;
-  padding: 3px 0;
+  padding: 3px 0 3px 14px;
   display: none;
 
   &::before {
     content:"∟ ";
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -160,6 +189,21 @@
 li:hover .blink {
     animation: blink 1s infinite;
   }
+
+.more {
+  font-size: 0.75rem;
+  line-height: 100%;
+  position: fixed;
+  bottom: 30px;
+
+  span {
+    display: none;
+  }
+
+  &:hover span {
+    display: inline-block;
+  }
+}
 
 /* --- responsiveness --- */
 
@@ -191,12 +235,13 @@ li:hover .blink {
   #proj-list {
     .subtext {
       display: block;
+      padding-left: 18px;
     }
 
     img {
       display: block;
       position: relative;
-      max-width: 100%;
+      width: 100%;
       padding: 6px 0 30px 0;
       top: 0;
       left: 0;
@@ -207,5 +252,23 @@ li:hover .blink {
 
   #categories {
     width: calc(100% - 60px);
+    letter-spacing: 0.5px;;
+  }
+
+  .category {
+    font-size: 0.625rem;
+
+    &.active {
+      padding: 6px 2px 4px 2px;
+    }
+  }
+
+  .more {
+    position: sticky;
+    padding-top: 60px;
+
+    span {
+      display: block;
+    }
   }
 }

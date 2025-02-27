@@ -6,33 +6,33 @@
 
   // Projects
     const projects = [
-      {
-        link: '',
-        category: 'brand',
-        name: 'Zentitude',
-        year: 'WIP!',
-        sub: '',
-        tags: 'Brand Identity',
-        src: 'zentitude/zent_bilinguallogo.png',
-        imgAlt: 'Outline of English and Chinese wordmarks'
-      },
+      // {
+      //   link: '',
+      //   category: 'brand',
+      //   name: 'Zentitude',
+      //   year: 'Coming Soon!',
+      //   sub: '',
+      //   type: 'Scent Brand',
+      //   src: 'zentitude/zent_bilinguallogo.png',
+      //   imgAlt: 'Outline of English and Chinese wordmarks'
+      // },
       {
         link: '',
         category: 'brand web',
         name: 'Sky Nine Social Club',
-        year: 'WIP!',
+        year: 'Coming Soon!',
         sub: '',
-        tags: 'Brand Identity, Web Design, Web Development',
+        type: 'Brand Identity, Web Design, Web Development',
         src: 'skynine/skynine_logo.png',
         imgAlt: 'Text logo of Skynine Social Club'
       },
       {
         link: 'askjune',
-        category: 'brand uxui',
+        category: 'brand',
         name: 'Ask June',
         year: '2024',
         sub: 'A Trusted Personal Guide in Healthcare, Powered by Rapport',
-        tags: 'Brand Identity, Brand Strategy, Prototyping, UX/UI',
+        type: 'Digital product subbrand by Rapport',
         src: 'askjune/askjune.gif',
         imgAlt: 'Photo of a woman holding a phone, with the shot taken from behind her shoulder. The phone is positioned in front of her, and her back and part of her arm are visible in the frame'
       },
@@ -42,8 +42,8 @@
         name: 'Rapport',
         year: '2024',
         sub: 'Redefining Healthcare with Accessible and Efficient Solutions',
-        tags: 'Animation, Brand Identity, Brand Strategy, Web Design, Web Development',
-        src: 'rapport/rapport_tagline.png',
+        type: 'Healthcare Startup',
+        src: 'rapport/rapport_stationery.png',
         imgAlt: 'Logo with tagline'
       },
       {
@@ -52,7 +52,7 @@
         name: 'Vistra',
         year: '2024',
         sub: 'Creating a Unified Brand through Purpose-Driven Transformation',
-        tags: 'Brand Identity, Web design',
+        type: 'Corporate business merger',
         src: 'vistra/vistra_products.png',
         imgAlt: ''
       },
@@ -62,17 +62,17 @@
         name: 'The Morning After',
         year: '2024',
         sub: 'Where Naughty Meets Nice in Every Crunch',
-        tags: 'Animation, Brand Identity, Packaging, Social Media Direction, Shopify, Web Design',
-        src: 'themorningafter/tma_logo.gif',
+        type: 'Granola brand',
+        src: 'themorningafter/tma.webp',
         imgAlt: 'Animated visual of Creation of Adam parody image with left hand holding a bagel and right hand having spread on index finger, revealing logo in the center'
       },
       {
         link: 'mb_bank',
-        category: 'brand uxui',
+        category: 'uxui',
         name: 'MB Bank',
         year: '2023',
         sub: 'A Strategic Brand Refresh Through Digital Banking Transformation',
-        tags: 'Brand Identity, Brand Strategy, Prototyping, UX/UI',
+        type: 'Mobile App',
         src: 'mb_bank/mb_landing.png',
         imgAlt: 'Three iPhones showing screens of apps in different banking tiers'
       },
@@ -82,7 +82,7 @@
         name: 'orient-ation',
         year: '2022',
         sub: 'A Web-based Expression on Shifting States, Belonging, and Cultural Displacement',
-        tags: 'Web design, Web Development',
+        type: 'Web design and Development',
         src: 'orientation/orientation.gif',
         imgAlt: 'Cursor interaction with website'
       },
@@ -92,7 +92,7 @@
         name: 'Visual Culture Seminar – Notes from the Field',
         year: '2022',
         sub: 'Reinterpreting Google Calendar to Reflect Diverse Learnings',
-        tags: 'Presentation Concept',
+        type: 'Presentation Concept',
         src: 'vcs_fieldnotes/VCS.gif',
         imgAlt: 'Cursor interaction with Google Calendar'
       },
@@ -102,29 +102,39 @@
         name: 'Archive: Colors',
         year: '2022',
         sub: 'Exploration of digital archiving and evolving system of organization',
-        tags: 'Web design, Web Development',
+        type: 'Web design and Development',
         src: 'colors_archive/colors_archive.gif',
         imgAlt: 'Cursor interaction with website'
       },
       {
         link: 'studybuds',
-        category: 'brand uxui',
+        category: 'uxui',
         name: 'Study Buds',
         year: '2021',
         sub: 'A UX/UI Redesign to Tackle Abandonment',
-        tags: 'UX/UI, Branding',
+        type: 'Online tutorial platform',
         src: 'studybuds/studybuds.png',
         imgAlt: 'Compilation of different pages of website shown at an angle'
       },
       {
         link: 'vantage',
-        category: 'brand',
+        category: 'brand uxui',
         name: 'Vantage',
         year: '2021',
         sub: 'Repositioning a Multi-Asset Broker to Drive Growth',
-        tags: 'Brand Identity, Digital design',
-        src: 'vantage/vantage.png',
-        imgAlt: 'Logo on textured paper in dark teal'
+        type: 'Fintech brand refresh',
+        src: 'vantage/vantage_posters.jpeg',
+        imgAlt: 'Set of 3 posters in public'
+      },
+      {
+        link: 'chinesetypearchive',
+        category: 'concepts',
+        name: 'Chinese Type Archive',
+        year: '2020 (Ongoing)',
+        sub: 'An open-access database of Chinese typographic resources',
+        type: 'Archival Project Web App',
+        src: 'chinesetypearchive/chinesetypearchive_01.gif',
+        imgAlt: 'Looping gif showing various screens of the Chinese Type Archive web app'
       },
       {
         link: 'projectunhappiness',
@@ -132,7 +142,7 @@
         name: 'Project Unhappiness',
         year: '2020',
         sub: 'Visual Narrative that Embraces Human Emotional Spectrum',
-        tags: 'Campaign Concept, Brand Identity',
+        type: 'Campaign Concept',
         src: 'projectunhappiness/unhap.png',
         imgAlt: 'Close up of posters stuck on power boxes in street'
       },
@@ -142,7 +152,7 @@
         name: 'etudiant',
         year: '2020',
         sub: 'A Typeface for the Ever-Learning Mind',
-        tags: 'Typeface design',
+        type: 'Typeface design',
         src: 'etudiant/etudiant.jpg',
         imgAlt: 'B/W image of sky with building and hanging signs in frame. Text in center, reads: Etudiant'
       },
@@ -152,7 +162,7 @@
         name: 'Luv(Sic) Part 4',
         year: '2020',
         sub: 'Visual Tribute to Music, Life, and the Genius of Nujabes',
-        tags: 'Graphic Design, Print',
+        type: 'Graphic Design',
         src: 'luvsic/luvsic.jpg',
         imgAlt: 'Set of 3 cards with soft gradient graphics laid out flat'
       },
@@ -162,20 +172,20 @@
         name: 'Tactus',
         year: '2019',
         sub: 'A Visual Identity that Brings Rhythm to Everyone',
-        tags: 'Branding, Pro-bono',
+        type: 'Wearable Tech for Deaf Community',
         src: 'tactus/tactus_logo.gif',
         imgAlt: 'Animated logo'
       },
-      {
-        link: 'aenigma',
-        category: 'brand concepts',
-        name: 'Ænigma',
-        year: '2018',
-        sub: 'Designing Curiosity through a New Identity',
-        tags: 'Branding',
-        src: 'aenigma/aenigma.png',
-        imgAlt: 'Close up of large scale poster hanging indoors on wall'
-      }
+      // {
+      //   link: 'aenigma',
+      //   category: 'brand concepts',
+      //   name: 'Ænigma',
+      //   year: '2018',
+      //   sub: 'Designing Curiosity through a New Identity',
+      //   type: 'Museum Rebrand Concept',
+      //   src: 'aenigma/aenigma.png',
+      //   imgAlt: 'Close up of large scale poster hanging indoors on wall'
+      // }
     ];
 
 
@@ -188,10 +198,11 @@
         if (project.link == '') {
           return;
         } else {
-          link.href = project.link;
+          link.href = 'work/' + project.link;
         }
 
         const listItem = document.createElement('li');
+        listItem.id = project.link;
         listItem.className = project.category;
 
         const title = document.createElement('h4');
@@ -200,7 +211,7 @@
 
         const year = document.createElement('span');
         year.innerText = project.year;
-        project.year === "WIP!" && (year.className = "blink");
+        project.year === "Coming Soon!" && (year.className = "blink");
 
         const sub = document.createElement('h4');
         if (project.sub) {
@@ -208,15 +219,15 @@
           sub.innerText = project.sub;
         }
 
-        const tags = document.createElement('p');
-        tags.innerText = project.tags;
+        const type = document.createElement('p');
+        type.innerText = project.type;
 
         const img = document.createElement('img');
         img.className = 'preview';
-        img.src = project.src;
+        img.src = 'work/' + project.src;
         img.alt = project.imgAlt;
 
-        listItem.append(title, year, sub, tags, img);
+        listItem.append(title, year, sub, type, img);
 
         link.appendChild(listItem);
 
@@ -283,7 +294,7 @@
           const pubDate = document.createElement ('span');
           pubDate.textContent = " " + year;
 
-          year === "WIP!" && (pubDate.className = "blink");
+          year === "Coming Soon!" && (pubDate.className = "blink");
 
           pageLink.appendChild(pageName);
           pageLink.appendChild(pubDate);
@@ -425,8 +436,7 @@
           const p = document.createElement ('p');
           p.textContent = text;
 
-          div.appendChild(h4);
-          div.appendChild(p);
+          div.append(h4, p);
 
           return div;
         }
@@ -443,9 +453,7 @@
       projDesc.textContent = descText;
 
 
-      projInfoContainer.appendChild(projName);
-      projInfoContainer.appendChild(infoDiv);
-      projInfoContainer.appendChild(projDesc);
+      projInfoContainer.append(projName, infoDiv, projDesc);
 
       return projInfoContainer;
     }
@@ -479,7 +487,7 @@
 
       const footerInfo = document.createElement('div');
       footerInfo.className = 'footer-info';
-      footerInfo.innerHTML = "Antoinette Chow is a designer between New York and Hong Kong. <br>She is currently seeking full-time opportunities in New York.";
+      footerInfo.innerHTML = "Antoinette Chow developed this website (◔ , ◔)ノ <br> She is currently seeking full-time design opportunities in New York.";
 
       const year = document.createElement('div');
       year.className = 'Cyear';
