@@ -1,18 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.png">
-    <link rel="stylesheet" type="text/css" href="../src/styles/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Redirecting...</title>
-    <script>
-        if (window.location.pathname === '/work' || window.location.pathname === '/work/') {
-            window.location.href = '/';
-        }
-    </script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../src/styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="⋆˙⟡ Antoinette's design portfolio across disciplines in branding, typography, UX/UI and coding. 𓂃 ִֶ  New York based, specializes in brand identity systems and experiences. ⋅ॱ˙*">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K943JVQ707');
+  </script>
+  <title>Antoinette's work</title>
 </head>
-<body>
-    <p>We've moved things around! Please go <a href="/" target="_self">here</a>if you're not redirected.</p>
+
+<body class="homepage">
+
+  <noscript><p style="background:lightskyblue;">hello welcome but sorry please enable javascript for a better experience, thank you!</p></noscript>
+
+  <div id="scroll-trigger"></div>
+ 
+  <div class="work">
+    <section id="name"></section>
+
+    <section id="projects">
+      <span id="view">view →</span>
+
+      <div id="categories">
+        <div class="category brand active">Brand <span>-̗̀(•̀◡• )</span></div>
+        <div class="category uxui">UX/UI <span>(⚭-⚭ )੭</span></div>
+        <div class="category web">Web <span>◔.̮◔✧</span></div>
+        <div class="category concepts">Concepts <span>•͡˘㇁•͡˘</span></div>
+        <div class="category all">All <span>꙳·⸜(•ᴗ• )୨</span></div>
+      </div>
+
+      <ul id="proj-list">
+        <!-- <a href="work/zentitude"> -->
+        <li class="brand wip">
+          <h4 class="title">Zentitude</h4>
+          <span class="blink">Coming Soon!</span>
+          <p>Scent brand</p>
+          <img src="zentitude/zent_bilinguallogo.png" alt=""></a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="more-info">
+    <div class="visit-space">
+      <a href="../" target="_self"><span>⊹˚⟡₊˙⋆ </span><p>Visit my liminal space.</p><span> ⋆˙₊⟡˚⊹</span></a>
+    </div>
+    <div class="more">
+      <p><a href="mailto:chowantoinette@gmail.com?subject=Extended Portfolio Request">Want to see more of my work?</a> <span>just send an email (ᵔ ᵕ ᵔ)＞</span></p>
+    </div>
+  </div>
+
+  <footer class="footer"></footer>
+
+  <script src="../src/scripts/script.js"></script>
+  <script src="../src/scripts/templates.js"></script>
+  <script>
+
+    aboutMe();
+    designWork();
+    listProjects();
+    customCursor();
+
+  </script>
+
 </body>
 </html>

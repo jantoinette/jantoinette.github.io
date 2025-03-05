@@ -6,26 +6,26 @@
 
   // Projects
     const projects = [
-      // {
-      //   link: '',
-      //   category: 'brand',
-      //   name: 'Zentitude',
-      //   year: 'Coming Soon!',
-      //   sub: '',
-      //   type: 'Scent Brand',
-      //   src: 'zentitude/zent_bilinguallogo.png',
-      //   imgAlt: 'Outline of English and Chinese wordmarks'
-      // },
       {
         link: '',
-        category: 'brand web',
-        name: 'Sky Nine Social Club',
+        category: 'brand',
+        name: 'Zentitude',
         year: 'Coming Soon!',
         sub: '',
-        type: 'Brand Identity, Web Design, Web Development',
-        src: 'skynine/skynine_logo.png',
-        imgAlt: 'Text logo of Skynine Social Club'
+        type: 'Scent Brand',
+        src: 'zentitude/zent_bilinguallogo.png',
+        imgAlt: 'Outline of English and Chinese wordmarks'
       },
+      // {
+      //   link: '',
+      //   category: 'brand web',
+      //   name: 'Sky Nine Social Club',
+      //   year: 'Coming Soon!',
+      //   sub: '',
+      //   type: 'Brand Identity, Web Design, Web Development',
+      //   src: 'skynine/skynine_logo.png',
+      //   imgAlt: 'Text logo of Skynine Social Club'
+      // },
       {
         link: 'askjune',
         category: 'brand',
@@ -198,7 +198,7 @@
         if (project.link == '') {
           return;
         } else {
-          link.href = 'work/' + project.link;
+          link.href = project.link;
         }
 
         const listItem = document.createElement('li');
@@ -224,7 +224,7 @@
 
         const img = document.createElement('img');
         img.className = 'preview';
-        img.src = 'work/' + project.src;
+        img.src = project.src;
         img.alt = project.imgAlt;
 
         listItem.append(title, year, sub, type, img);
@@ -259,12 +259,18 @@
       myName.appendChild(backHome);
 
       const myInfo = document.createElement('div');
+      myInfo.className = "info";
 
-      const myInfoText = document.createElement('p');
-      myInfoText.className = "info";
-      myInfoText.innerHTML = " is a creative living and designing between New York and Hong Kong.<br>She was previously at <a href=\"https://prophet.com/\" target=\"_blank\">Prophet</a>, and is currently seeking full time opportunities."
+      const blurb = document.createElement('div');
+      blurb.className = "blurb";
+      const blurbText = document.createElement('p');
+      blurbText.textContent = " is a brand designer who celebrates the many ways visual language creates meaningful connections."
+      const blurbJob = document.createElement('p');
+      blurbJob.textContent = "She is currently seeking full time opportunities in New York. (•-•)ゝ"
+      blurb.append(blurbText, blurbJob);
 
       const resume = document.createElement('p');
+      resume.className = 'resume';
       const resumeLink = document.createElement('a');
       resumeLink.href = "https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4";
       resumeLink.target = "_blank";
@@ -272,12 +278,11 @@
       resumeLink.appendChild(resumeLinkText);
       resume.appendChild(resumeLink);
 
-      myInfo.appendChild(myInfoText);
-      myInfo.appendChild(resume);
+      myInfo.append(blurb, resume);
 
       const menuFragment = document.createDocumentFragment();
 
-      const menuListDiv = document.createElement('div');
+      const menuListDiv = document.createElement('nav');
       const menuList = document.createElement('ul');
 
         function menuItem(link, name, year) {
@@ -470,7 +475,7 @@
     }
 
 
-  // Footer
+  // Project Page Footer
     function footerTemplate() {
       const footerText = document.createElement('div');
       footerText.className = "footer-text";

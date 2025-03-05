@@ -3,28 +3,34 @@
 // scrollbar, selection
 // a links
 // lists, ol.numList, li
+// name, info, who, blurb, more-info (liminal space link)
 // footer
+// horizontal scroll, vert_img layout
 // cursors
-// slideanim
+// view transitions, slideanim
 
-@use 'landing';
-// home, intro, skills
+@use 'liminal';
+// liminalspace, intro, skills
+// page footer
 
 @use 'work';
-// work, name contact, who, info
+// work, more
 // projects, categories, proj-list
 // view cursor, blink
 
+@use 'about';
+
 @use 'projectpages';
-// container, nav, menu, proj-info, projNav
-// email
-// project#
+// container, nav, projNav
+// menu: menu-container, menu-btn, menu-lin
+// proj-info, content-info, details, desc
+// project, case-study, case-points
 
 @use 'otherpages';
-// page-title, other-projects
-// other-img, other, other-info, other-details, other-content
+// page-title, other-pages, other-projects
+// other-img, other, other-info, other-details, other-content, other-desc
+// my.other-content
 // SAYWHAT episode lists
 // jobsearch
 // photography: photo-title, gallery, photo, FL FR #full
-// other layouts: horizontal-scroll, vert_img
 

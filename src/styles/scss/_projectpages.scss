@@ -267,6 +267,21 @@
   }
 }
 
+#footer > div {
+  &:nth-child(1), &:nth-child(3) {
+    flex-basis: 66%;
+  }
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.Cyear {
+  margin-top: 80px;
+}
+
 .email {
   &::after {
     content: "email";
@@ -277,18 +292,7 @@
   }
 }
 
-#rapportgifs {
-  flex-flow: row nowrap;
-  width: 100%;
-  background: #f9f5ee;
-  padding: 40px 0;
-  justify-content: space-evenly;
-  margin-bottom: 2%;
 
-  img {
-    width: 30%;
-  }
-}
 
 #colors_archive img {
   border: solid 1px;

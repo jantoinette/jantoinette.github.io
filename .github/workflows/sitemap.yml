@@ -1,0 +1,44 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v3
+
+    - name: Generate the sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://antoinettechow.com/
+        include-html: true
+        sitemap-format: xml
+
+    - name: Modify sitemap priorities
+      run: |
+        sed -i 's|<url><loc>https://antoinettechow.com/</loc>|<url><loc>https://antoinettechow.com/</loc><priority>1</priority>|' sitemap.xml
+        sed -i 's|<url><loc>https://antoinettechow.com/work[^/]*</loc>|&<priority>0.8</priority>|' sitemap.xml
+        sed -i 's|<url><loc>https://antoinettechow.com/[^/]*</loc>|&<priority>0.6</priority>|' sitemap.xml
+
+    - name: Commit and push sitemap
+      run: |
+        if [[ `git status --porcelain sitemap.xml` ]]; then
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m "Update sitemap"
+          git push
+        else
+          echo "No changes to sitemap.xml"
+        fi
+
+    - name: Check for errors
+      if: failure()
+      run: |
+        echo "The workflow failed. Please check the logs for more information."

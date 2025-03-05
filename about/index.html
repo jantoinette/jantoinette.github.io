@@ -5,28 +5,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="../src/styles/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="⋆˙⟡ About Antoinette Chow  𓂃 ִֶ - designer in New York from Hong Kong, specializes in brand identity systems and experiences. Language lover, linguistic and visual. ⋅ॱ˙*">
+  <meta name="view-transition" content="same-origin">
+  <style>
+    ::view-transition-old(root) {animation: none;}
+    ::view-transition-new(root) {animation-name: rotate-right-down;animation-duration: 0.8s;z-index: 2;}
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-K943JVQ707');
+
+    sessionStorage.setItem('fromAbout', 'true');
   </script>
   <title>Who is Antoinette?</title>
 </head>
 
 <body class="other">
   <section class="other-info">
-    <p><a href="../">< back</a></p>
+    <p onclick="history.back()">⤴ close</p>
     <h2>Hello this is me <span style="font-family:var(--sans)">↘</span></h2>
     <div class="my other-details">
       <div><h4>does</h4><p>branding, web dev, photography, lettering</p></div>
       <div><h4>knows</h4><p>Adobe CC, Figma, front-end dev</p></div>
       <div><h4>speaks</h4><p>English, Chinese (Canto/Mando), some Japanese</p></div>
       <div><h4>plays</h4><p>basketball, Legend of Zelda, with your dog, not by the rules, fair</p></div>
-      <div><h4>loves</h4><p>snow, fireflies, half moon in late daylight, sparkly sounds, oxymoronic concepts</p></div>
+      <div><h4>loves</h4><p>snow, fireflies, half moon in late daylight, sparkly sounds, oxymoronic concepts, a good problem to solve</p></div>
     </div>
   </section>
 

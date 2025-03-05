@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../../src/styles/style.css">
+  <script src="../../src/scripts/float-panel.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K943JVQ707"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K943JVQ707');
+  </script>
+  <title>Sky Nine, social club identity</title>
+</head>
+
+<body>
+  <div class="container">
+    <section id="nav"></section>
+    <div id="menu-line"></div>
+
+    <section id="content">
+      <div id="content-head">
+        <div id="proj-info"></div>
+      </div>
+
+      <div class="project">
+      </div>
+    </section>
+  </div>
+
+  <section id="projNav"></section>
+
+  <footer id="footer"></footer>
+
+  <script id="project-info" type="application/json">
+    {
+      "textContent": [
+        "2024",
+        "Social club identity design",
+        "Founder, Art Director, Designer",
+        "Adobe Ai, Ps, Figma"
+      ]
+    }
+  </script>
+
+  <script src="../../src/scripts/templates.js" defer></script>
+  <script>
+    const projectName = 'Sky Nine Social Club';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const contentHead = document.getElementById("content-head");
+      const newProject = projTemplate(projectName, '', '', 'skynine description.');
+      contentHead.appendChild(newProject);
+
+      slideIn();
+    });
+  </script>
+
+</body>
+</html>
