@@ -20,11 +20,12 @@
 </head>
 
 <body id="liminalspace" data-page-type="normal">
-  <section class="crosshair">
+  <section>
+    <div id="point-csr">➪</div>
     <div class="intro">
       <div class="center link">
         <p id="welcome">⊹ ˚ ⟡ ₊˙⋆ Welcome to my liminal space. ⋆˙₊ ⟡ ˚ ⊹</p>
-        <div class="select-page">
+        <div id="gotopage" class="select-page">
           <label for="page"></label>
           <select name="page" id="page" onchange="gotopage()">
             <option value="" disabled selected hidden>˗ˏˋ Which creative side of me would you like to see ? </option>
@@ -71,6 +72,32 @@
 <script>
 
   liminalSpace();
+
+  document.addEventListener('mousemove', function(event) {
+    const cursor = document.getElementById('point-csr');
+    const targetDiv = document.getElementById('gotopage');
+
+    const footer = document.querySelector('footer');
+    if (footer && footer.contains(event.target)) {
+      cursor.style.display = 'none';
+    } else {
+      cursor.style.display = 'block';
+    }
+
+    const targetRect = targetDiv.getBoundingClientRect();
+    const targetX = targetRect.left + targetRect.width / 2;
+    const targetY = targetRect.top + targetRect.height / 2;
+
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    const angle = Math.atan2(targetY - mouseY, targetX - mouseX) * 180 / Math.PI;
+
+    cursor.style.left = mouseX - cursor.offsetWidth / 2 + 'px';
+    cursor.style.top = mouseY - cursor.offsetHeight / 2 + 'px';
+    cursor.style.transform = `rotate(${angle}deg)`;
+  });
+
 
   // Go to page
 

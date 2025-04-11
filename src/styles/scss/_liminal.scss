@@ -4,6 +4,16 @@
   width: 100%;
   position: relative;
   box-sizing: border-box;
+  cursor: none;
+}
+
+#point-csr {
+  position: absolute;
+  top: -50px;
+  pointer-events: none;
+  transition: all 0.05s ease;
+  z-index: 1;
+  font-size: 2rem;
 }
 
 /* -- intro -- */
@@ -41,6 +51,11 @@
     font-family: var(--sans);
     font-size: 0.75rem;
     letter-spacing: 0.25px;
+
+    cursor: none;
+    &:focus {
+      cursor: pointer;
+    }
   }
 
   @keyframes border {
@@ -77,6 +92,7 @@
   bottom: -5rem;
   padding: 15px 20px;
   transition: 0.5s ease;
+  z-index: 2;
 
   &:hover {
     bottom: 0;

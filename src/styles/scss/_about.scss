@@ -1,3 +1,256 @@
+
 #about-page {
-	background: #f5f5f5;
+	background: whitesmoke;
+	padding: 30px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.about-me {
+	width: 50%;
+
+	.myInfo {
+		position: relative;
+		z-index: -10;
+
+		.myDesc img {
+			height: 3vh;
+			max-width: 100%;
+			padding-bottom: 4px;
+
+			&:first-child {
+				height: auto;
+				margin-bottom: 6px;
+			}
+		}
+	}
+
+	#myPic {
+	width: 100%;
+	margin: 30px 0;
+	padding: 24px 0;
+	aspect-ratio: 3 / 2;
+	background: var(--pink);;
+
+		img {
+			height: 88%;
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			aspect-ratio: 3 / 2;
+			object-fit: cover;
+			top: 50%;
+		}
+	}
+
+	.song {
+		position: fixed;
+		bottom: 0;
+		left: 10px;
+		width: calc(50vw - 20px);
+		z-index: 10;
+
+		iframe {
+			height: 100px;
+			width: 60px;
+			border: 0;
+			position: absolute;
+			bottom: -30px;
+			opacity: 0;
+		}
+
+		.SC-text {
+			position: absolute;
+			bottom: 10px;
+			z-index: -1;
+			pointer-events: none;
+
+			width: 100%;
+			height: 80px;
+			padding: 20px;
+			display: inline-flex;
+			align-items: flex-end;
+			gap: 4px;
+			line-height: 1;
+
+			.play-btn {
+				position: relative;
+				padding-right: 12px;
+				display: flex;
+				align-items: flex-end;
+			}
+
+			.SC-link {
+				display: none;
+				pointer-events: auto;
+				line-break: anywhere;
+				word-break: normal;
+				overflow: hidden;
+				text-align: center;
+				font-size: 0.75rem;
+			}
+		}
+	}
+}
+
+.about-content {
+	position: fixed;
+	height: calc(100% - 60px);
+	width: calc(100% - 60px);
+	top: 30px;
+	left: 30px;
+	pointer-events: none;
+
+	.note {
+		position: absolute;
+	    cursor: grab;
+	    width: 240px;
+	    aspect-ratio: 1 / 1;
+	    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0% 100%);
+		z-index: 0;
+		pointer-events: auto;
+		display: none;
+
+		> div {
+		    height: 100%;
+		    padding: 30px;
+		    margin: 4px;
+		    box-sizing: border-box;
+		    background-color: snow;
+		    box-shadow: 
+			    -2px 1px 3px rgba(0, 0, 0, 0.06),
+			    -1px 0px 1px rgba(0, 0, 0, 0.12);
+		    
+		    display: flex;
+		    flex-flow: column wrap;
+		    align-content: center;
+		    justify-content: center;
+		    gap: 20px;
+
+		    .dogear {
+		    	position: absolute;
+		    	bottom: 4px;
+		    	right: 3px;
+		    	height: 0;
+		    	width: 0;
+		    	border-right: 40px solid transparent;
+				border-top: 40px solid rgba(185,185,180,0.25);
+				box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.25);
+
+				&:hover {
+					cursor: pointer;
+				}
+		    }
+
+		    &:active {
+		    	cursor: grabbing;
+			}
+
+			.note-content {
+				display: none;
+				height: 0;
+				transition: max-height 0.3s ease-out;
+			}
+			 
+		}
+
+		&.unfolded {
+			display: flex;
+			flex-flow: column nowrap;
+			aspect-ratio: auto;
+			clip-path: none;
+			height: auto;
+			width: auto;
+			
+			> div {
+				.dogear {
+					height: 100%;
+					width: 100%;
+					border: none;
+					box-shadow: none;
+				}
+
+				img.note-title {
+					width: 75%;
+					margin: 6px auto;
+				}
+
+				.note-content {
+					display: block;
+					height: auto;
+
+					img {
+						width: 32vw;
+						max-height: 36vw;
+					}
+
+					p {
+						font-size: 0.75rem;
+					}
+
+					&.jan {
+						display: flex;
+						flex-flow: column nowrap;
+
+						img {
+							width: auto;
+							padding: 4px 0;
+						}
+
+						a {
+							z-index: 100;
+						}
+
+						a img {
+							width: 6vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// -⎽__⎽-⎻⎺⎺⎻-⎽__⎽--⎻⎺⎺⎻--⎽__⎽-⎻⎺⎺⎻-⎽__⎽--⎻⎺⎺⎻--⎽__⎽-⎻⎺⎺⎻-⎽__⎽--⎻⎺⎺⎻- //
+
+/* --- responsiveness --- */
+
+@media screen and (max-width: 747px) {
+
+	.about-me {
+		width: 100%;
+		height: 100%;
+
+		.myInfo {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			height: calc(100% - 78px);
+		}
+
+		#myPic img {
+			height: 50vw;
+		}
+
+		.song {
+			width: 100%;
+		}
+	}
+
+	.about-content {
+		.note {
+			width: 200px;
+
+			> div .dogear {
+				border-right: 33px solid transparent;
+				border-top: 33px solid rgba(185,185,180,0.25);
+			}
+
+			&.unfolded > div .note-content img {
+				width: 80vw;
+				max-height: 100%;
+			}
+		}
+	}
 }

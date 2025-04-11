@@ -43,17 +43,17 @@
         year: '2024',
         sub: 'Redefining Healthcare with Accessible and Efficient Solutions',
         type: 'Healthcare Startup',
-        src: 'rapport/rapport_stationery.png',
+        src: 'rapport/rapport_landing.png',
         imgAlt: 'Logo with tagline'
       },
       {
         link: 'vistra',
-        category: 'brand web',
+        category: 'brand',
         name: 'Vistra',
         year: '2024',
         sub: 'Creating a Unified Brand through Purpose-Driven Transformation',
         type: 'Corporate business merger',
-        src: 'vistra/vistra_products.png',
+        src: 'vistra/vistra_card.png',
         imgAlt: ''
       },
       {
@@ -73,7 +73,7 @@
         year: '2023',
         sub: 'A Strategic Brand Refresh Through Digital Banking Transformation',
         type: 'Mobile App',
-        src: 'mb_bank/mb_landing.png',
+        src: 'mb_bank/mb_mock.png',
         imgAlt: 'Three iPhones showing screens of apps in different banking tiers'
       },
       {
@@ -116,16 +116,16 @@
         src: 'studybuds/studybuds.png',
         imgAlt: 'Compilation of different pages of website shown at an angle'
       },
-      {
-        link: 'vantage',
-        category: 'brand uxui',
-        name: 'Vantage',
-        year: '2021',
-        sub: 'Repositioning a Multi-Asset Broker to Drive Growth',
-        type: 'Fintech brand refresh',
-        src: 'vantage/vantage_posters.jpeg',
-        imgAlt: 'Set of 3 posters in public'
-      },
+      // {
+      //   link: 'vantage',
+      //   category: 'brand uxui',
+      //   name: 'Vantage',
+      //   year: '2021',
+      //   sub: 'Repositioning a Multi-Asset Broker to Drive Growth',
+      //   type: 'Fintech brand refresh',
+      //   src: 'vantage/vantage_posters.jpeg',
+      //   imgAlt: 'Set of 3 posters in public'
+      // },
       {
         link: 'chinesetypearchive',
         category: 'concepts',

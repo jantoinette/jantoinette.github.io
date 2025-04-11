@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-li:hover, .lost {
+li:hover, .lost, .blurb {
   .blink {
     animation: blink 1s infinite;
   }
@@ -83,6 +83,7 @@ a {
 
   &:hover {
     background: var(--pink);
+    cursor: pointer;
   }
 }
 
@@ -167,18 +168,37 @@ li {
 
   .blurb {
     padding: 4px 0 6px 0;
+
+    .hire {
+      margin-right: 6px;
+
+      span {
+        animation: blink 1.5s infinite;
+      }
+
+      &::after {
+        content: attr(data-text);
+        display: none;
+      }
+
+      &:hover {
+        span {
+          display: none;
+        }
+        .blink {
+          animation: none;
+        }
+        &::after {
+          display: inline-block;
+        }
+      }
+    }
   }
+
 
   .resume {
     padding-top: 2px;
   }
-}
-
-.info h6 a, #proj-list p {
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.625);
-  letter-spacing: 0.25px;
-  background: unset;
 }
 
 #who {
@@ -302,8 +322,9 @@ footer {
 
 #footer {
   padding: 20px 0;
-  > * {padding: 0 30px;}
   align-items: flex-end;
+  
+  > * {padding: 0 30px;}
 }
 
 

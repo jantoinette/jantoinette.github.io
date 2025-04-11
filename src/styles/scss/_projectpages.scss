@@ -48,7 +48,7 @@
     overflow: scroll;
   }
 
-  div {
+  > * {
     flex-basis: 50%;
   }
 }

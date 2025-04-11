@@ -28,7 +28,14 @@
   }
 }
 
-.more {
+.info h6 a, #proj-list p {
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.625) !important;
+  letter-spacing: 0.25px;
+  background: unset;
+}
+
+.folio {
   font-size: 0.75rem;
   line-height: 100%;
 

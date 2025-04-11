@@ -16,17 +16,28 @@
     const myDesc = document.createElement('p');
     myDesc.textContent = 'is a brand designer who celebrates the many ways visual language creates meaningful connections.';
     const myCV = document.createElement('p');
-    myCV.innerHTML = 'Previously at <a href="https://prophet.com/" target="_blank">Prophet</a>. Currently seeking full-time opportunities in New York.';
+      const hire = document.createElement('a');
+      hire.className = 'hire';
+      hire.href = 'mailto:chowantoinette@gmail.com';
+      hire.setAttribute('data-text', 'Seeking full-time designer role in New York (•-•)ゝ')
+      const hireText = document.createElement('span');
+      hireText.textContent = 'For hire!';
+      hire.appendChild(hireText);
+      const previous = document.createElement('p');
+      previous.innerHTML = 'Previously at <a href="https://prophet.com/" target="_blank">Prophet</a>.';
+      myCV.style.display = 'inline-flex';
+      myCV.append(hire, previous);
     blurb.append(myDesc, myCV);
     
     const about = document.createElement('h6');
     const aboutA = document.createElement('a');
+    aboutA.id = 'who';
     aboutA.href = '../about';
     aboutA.textContent = '+ About';
     about.appendChild(aboutA);
 
     // const resumeLink = document.createElement('p');
-    // resumeLink.innerHTML = '<a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec?pvs=4" target="_blank"> ⤷ Resume / CV </a>';
+    // resumeLink.innerHTML = '<a href="https://antoinettechow.notion.site/Antoinette-s-Resume-1a916c58244344f3ac000d9f841368ec" target="_blank"> ⤷ Resume / CV </a>';
 
     myInfo.append(myName, blurb, about)
 
@@ -349,6 +360,8 @@
         }
       });
 
+      window.location.hash = catClass;
+      
       scrollEvent();
     }
 
