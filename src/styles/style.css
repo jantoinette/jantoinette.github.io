@@ -120,17 +120,6 @@ li p {
   margin-bottom: 12px;
 }
 
-.next-steps h2 {
-  margin-bottom: 6px;
-}
-.next-steps li {
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-.next-steps li::before {
-  content: "▢";
-  margin-right: 10px;
-}
 
 /* -- name + liminal space link -- */
 #name {
@@ -560,11 +549,22 @@ footer {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-#proj-list li:hover {
+#proj-list div {
+  margin-bottom: 0.75rem;
+}
+#proj-list div:hover {
   background: pink;
 }
-#proj-list li.wip:hover {
+#proj-list div.wip:hover {
   background: gainsboro;
+}
+#proj-list div span {
+  font-family: var(--serif);
+  font-size: 0.75rem;
+}
+#proj-list p {
+  font-size: 0.75rem;
+  margin-top: 4px;
 }
 #proj-list .wip > * {
   color: rgba(0, 0, 0, 0.25);
@@ -1291,6 +1291,17 @@ footer {
 }
 .my.other-content img {
   padding-top: 2px;
+}
+.next-steps h2 {
+  margin-bottom: 6px;
+}
+.next-steps li {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.next-steps li::before {
+  content: "\25A2";
+  margin-right: 10px
 }
 
 /* SAY WHAT - EPISODES */

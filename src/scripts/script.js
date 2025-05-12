@@ -340,7 +340,7 @@
     });
 
     function filtering(el, catClass) {
-      const projects = document.querySelectorAll("#proj-list li");
+      const projects = document.querySelectorAll("#proj-list div");
 
       categories.forEach((cat) => {
           cat.classList.toggle("active", cat.isSameNode(el));
@@ -361,6 +361,9 @@
       });
 
       window.location.hash = catClass;
+
+      const firstShowcase = document.getElementsByClassName('showcase')[0];
+      firstShowcase.querySelector('img').loading = 'eager';
       
       scrollEvent();
     }

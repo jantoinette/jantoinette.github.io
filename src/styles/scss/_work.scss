@@ -93,7 +93,9 @@
   margin-top: 20px;
   margin-bottom: 30px;
 
-  li {
+  div {
+    margin-bottom: 0.75rem;
+
     &:hover {
       background: pink;
     }
@@ -101,6 +103,16 @@
     &.wip:hover {
       background: gainsboro;
     }
+
+    span {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+    }
+  }
+
+  p {
+    font-size: 0.75rem;
+    margin-top: 4px;
   }
 
   .wip > * {

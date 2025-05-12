@@ -2,8 +2,6 @@
 // TEMPLATES
 //
 
-  // Global \\
-
   // Projects
     const projects = [
       {
@@ -189,9 +187,10 @@
     ];
 
 
+
   // Project List
     function listProjects() {
-      const ul = document.getElementById('proj-list');
+      const list = document.getElementById('proj-list');
 
       projects.forEach(project => {
         const link = document.createElement('a');
@@ -201,7 +200,7 @@
           link.href = project.link;
         }
 
-        const listItem = document.createElement('li');
+        const listItem = document.createElement('div');
         listItem.id = project.link;
         listItem.className = project.category;
 
@@ -226,12 +225,13 @@
         img.className = 'preview';
         img.src = project.src;
         img.alt = project.imgAlt;
+        img.setAttribute('loading', 'lazy');
 
         listItem.append(title, year, sub, type, img);
 
         link.appendChild(listItem);
 
-        ul.appendChild(link);
+        list.appendChild(link);
       });
     }
 
@@ -503,4 +503,5 @@
 
     const footerContainer = document.getElementById("footer");
     footerContainer && footerTemplate();
+
 
