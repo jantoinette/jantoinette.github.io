@@ -374,7 +374,7 @@
     function toggleVisibility(el, isVisible) {
       if (!mediaQ.matches) return;
 
-      const showingCase = document.querySelector('#proj-list li.showcase');
+      const showingCase = document.querySelector('#proj-list div.showcase');
       if (showingCase) showingCase.classList.remove('showcase');
 
       const img = el.querySelector("img");
@@ -416,7 +416,7 @@
 
     function scrollEvent() {
       const trigger = document.querySelector('#scroll-trigger');
-      const showingCase = document.querySelector('#proj-list li.showcase img');
+      const showingCase = document.querySelector('#proj-list div.showcase img');
 
       if (showingCase) {
         const observer = new IntersectionObserver(([e]) => {
@@ -439,7 +439,7 @@
       filtering(brand, 'brand');
 
       if (mediaQ.matches) {
-        const hoverArea = document.querySelectorAll("#proj-list a, #proj-list li")
+        const hoverArea = document.querySelectorAll("#proj-list a, #proj-list div")
         hoverArea.forEach((a) => {
           a.addEventListener('mouseenter', (event) => show(event.target));
           a.addEventListener('mouseleave', (event) => hide(event.target));

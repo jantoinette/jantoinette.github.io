@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-li:hover .blink, .lost .blink, .blurb .blink {
+div.wip:hover .blink, .lost .blink, .blurb .blink {
   animation: blink 1s infinite;
 }
 

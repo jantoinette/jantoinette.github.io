@@ -166,6 +166,23 @@
 }
 
 
+.next-steps {
+  h2 {
+    margin-bottom: 6px;
+  }
+
+  li {
+    margin-top: 8px;
+    margin-bottom: 0;
+
+    &::before {
+      content: "\25A2";
+      margin-right: 10px
+    }
+  }
+}
+
+
 /* SAY WHAT - EPISODES */
 
 ol.epList {

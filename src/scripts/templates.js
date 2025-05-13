@@ -187,7 +187,6 @@
     ];
 
 
-
   // Project List
     function listProjects() {
       const list = document.getElementById('proj-list');
