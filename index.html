@@ -73,10 +73,19 @@
 
   liminalSpace();
 
+  let lastExecutionTime = 0;
+  const throttleDelay = 10; // Adjust for smoothness vs performance
+
   document.addEventListener('mousemove', function(event) {
+    const now = Date.now();
+    if (now - lastExecutionTime < throttleDelay) {
+      return;
+    }
+    lastExecutionTime = now;
+
     const cursor = document.getElementById('point-csr');
     const targetDiv = document.getElementById('gotopage');
-
+    
     const footer = document.querySelector('footer');
     if (footer && footer.contains(event.target)) {
       cursor.style.display = 'none';
@@ -89,14 +98,13 @@
     const targetY = targetRect.top + targetRect.height / 2;
 
     const mouseX = event.clientX;
-    const mouseY = event.clientY;
+    const mouseY = event.clientY + 50;
 
     const angle = Math.atan2(targetY - mouseY, targetX - mouseX) * 180 / Math.PI;
 
-    cursor.style.left = mouseX - cursor.offsetWidth / 2 + 'px';
-    cursor.style.top = mouseY - cursor.offsetHeight / 2 + 'px';
-    cursor.style.transform = `rotate(${angle}deg)`;
+    cursor.style.transform = `translate(-50%, -50%) translate(${mouseX}px, ${mouseY}px) rotate(${angle}deg)`;
   });
+
 
 
   // Go to page

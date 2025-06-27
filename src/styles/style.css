@@ -406,7 +406,7 @@ footer {
 
 @media screen and (max-width: 752px) {
   .center {
-    top: 42%;
+    top: 38%;
   }
   #welcome span {
     display: block;
@@ -473,7 +473,7 @@ footer {
 }
 @media screen and (max-width: 752px) {
   #liminalspace .footer {
-    bottom: -26%;
+    bottom: -20%;
   }
 }
 
