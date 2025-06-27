@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-div.wip:hover .blink, .lost .blink, .blurb .blink {
+li:hover .blink, .lost .blink, .blurb .blink {
   animation: blink 1s infinite;
 }
 
@@ -119,7 +119,6 @@ li p {
 .list li:last-child {
   margin-bottom: 12px;
 }
-
 
 /* -- name + liminal space link -- */
 #name {
@@ -374,9 +373,7 @@ footer {
   }
 }
 #liminalspace {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   cursor: none;
 }
@@ -407,6 +404,15 @@ footer {
   text-align: center;
 }
 
+@media screen and (max-width: 752px) {
+  .center {
+    top: 42%;
+  }
+  #welcome span {
+    display: block;
+    padding: 8px;
+  }
+}
 .select-page {
   margin-top: 1.25rem;
 }
@@ -455,6 +461,7 @@ footer {
 
 /* -- footer -- */
 #liminalspace .footer {
+  position: absolute;
   top: unset;
   bottom: -5rem;
   padding: 15px 20px;
@@ -463,6 +470,11 @@ footer {
 }
 #liminalspace .footer:hover {
   bottom: 0;
+}
+@media screen and (max-width: 752px) {
+  #liminalspace .footer {
+    bottom: -26%;
+  }
 }
 
 /* ------- WORK ------- */
@@ -1292,6 +1304,7 @@ footer {
 .my.other-content img {
   padding-top: 2px;
 }
+
 .next-steps h2 {
   margin-bottom: 6px;
 }
@@ -1300,8 +1313,8 @@ footer {
   margin-bottom: 0;
 }
 .next-steps li::before {
-  content: "\25A2";
-  margin-right: 10px
+  content: "▢";
+  margin-right: 10px;
 }
 
 /* SAY WHAT - EPISODES */

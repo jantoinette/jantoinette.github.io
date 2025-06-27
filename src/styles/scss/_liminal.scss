@@ -1,8 +1,6 @@
 
 #liminalspace {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   cursor: none;
 }
@@ -32,6 +30,17 @@
   top: 48%;
   width: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 752px) {
+  .center {
+    top: 42%;
+  }
+
+  #welcome span {
+      display: block;
+      padding: 8px;
+  }
 }
 
 .select-page {
@@ -88,6 +97,7 @@
 /* -- footer -- */
 
 #liminalspace .footer {
+  position: absolute;
   top: unset;
   bottom: -5rem;
   padding: 15px 20px;
@@ -96,6 +106,10 @@
 
   &:hover {
     bottom: 0;
+  }
+
+  @media screen and (max-width: 752px) {
+      bottom: -26%;
   }
 }
 
