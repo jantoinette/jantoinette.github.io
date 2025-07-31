@@ -332,6 +332,8 @@
     ];
 
     const categories = document.querySelectorAll("#categories .category");
+    const brand = [...categories].find(cat => cat.classList.contains('brand'));
+
     categories.forEach((cat) => {
         cat.addEventListener("click", function() {
             const catClass = this.classList[1];
@@ -359,8 +361,6 @@
             project.classList.add("hidden");
         }
       });
-
-      window.location.hash = catClass;
 
       const firstShowcase = document.getElementsByClassName('showcase')[0];
       firstShowcase.querySelector('img').loading = 'eager';
@@ -434,18 +434,27 @@
        
     }
 
+    // Category filter on load
+
     document.addEventListener("DOMContentLoaded", () => {
-      const brand = document.querySelector('#categories .brand');
-      filtering(brand, 'brand');
+      const hash = window.location.hash.slice(1);
+      const matchingCat = hash ? [...categories].find(cat => cat.classList.contains(hash)) : null;
+
+      if (matchingCat) {
+        filtering(matchingCat, hash);
+      } else {
+        filtering(brand, 'brand');
+      }
 
       if (mediaQ.matches) {
-        const hoverArea = document.querySelectorAll("#proj-list a, #proj-list div")
+        const hoverArea = document.querySelectorAll("#proj-list a, #proj-list div");
         hoverArea.forEach((a) => {
           a.addEventListener('mouseenter', (event) => show(event.target));
           a.addEventListener('mouseleave', (event) => hide(event.target));
         });
       }
-    })
+    });
+
   }
 
 
