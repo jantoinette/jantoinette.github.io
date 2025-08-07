@@ -159,7 +159,7 @@
   // to load, then performs the operations.
   // This is considered best practice.
 
-  window.addEventListener('load', ()=>{      
+  window.addEventListener('DOMContentLoaded', ()=>{      
       resize(); // Resizes the canvas once the window loads
       document.addEventListener('mousedown', penColor);
       document.addEventListener('mouseenter', startPainting);

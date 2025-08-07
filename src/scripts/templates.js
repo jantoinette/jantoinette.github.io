@@ -41,7 +41,7 @@
         year: '2024',
         sub: 'Redefining Healthcare with Accessible and Efficient Solutions',
         type: 'Healthcare Startup',
-        src: 'rapport/rapport_landing.png',
+        src: 'rapport/rapport_landing.jpg',
         imgAlt: 'Logo with tagline'
       },
       {
@@ -51,7 +51,7 @@
         year: '2024',
         sub: 'Creating a Unified Brand through Purpose-Driven Transformation',
         type: 'Corporate business merger',
-        src: 'vistra/vistra_card.png',
+        src: 'vistra/vistra_card.jpg',
         imgAlt: ''
       },
       {
@@ -71,7 +71,7 @@
         year: '2023',
         sub: 'A Strategic Brand Refresh Through Digital Banking Transformation',
         type: 'Mobile App',
-        src: 'mb_bank/mb_mock.png',
+        src: 'mb_bank/mb_mock.jpg',
         imgAlt: 'Three iPhones showing screens of apps in different banking tiers'
       },
       {
@@ -141,7 +141,7 @@
         year: '2020',
         sub: 'Visual Narrative that Embraces Human Emotional Spectrum',
         type: 'Campaign Concept',
-        src: 'projectunhappiness/unhap.png',
+        src: 'projectunhappiness/unhap.jpg',
         imgAlt: 'Close up of posters stuck on power boxes in street'
       },
       {
