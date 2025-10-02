@@ -1024,11 +1024,14 @@ footer {
   gap: 24px;
 }
 .project .half > * {
-  flex-basis: calc(50% - 12px);
+  max-width: calc(50% - 12px);
   box-sizing: border-box;
 }
 .project .half .spacer {
   height: 36%;
+}
+.project .half .case-study {
+  padding-top: 48px;
 }
 
 .case-study {

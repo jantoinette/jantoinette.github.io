@@ -4,6 +4,16 @@
 
   // Projects
     const projects = [
+      // {
+      //   link: '',
+      //   category: 'brand',
+      //   name: 'PureAir Tech',
+      //   year: 'Coming Soon!',
+      //   sub: '',
+      //   type: 'Air Purification Solutions Brand',
+      //   src: 'pureairtech/patech_logo.png',
+      //   imgAlt: ''
+      // },
       {
         link: '',
         category: 'brand',
@@ -69,7 +79,7 @@
         category: 'uxui',
         name: 'MB Bank',
         year: '2023',
-        sub: 'A Strategic Brand Refresh Through Digital Banking Transformation',
+        sub: 'A Strategic Brand Refresh to Unlock and Accelerate Growth',
         type: 'Mobile App',
         src: 'mb_bank/mb_mock.jpg',
         imgAlt: 'Three iPhones showing screens of apps in different banking tiers'

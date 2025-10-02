@@ -124,12 +124,16 @@
     gap: 24px;
 
     > * {
-      flex-basis: calc(50% - 12px);
+      max-width: calc(50% - 12px);
       box-sizing: border-box;
     }
 
     .spacer {
       height: 36%;
+    }
+
+    .case-study {
+      padding-top: 48px;
     }
   }
 }
